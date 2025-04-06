@@ -2,37 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Traditional Kung Fu classes in [Your City] – Discipline, fitness, and martial arts training." />
-  <meta name="keywords" content="Kung Fu, Martial Arts, Self-Defense, [Your City], Traditional Chinese Martial Arts" />
-  <meta name="author" content="[Your Name]" />
-  <title>Traditional Kung Fu School</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Choy Lee Fut Kung Fu Classes | Sydney North Shore</title>
+  <meta name="description" content="Join our Choy Lee Fut Kung Fu classes in Sydney North Shore. Learn self-defense, discipline, and authentic martial arts techniques. Sign up today!">
+  <meta name="keywords" content="Kung Fu, Martial Arts, Self-Defense, Sydney, North Shore, Marsfield, Wahroonga, Choy Lay Fut, Choy Lee Fut, Traditional Chinese Martial Arts" />
+  <meta name="author" content="Angus Tse" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html {
       scroll-behavior: smooth;
     }
+    body {
+      overflow-x: hidden;
+    }
   </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('menu');
+      menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    });
+  </script>
 </head>
 <body class="bg-gray-100 font-sans text-gray-800">
   <!-- Navigation -->
   <header class="bg-black text-white fixed w-full top-0 z-50 shadow">
-    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="#" class="text-2xl font-bold">Kung Fu School</a>
-      <ul class="flex space-x-6 text-sm">
+    <nav class="container mx-auto px-4 py-2 flex justify-between items-center">
+      <a href="#">
+        <img src="assets/images/tse_kung_fu_academy_logo.png" alt="Tse Kung Fu Academy Logo" class="h-14">
+      </a>
+      <button id="menu-toggle" class="text-white md:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+      <ul id="menu" class="hidden flex-col space-y-4 md:flex md:flex-row md:space-y-0 md:space-x-6 text-sm">
         <li><a href="#hero" class="hover:text-gray-300">Home</a></li>
         <li><a href="#about" class="hover:text-gray-300">About</a></li>
         <li><a href="#schedule" class="hover:text-gray-300">Schedule</a></li>
         <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+        <li><a href="#faq" class="hover:text-gray-300">FAQ</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Hero Section -->
-  <section id="hero" class="min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://yourcdn.com/kungfu-banner.jpg');">
+  <section id="hero" class="min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('assets/images/hero_01.png');">
     <div class="bg-black bg-opacity-60 p-10 rounded text-center text-white">
-      <h1 class="text-4xl font-bold mb-4">Traditional Kung Fu Classes in [Your City]</h1>
-      <p class="text-lg mb-6">Train your body, discipline your mind. Discover the path of martial arts excellence.</p>
+      <h1 class="text-4xl font-bold mb-4">Choy Lee Fut Kung Fu Classes in Sydney North Shore</h1>
+      <p class="text-lg mb-6">Self-Defence, Real Combat Kung Fu, Train your body, discipline your mind. Discover the path of martial arts excellence.</p>
       <a href="#contact" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">Join Now</a>
     </div>
   </section>
@@ -40,8 +60,16 @@
   <!-- About Section -->
   <section id="about" class="py-16 bg-white">
     <div class="container mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-6">About Our Kung Fu</h2>
-      <p class="text-lg max-w-3xl mx-auto">Our lineage draws from traditional Southern Chinese martial arts, focusing on strength, flexibility, discipline, and philosophy. Learn authentic techniques passed down through generations in a friendly, supportive environment.</p>
+      <h2 class="text-3xl font-bold mb-6">About Our Choy Lee Fut Kung Fu</h2>
+      <p class="text-lg max-w-3xl mx-auto">Our Choy Lay Fut lineage is Hung Sing Choy Lay Fut, Fong Yuk Shu lineage.  This is most popular Southern Chinese martial arts, focusing on strength, flexibility, discipline, and philosophy. Learn authentic techniques passed down through generations in a friendly, supportive environment.</p>
+    </div>
+  </section>
+
+  <!-- Sifu Section -->
+  <section id="sifu" class="py-16 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">About Sifu Angus</h2>
+      <p class="text-lg max-w-3xl mx-auto">Angus practiced Choy Lee Fut in Hong Kong for 20 years, a direct disciple of Grand Master Chu Shiu Ki. Angus is a 6th DANN from Hong Kong Chin Woo Authentic Association, the longest history Kung Fu assocucation. He practiced vaiours style, such as Muay Thai, Boxig, BJJ, Choi Mok, Chow Gar Southern Pray Mantis. Angus is an engineer, he can explain martial arts in a modrern scientific way.</p>
     </div>
   </section>
 
@@ -49,28 +77,17 @@
   <section id="schedule" class="py-16 bg-gray-200">
     <div class="container mx-auto px-6">
       <h2 class="text-3xl font-bold text-center mb-8">Class Schedule</h2>
-      <div class="max-w-2xl mx-auto">
-        <table class="w-full text-left border-collapse">
-          <thead>
-            <tr>
-              <th class="py-2 px-4 border-b">Day</th>
-              <th class="py-2 px-4 border-b">Time</th>
-              <th class="py-2 px-4 border-b">Level</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="py-2 px-4 border-b">Monday</td>
-              <td class="py-2 px-4 border-b">6:00pm - 7:30pm</td>
-            <td class="py-2 px-4 border-b">Beginner</td>
-            </tr>
-            <tr>
-              <td class="py-2 px-4 border-b">Wednesday</td>
-              <td class="py-2 px-4 border-b">6:00pm - 7:30pm</td>
-              <td class="py-2 px-4 border-b">All Levels</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-xl font-bold mb-2">Wednesday</h3>
+          <p class="text-gray-700"><strong>Time:</strong> 5:00pm - 7:00pm</p>
+          <p class="text-gray-700"><strong>Location:</strong> Wahroonga Park, NSW 2076</p>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-xl font-bold mb-2">Saturday</h3>
+          <p class="text-gray-700"><strong>Time:</strong> 9:30am - 11:30am</p>
+          <p class="text-gray-700"><strong>Location:</strong> Marsfield Park, NSW 2122</p>
+        </div>
       </div>
     </div>
   </section>
@@ -80,9 +97,29 @@
     <div class="container mx-auto px-6 text-center">
       <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
       <p class="text-lg mb-4">Interested in a trial class or just want to ask a question?</p>
-      <p class="text-lg">📧 <strong>Email:</strong> <a href="mailto:your@email.com" class="text-blue-600">your@email.com</a></p>
-      <p class="text-lg">📍 <strong>Location:</strong> [Your Training Location]</p>
-      <p class="text-lg">📸 <strong>Follow us:</strong> <a href="https://instagram.com/yourpage" class="text-blue-600">Instagram</a>, <a href="https://facebook.com/yourpage" class="text-blue-600">Facebook</a></p>
+      <p class="text-lg">📧 <strong>Email:</strong> <a href="mailto:sydney.kungfu.chi@gmail.com" class="text-blue-600">sydney.kungfu.chi@gmail.com</a></p>
+      <p class="text-lg">📸 <strong>Follow us:</strong> <a href="https://instagram.com/sydney.kungfu" class="text-blue-600" target="_blank">Instagram</a>, <a href="https://facebook.com/sydney.kungfu" class="text-blue-600" target="_blank">Facebook</a></p>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-6 text-center">Frequently Asked Questions</h2>
+      <div class="space-y-6 max-w-3xl mx-auto">
+        <div>
+          <h3 class="font-semibold text-xl">Do I need experience to join?</h3>
+          <p>No. Beginners are welcome and we tailor classes to all levels.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-xl">What should I wear to class?</h3>
+          <p>Comfortable workout clothes are fine. Uniforms are available once you join.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-xl">Is there a minimum age?</h3>
+          <p>We accept students from age 7 and up.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -90,5 +127,27 @@
   <footer class="bg-black text-white text-center py-4">
     &copy; 2025 Kung Fu School. All rights reserved.
   </footer>
+
+  <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Tse Kung Fu Academy",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Wahroonga Park, NSW 2076",
+          "addressLocality": "Sydney",
+          "addressRegion": "NSW",
+          "postalCode": "2076",
+          "addressCountry": "AU"
+        },
+        "email": "sydney.kungfu.chi@gmail.com",
+        "url": "https://sydneykungfu.github.io",
+        "sameAs": [
+          "https://instagram.com/sydney.kungfu",
+          "https://facebook.com/sydney.kungfu"
+        ]
+    }
+  </script>
 </body>
 </html>
