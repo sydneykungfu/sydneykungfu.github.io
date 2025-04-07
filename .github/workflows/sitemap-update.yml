@@ -25,7 +25,13 @@ jobs:
       run: |
         npx sitemap-generator-cli https://sydneykungfu.github.io/ -o sitemap.xml
 
+    - name: Check for changes
+      id: check_changes
+      run: |
+        git diff --exit-code sitemap.xml || echo "changes=true" >> $GITHUB_OUTPUT
+
     - name: Commit and push updated sitemap
+      if: steps.check_changes.outputs.changes == 'true'
       run: |
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
