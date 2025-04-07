@@ -17,9 +17,12 @@
   <meta name="description" content="Join our Choy Lee Fut Kung Fu classes in Sydney North Shore. Learn self-defense, discipline, and authentic martial arts techniques. Sign up today!">
   <meta name="keywords" content="Kung Fu, Martial Arts, Self-Defense, Sydney, North Shore, Marsfield, Wahroonga, Choy Lay Fut, Choy Lee Fut, Traditional Chinese Martial Arts" />
   <meta name="author" content="Angus Tse" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preload" as="image" href="assets/images/hero_01_compressed.png" />
   <style>
+    /* Add critical Tailwind utilities used above the fold */
+    .container{width:100%}
+    .fixed{position:fixed}
+    .bg-black{--tw-bg-opacity:1;background-color:rgba(0,0,0,var(--tw-bg-opacity))}
+    .text-white{--tw-text-opacity:1;color:rgba(255,255,255,var(--tw-text-opacity))}
     html {
       scroll-behavior: smooth;
     }
@@ -33,6 +36,12 @@
       background-position: center;
     }
   </style>
+  <!-- Lazy load Tailwind CSS -->
+  <link rel="stylesheet" href="assets/css/tailwind.min.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="assets/css/tailwind.min.css">
+  </noscript>
+  <link rel="preload" as="image" href="assets/images/hero_01_compressed.png" />
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const menuToggle = document.getElementById('menu-toggle');
@@ -59,7 +68,7 @@
   <header class="bg-black text-white fixed w-full top-0 z-50 shadow">
     <nav class="container mx-auto px-4 py-2 flex justify-between items-center">
       <a href="index.html">
-        <img src="assets/images/tse_kung_fu_academy_logo.png" alt="Tse Kung Fu Academy Logo" class="h-14">
+        <img src="assets/images/tse_kung_fu_academy_logo.png" alt="Tse Kung Fu Academy Logo" class="h-14" loading="lazy">
       </a>
       <button id="menu-toggle" class="text-white md:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
