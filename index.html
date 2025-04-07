@@ -18,12 +18,19 @@
   <meta name="keywords" content="Kung Fu, Martial Arts, Self-Defense, Sydney, North Shore, Marsfield, Wahroonga, Choy Lay Fut, Choy Lee Fut, Traditional Chinese Martial Arts" />
   <meta name="author" content="Angus Tse" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preload" as="image" href="assets/images/hero_01_compressed.png" />
   <style>
     html {
       scroll-behavior: smooth;
     }
     body {
       overflow-x: hidden;
+    }
+    /* Critical CSS for Hero Section */
+    #hero {
+      background-image: url('assets/images/hero_01.png');
+      background-size: cover;
+      background-position: center;
     }
   </style>
   <script>
@@ -71,7 +78,7 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="hero" class="min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('assets/images/hero_01.png');">
+  <section id="hero" class="min-h-screen flex items-center justify-center bg-cover bg-center">
     <div class="bg-black bg-opacity-60 p-10 rounded text-center text-white">
       <h1 class="text-4xl font-bold mb-4">Choy Lee Fut Kung Fu Classes in Sydney North Shore</h1>
       <p class="text-lg mb-6">Self-Defence, Real Combat Kung Fu, Train your body, discipline your mind. Discover the path of martial arts excellence.</p>
