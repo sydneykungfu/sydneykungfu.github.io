@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXVEYWLYKY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PXVEYWLYKY');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Enroll in Kung Fu Classes | Tse Kung Fu Academy</title>
+  <meta name="description" content="Enroll in our Choy Lee Fut Kung Fu classes in Sydney North Shore. Book your trial class or register your interest today!">
+  <meta name="keywords" content="Kung Fu, Martial Arts, Self-Defense, Sydney, North Shore, Marsfield, Wahroonga, Choy Lay Fut, Choy Lee Fut, Traditional Chinese Martial Arts" />
+  <meta name="author" content="Angus Tse" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      overflow-x: hidden;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('menu');
+      const menuLinks = menu.querySelectorAll('a');
+
+      menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (!menu.classList.contains('hidden')) {
+            menu.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+  <!-- Navigation -->
+  <header class="bg-black text-white fixed w-full top-0 z-50 shadow">
+    <nav class="container mx-auto px-4 py-2 flex justify-between items-center">
+      <a href="index.html">
+        <img src="assets/images/tse_kung_fu_academy_logo.png" alt="Tse Kung Fu Academy Logo" class="h-14">
+      </a>
+      <button id="menu-toggle" class="text-white md:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+      <ul id="menu" class="hidden flex-col space-y-4 md:flex md:flex-row md:space-y-0 md:space-x-6 text-sm">
+        <li><a href="index.html#hero" class="hover:text-gray-300">Home</a></li>
+        <li><a href="enroll.html" class="hover:text-gray-300">Enroll</a></li>
+        <li><a href="index.html#about" class="hover:text-gray-300">About</a></li>
+        <li><a href="index.html#schedule" class="hover:text-gray-300">Schedule</a></li>
+        <li><a href="index.html#contact" class="hover:text-gray-300">Contact</a></li>
+        <li><a href="index.html#faq" class="hover:text-gray-300">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Enroll Section -->
+  <div class="max-w-3xl mx-auto px-4 py-24">
+    <h1 class="text-3xl font-bold mb-6 text-center">Enroll in Our Kung Fu Classes</h1>
+    <p class="text-lg text-center mb-8">
+      Fill in the form below to book your trial class or register your interest.
+    </p>
+    <div class="aspect-w-16 aspect-h-9">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeNLhIwc0D4bmBNuAlrZ8p9-38qFTWtVmVwyIWaphRDmoXcfQ/viewform?embedded=true" width="100%" height="1356" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+  </div>
+
+  <!-- BEGIN common page footer -->
+  <footer class="bg-black text-white text-center py-4">
+    &copy; 2025 Kung Fu School. All rights reserved.
+  </footer>
+
+  <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Tse Kung Fu Academy",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Wahroonga Park, NSW 2076",
+          "addressLocality": "Sydney",
+          "addressRegion": "NSW",
+          "postalCode": "2076",
+          "addressCountry": "AU"
+        },
+        "email": "sydney.kungfu.chi@gmail.com",
+        "url": "https://sydneykungfu.github.io",
+        "sameAs": [
+          "https://instagram.com/sydney.kungfu",
+          "https://facebook.com/sydney.kungfu"
+        ]
+    }
+  </script>
+  <!-- END common page footer -->
+</body>
+</html>

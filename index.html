@@ -1,3 +1,4 @@
+<!-- BEGIN common page header -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,17 +30,28 @@
     document.addEventListener('DOMContentLoaded', () => {
       const menuToggle = document.getElementById('menu-toggle');
       const menu = document.getElementById('menu');
+      const menuLinks = menu.querySelectorAll('a');
+
       menuToggle.addEventListener('click', () => {
         menu.classList.toggle('hidden');
+      });
+
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (!menu.classList.contains('hidden')) {
+            menu.classList.add('hidden');
+          }
+        });
       });
     });
   </script>
 </head>
+<!-- END common page header -->
 <body class="bg-gray-100 font-sans text-gray-800">
   <!-- Navigation -->
   <header class="bg-black text-white fixed w-full top-0 z-50 shadow">
     <nav class="container mx-auto px-4 py-2 flex justify-between items-center">
-      <a href="#">
+      <a href="index.html">
         <img src="assets/images/tse_kung_fu_academy_logo.png" alt="Tse Kung Fu Academy Logo" class="h-14">
       </a>
       <button id="menu-toggle" class="text-white md:hidden">
@@ -49,6 +61,7 @@
       </button>
       <ul id="menu" class="hidden flex-col space-y-4 md:flex md:flex-row md:space-y-0 md:space-x-6 text-sm">
         <li><a href="#hero" class="hover:text-gray-300">Home</a></li>
+        <li><a href="enroll.html" class="hover:text-gray-300">Enroll</a></li>
         <li><a href="#about" class="hover:text-gray-300">About</a></li>
         <li><a href="#schedule" class="hover:text-gray-300">Schedule</a></li>
         <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
@@ -62,7 +75,7 @@
     <div class="bg-black bg-opacity-60 p-10 rounded text-center text-white">
       <h1 class="text-4xl font-bold mb-4">Choy Lee Fut Kung Fu Classes in Sydney North Shore</h1>
       <p class="text-lg mb-6">Self-Defence, Real Combat Kung Fu, Train your body, discipline your mind. Discover the path of martial arts excellence.</p>
-      <a href="#contact" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">Join Now</a>
+      <a href="enroll.html" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">Join Now</a>
     </div>
   </section>
 
@@ -70,7 +83,9 @@
   <section id="about" class="py-16 bg-white">
     <div class="container mx-auto px-6 text-center">
       <h2 class="text-3xl font-bold mb-6">About Our Choy Lee Fut Kung Fu</h2>
-      <p class="text-lg max-w-3xl mx-auto">Our Choy Lay Fut lineage is Hung Sing Choy Lay Fut, Fong Yuk Shu lineage.  This is most popular Southern Chinese martial arts, focusing on strength, flexibility, discipline, and philosophy. Learn authentic techniques passed down through generations in a friendly, supportive environment.</p>
+      <p class="text-lg max-w-3xl mx-auto">
+        Our Choy Lay Fut lineage is the Hung Sing Choy Lay Fut, Fong Yuk Shu lineage. This is one of the most popular Southern Chinese martial arts, focusing on strength, flexibility, discipline, and philosophy. Learn authentic techniques passed down through generations in a friendly, supportive environment.
+      </p>
     </div>
   </section>
 
@@ -78,7 +93,9 @@
   <section id="sifu" class="py-16 bg-white">
     <div class="container mx-auto px-6 text-center">
       <h2 class="text-3xl font-bold mb-6">About Sifu Angus</h2>
-      <p class="text-lg max-w-3xl mx-auto">Angus practiced Choy Lee Fut in Hong Kong for 20 years, a direct disciple of Grand Master Chu Shiu Ki. Angus is a 6th DANN from Hong Kong Chin Woo Authentic Association, the longest history Kung Fu assocucation. He practiced vaiours style, such as Muay Thai, Boxig, BJJ, Choi Mok, Chow Gar Southern Pray Mantis. Angus is an engineer, he can explain martial arts in a modrern scientific way.</p>
+      <p class="text-lg max-w-3xl mx-auto">
+        Angus practiced Choy Lee Fut in Hong Kong for 20 years and is a direct disciple of Grand Master Chu Shiu Ki. Angus holds a 6th DAN from the Hong Kong Chin Woo Authentic Association, the oldest Kung Fu association. He has also practiced various styles, such as Muay Thai, Boxing, BJJ, Choi Mok, and Chow Gar Southern Praying Mantis. As an engineer, Angus explains martial arts in a modern, scientific way.
+      </p>
     </div>
   </section>
 
@@ -97,6 +114,9 @@
           <p class="text-gray-700"><strong>Time:</strong> 9:30am - 11:30am</p>
           <p class="text-gray-700"><strong>Location:</strong> Marsfield Park, NSW 2122</p>
         </div>
+      </div>
+      <div class="text-center mt-8">
+        <a href="enroll.html" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">Join Now</a>
       </div>
     </div>
   </section>
@@ -132,6 +152,7 @@
     </div>
   </section>
 
+  <!-- BEGIN common page footer -->
   <!-- Footer -->
   <footer class="bg-black text-white text-center py-4">
     &copy; 2025 Kung Fu School. All rights reserved.
@@ -160,3 +181,4 @@
   </script>
 </body>
 </html>
+<!-- END common page footer -->
