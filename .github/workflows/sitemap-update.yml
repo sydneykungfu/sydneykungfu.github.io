@@ -40,3 +40,6 @@ jobs:
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Notify Google of Sitemap Update
+      run: curl -X POST "https://www.google.com/ping?sitemap=https://sydneykungfu.au/sitemap.xml"
