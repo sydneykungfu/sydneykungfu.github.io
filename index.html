@@ -214,22 +214,63 @@
     <div class="container mx-auto px-6">
       <h2 class="text-3xl font-bold text-center mb-8">Class Schedule</h2>
       <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-        <div class="bg-white shadow-md rounded-lg p-6">
+        <!-- Wednesday Schedule Item -->
+        <div class="bg-white shadow-md rounded-lg p-6 cursor-pointer" onclick="showDetails('wednesday')">
           <h3 class="text-xl font-bold mb-2">Wednesday</h3>
           <p class="text-gray-700"><strong>Time:</strong> 5:00pm - 7:00pm</p>
           <p class="text-gray-700"><strong>Location:</strong> Wahroonga Park, NSW 2076</p>
+          <div id="details-wednesday" class="hidden mt-2">
+            <div class="text-center mb-4">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1331.3978532929216!2d151.11700257706968!3d-33.71670577683284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a7eb580573e7%3A0x66924a3a81c19f81!2sWahroonga%20Park!5e1!3m2!1sen!2sau!4v1744445536823!5m2!1sen!2sau"
+                width="100%"
+                height="200"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"></iframe>
+            </div>
+            <div class="text-center">
+              <a href="enroll.html" class="mt-4 inline-block bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Enroll Now</a>
+            </div>
+          </div>
         </div>
-        <div class="bg-white shadow-md rounded-lg p-6">
+
+        <!-- Saturday Schedule Item -->
+        <div class="bg-white shadow-md rounded-lg p-6 cursor-pointer" onclick="showDetails('saturday')">
           <h3 class="text-xl font-bold mb-2">Saturday</h3>
           <p class="text-gray-700"><strong>Time:</strong> 9:30am - 11:30am</p>
           <p class="text-gray-700"><strong>Location:</strong> Marsfield Park, NSW 2122</p>
+          <div id="details-saturday" class="hidden mt-2">
+            <div class="text-center mb-4">
+              <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1661.9372302717045!2d151.10371516622013!3d-33.77075548074011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a67ad9232287%3A0xdc2772ff16bb6e30!2sVimiera%20Rd%2C%20Marsfield%20NSW%202122!5e1!3m2!1sen!2sau!4v1744445626091!5m2!1sen!2sau"
+              width="100%"
+              height="200"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"></iframe>
+            </div>
+            <div class="text-center">
+              <a href="enroll.html" class="mt-4 inline-block bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Enroll Now</a>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="text-center mt-8">
-        <a href="enroll.html" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">Get FREE Trial Now</a>
-      </div>
+    </div>
+    <div class="text-center mt-8">
+      <a href="enroll.html" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">Get FREE Trial Now</a>
     </div>
   </section>
+
+  <script>
+    function showDetails(day) {
+      // Show the selected day's details
+      const details = document.getElementById(`details-${day}`);
+      if (details) {
+        details.classList.toggle('hidden');
+      }
+    }
+  </script>
 
   <!-- Testimonials Section -->
   <section id="testimonials" style="padding: 4rem 1rem; background-color: #f9f9f9;">
