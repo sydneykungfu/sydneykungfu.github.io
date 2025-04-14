@@ -1,0 +1,22 @@
+@media (max-width: 768px) {
+    #menu {
+      background-color: rgba(0, 0, 0, 0.9); /* Dark background for mobile menu */
+      position: absolute;
+      top: 100%; /* Below the header */
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      z-index: 1000;
+    }
+
+    #menu a {
+      display: block;
+      padding: 0.5rem 0;
+      color: white;
+      text-align: center;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}

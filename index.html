@@ -39,10 +39,6 @@
       --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-    
     body {
       margin: 0;
       padding-top: 4rem; /* Height of fixed header */
@@ -77,62 +73,19 @@
       z-index: 50;
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
-
-    @media (max-width: 768px) {
-      #menu {
-        background-color: rgba(0, 0, 0, 0.9); /* Dark background for mobile menu */
-        position: absolute;
-        top: 100%; /* Below the header */
-        left: 0;
-        right: 0;
-        padding: 1rem;
-        z-index: 1000;
-      }
-
-      #menu a {
-        display: block;
-        padding: 0.5rem 0;
-        color: white;
-        text-align: center;
-      }
-    }
   </style>
 
+  <link rel="preload" as="image" href="assets/images/hero_01_compressed.png" />
   <!-- Load Tailwind CSS normally since critical styles are inlined -->
   <link rel="stylesheet" href="assets/css/tailwind.min.css">
-  <link rel="preload" as="image" href="assets/images/hero_01_compressed.png" />
+  <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" href="assets/images/favicon_io/favicon.ico" type="image/x-icon">
+  <script src="assets/js/navigation.js" defer></script>
 </head>
 <!-- END common page header -->
 <body class="bg-gray-100 font-sans text-gray-800">
   <!-- Navigation -->
   <div id="navigation-placeholder"></div>
-  <script>
-    // Dynamically load the navigation
-    fetch('includes/navigation.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navigation-placeholder').innerHTML = data;
-
-        // Add menu toggle functionality after navigation is loaded
-        const menuToggle = document.getElementById('menu-toggle');
-        const menu = document.getElementById('menu');
-        const menuLinks = menu.querySelectorAll('a');
-
-        menuToggle.addEventListener('click', () => {
-          menu.classList.toggle('hidden');
-        });
-
-        menuLinks.forEach(link => {
-          link.addEventListener('click', () => {
-            if (!menu.classList.contains('hidden')) {
-              menu.classList.add('hidden');
-            }
-          });
-        });
-      })
-      .catch(error => console.error('Error loading navigation:', error));
-  </script>
 
   <!-- Hero Section -->
   <section id="hero" class="min-h-screen flex items-center justify-center bg-cover bg-center">

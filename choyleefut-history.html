@@ -83,8 +83,9 @@
 
   <!-- Load Tailwind CSS normally since critical styles are inlined -->
   <link rel="stylesheet" href="assets/css/tailwind.min.css">
-  <link rel="preload" as="image" href="assets/images/hero_01_compressed.png" />
+  <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" href="assets/images/favicon_io/favicon.ico" type="image/x-icon">
+  <script src="assets/js/navigation.js" defer></script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -112,32 +113,6 @@
 <body class="bg-gray-100 font-sans text-gray-800">
   <!-- Navigation -->
   <div id="navigation-placeholder"></div>
-  <script>
-    // Dynamically load the navigation
-    fetch('includes/navigation.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navigation-placeholder').innerHTML = data;
-
-        // Add menu toggle functionality after navigation is loaded
-        const menuToggle = document.getElementById('menu-toggle');
-        const menu = document.getElementById('menu');
-        const menuLinks = menu.querySelectorAll('a');
-
-        menuToggle.addEventListener('click', () => {
-          menu.classList.toggle('hidden');
-        });
-
-        menuLinks.forEach(link => {
-          link.addEventListener('click', () => {
-            if (!menu.classList.contains('hidden')) {
-              menu.classList.add('hidden');
-            }
-          });
-        });
-      })
-      .catch(error => console.error('Error loading navigation:', error));
-  </script>
 
   <!-- History Section -->
   <div class="max-w-4xl mx-auto px-4 py-24">
