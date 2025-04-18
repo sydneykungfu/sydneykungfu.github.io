@@ -82,41 +82,6 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" href="assets/images/favicon_io/favicon.ico" type="image/x-icon">
   <script src="assets/js/navigation.js" defer></script>
-  <script>
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual';
-    }
-    window.addEventListener('beforeunload', () => {
-      sessionStorage.setItem('scrollPosition', window.scrollY);
-    });
-    window.addEventListener('load', () => {
-      const scrollPosition = sessionStorage.getItem('scrollPosition');
-      if (scrollPosition) {
-        window.scrollTo(0, parseInt(scrollPosition, 10));
-      }
-    });
-  </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const sections = document.querySelectorAll('section[id]');
-      const options = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.5, // Trigger when 50% of the section is visible
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const sectionId = entry.target.id;
-            history.pushState(null, '', `#${sectionId}`);
-          }
-        });
-      }, options);
-
-      sections.forEach((section) => observer.observe(section));
-    });
-  </script>
 </head>
 <!-- END common page header -->
 <body class="bg-gray-100 font-sans text-gray-800">
