@@ -82,6 +82,20 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" href="assets/images/favicon_io/favicon.ico" type="image/x-icon">
   <script src="assets/js/navigation.js" defer></script>
+  <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.addEventListener('beforeunload', () => {
+      sessionStorage.setItem('scrollPosition', window.scrollY);
+    });
+    window.addEventListener('load', () => {
+      const scrollPosition = sessionStorage.getItem('scrollPosition');
+      if (scrollPosition) {
+        window.scrollTo(0, parseInt(scrollPosition, 10));
+      }
+    });
+  </script>
 </head>
 <!-- END common page header -->
 <body class="bg-gray-100 font-sans text-gray-800">
@@ -125,7 +139,7 @@
       </p>
       <p class="text-lg max-w-3xl mx-auto mb-6">
         Choy Lee Fut offers a holistic path that trains both body and mind. It is ideal for students of all ages looking to build strength, confidence, and self-mastery through a deep, cultural tradition. <br/>
-        <a href="./choyleefut-history.html" class="text-blue-600 hover:underline" target="_blank">Learn about the Choy Lee Fut History</a>.
+        <a href="./choyleefut-history.html" class="text-blue-600 hover:underline">Learn about the Choy Lee Fut History</a>.
       </p>
       <p class="text-lg mb-4">
         <a href="enroll.html" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700 mb-4 inline-block">Get Local Classes FREE Trial</a>
