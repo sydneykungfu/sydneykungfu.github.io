@@ -23,7 +23,7 @@ jobs:
 
     - name: Generate sitemap
       run: |
-        npx sitemap-generator-cli https://sydneykungfu.au/ -o sitemap.xml
+        npx sitemap-generator-cli https://sydneykungfu.au/ -o sitemap.xml -l
 
     - name: Commit and push updated sitemap
       run: |
@@ -44,6 +44,3 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./  # Ensure the sitemap.xml is included in the root directory
-
-    - name: Notify Google of Sitemap Update
-      run: curl -X POST "https://www.google.com/ping?sitemap=https://sydneykungfu.au/sitemap.xml"
