@@ -112,28 +112,31 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Event",
+      "@type": "Service",
       "name": "Online Private Kung Fu Class",
       "description": "Book a 60-minute online private Kung Fu class tailored to your needs. Learn Choy Lee Fut Kung Fu from the comfort of your home.",
-      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "organizer": {
+      "provider": {
         "@type": "Organization",
         "name": "Tse Kung Fu Academy",
         "url": "https://sydneykungfu.au"
       },
-      "location": {
-        "@type": "VirtualLocation",
-        "url": "https://meet.google.com"
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://calendly.com/sydneykungfu/60-min-private-online-class",
+        "availableLanguage": ["English", "Chinese"]
       },
       "offers": {
         "@type": "Offer",
-        "url": "https://hardclutch.com",
+        "url": "https://hardclutch.com/products/choy-lee-fut-60-min-online-private-session-by-tse-kung-fu-academy",
         "price": "63",
         "priceCurrency": "AUD",
         "availability": "https://schema.org/InStock"
       }
     }
-  </script>
+    </script>
 </body>
 </html>
