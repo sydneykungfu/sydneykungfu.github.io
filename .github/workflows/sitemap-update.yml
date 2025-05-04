@@ -23,7 +23,7 @@ jobs:
 
     - name: Generate sitemap
       run: |
-        npx sitemap-generator-cli https://sydneykungfu.au/ -o sitemap.xml -l
+        npx sitemap-generator-cli https://sydneykungfu.au/ -o sitemap.xml -l 0 --ignore 404
 
     - name: Commit and push updated sitemap
       run: |
