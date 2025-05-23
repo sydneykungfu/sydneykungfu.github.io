@@ -20,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Sydney Kung Fu Movements | Tse Kung Fu Academy</title>
     <meta name="description" content="Explore a comprehensive list of Kung Fu movements in Choy Lee Fut categorized by type. Learn their Chinese names and Cantonese pronunciations.">
-    <meta name="keywords" content="Kung Fu Sydney, Learn Self-Defense in Sydney, Choy Lee Fut Kung Fu, Kung Fu Classes, Kung Fu School Near me, Martial Arts Class Free Trial, Choy Lee Fut Classes, 澳洲悉尼, 蔡李佛功夫, Self-Defense, Sydney, North Shore, Marsfield, Wahroonga, Local Kung Fu Class,Choy Lay Fut, Choy Lee Fut, Traditional Chinese Martial Arts">
+    <meta name="keywords" content="Kung Fu Classes Sydney, Learn Self-Defense in Sydney, Choy Lee Fut Kung Fu,蔡李佛招式,蔡李佛殺手鐧,蔡李佛十訣,Kung Fu Classes, Kung Fu School Near me, Martial Arts Class Free Trial, Choy Lee Fut Classes, 澳洲悉尼, 蔡李佛功夫, Self-Defense, Sydney, North Shore, Marsfield, Wahroonga, Local Kung Fu Class,Choy Lay Fut, Choy Lee Fut, Traditional Chinese Martial Arts">
     <meta name="author" content="Angus Tse">
     <meta property="og:title" content="Choy Lee Fut Kung Fu Movements | Tse Kung Fu Academy | Marsfield & Wahroonga, Sydney North Shore" />
     <meta property="og:description" content="Explore a comprehensive list of Kung Fu movements in Choy Lee Fut categorized by type. Learn their Chinese names and Cantonese pronunciations." />
@@ -49,6 +49,33 @@
     src="https://www.facebook.com/tr?id=603218188706963&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
+    <style>
+        .movement-row {
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .movement-row:hover {
+            background-color: rgb(243, 244, 246);
+        }
+
+        /* Modal animation */
+        .modal-enter {
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .image-indicator {
+            color: #4CAF50;
+            font-size: 1.2em;
+            width: 24px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 font-sans text-gray-800">
     <!-- Navigation -->
@@ -65,10 +92,12 @@
             <label for="filter-type" class="block text-lg font-medium text-gray-700 mb-2">Filter by Type:</label>
             <select id="filter-type" class="block w-full p-2 border border-gray-300 rounded"></select>
         </div>
+        <p class="text-sm text-gray-600 mt-2">Look for the 📷 icon and click on the row to view movement images</p>
 
         <table class="table-auto w-full bg-white shadow-md rounded-lg">
             <thead class="bg-gray-200">
                 <tr>
+                    <th class="px-4 py-2 w-8"></th>
                     <th class="px-4 py-2 text-left">Type</th>
                     <th class="px-4 py-2 text-left">Chinese Name</th>
                     <th class="px-4 py-2 text-left">Cantonese</th>
@@ -76,226 +105,271 @@
             </thead>
             <tbody>
                 <tr class="movement-row" data-type="Block 防">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Block 防</td>
                     <td class="border px-4 py-2">穿手</td>
                     <td class="border px-4 py-2">cyun sau</td>
                 </tr>
                 <tr class="movement-row" data-type="Block 防">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Block 防</td>
                     <td class="border px-4 py-2">擒拿</td>
                     <td class="border px-4 py-2">kam naa</td>
                 </tr>
                 <tr class="movement-row" data-type="Block 防">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Block 防</td>
                     <td class="border px-4 py-2">擸手</td>
                     <td class="border px-4 py-2">laap sau</td>
                 </tr>
                 <tr class="movement-row" data-type="Block 防">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Block 防</td>
                     <td class="border px-4 py-2">閘手</td>
                     <td class="border px-4 py-2">jaap sau</td>
                 </tr>
                 <tr class="movement-row" data-type="Elbow 肘">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Elbow 肘</td>
                     <td class="border px-4 py-2">擔肘</td>
                     <td class="border px-4 py-2">daam zau</td>
                 </tr>
                 <tr class="movement-row" data-type="Elbow 肘">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Elbow 肘</td>
                     <td class="border px-4 py-2">包肘</td>
                     <td class="border px-4 py-2">baau zau</td>
                 </tr>
                 <tr class="movement-row" data-type="Elbow 肘">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Elbow 肘</td>
                     <td class="border px-4 py-2">扱肘</td>
                     <td class="border px-4 py-2">haap zau</td>
                 </tr>
                 <tr class="movement-row" data-type="Elbow 肘">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Elbow 肘</td>
                     <td class="border px-4 py-2">拋肘</td>
                     <td class="border px-4 py-2">paau zau</td>
                 </tr>
                 <tr class="movement-row" data-type="Elbow 肘">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Elbow 肘</td>
                     <td class="border px-4 py-2">頂肘</td>
                     <td class="border px-4 py-2">ding zau</td>
                 </tr>
                 <tr class="movement-row" data-type="Fist 拳">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Fist 拳</td>
                     <td class="border px-4 py-2">掛捶</td>
                     <td class="border px-4 py-2">gwaa ceoi</td>
                 </tr>
                 <tr class="movement-row" data-type="Fist 拳">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Fist 拳</td>
                     <td class="border px-4 py-2">捎捶</td>
                     <td class="border px-4 py-2">siu ceoi</td>
                 </tr>
                 <tr class="movement-row" data-type="Fist 拳">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Fist 拳</td>
                     <td class="border px-4 py-2">插捶</td>
                     <td class="border px-4 py-2">caap ceoi</td>
                 </tr>
                 <tr class="movement-row" data-type="Fist 拳">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Fist 拳</td>
                     <td class="border px-4 py-2">搶眼捶</td>
                     <td class="border px-4 py-2">coeng ngaan ceoi</td>
                 </tr>
                 <tr class="movement-row" data-type="Fist 拳">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Fist 拳</td>
                     <td class="border px-4 py-2">陽插捶</td>
                     <td class="border px-4 py-2">joeng caap ceoi</td>
                 </tr>
                 <tr class="movement-row" data-type="Fist 拳">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Fist 拳</td>
                     <td class="border px-4 py-2">陰插捶</td>
                     <td class="border px-4 py-2">jam caap ceoi</td>
                 </tr>
                 <tr class="movement-row" data-type="Fist 拳">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Fist 拳</td>
                     <td class="border px-4 py-2">扭插捶</td>
                     <td class="border px-4 py-2">nau caap ceoi</td>
                 </tr>
                 <tr class="movement-row" data-type="Fist 拳">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Fist 拳</td>
                     <td class="border px-4 py-2">拋捶</td>
                     <td class="border px-4 py-2">paau ceoi</td>
                 </tr>
                 <tr class="movement-row" data-type="Fist 拳">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Fist 拳</td>
                     <td class="border px-4 py-2">扱捶</td>
                     <td class="border px-4 py-2">haap ceoi</td>
                 </tr>
                 <tr class="movement-row" data-type="Fist 拳">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Fist 拳</td>
                     <td class="border px-4 py-2">標捶</td>
                     <td class="border px-4 py-2">biu ceoi</td>
                 </tr>
                 <tr class="movement-row" data-type="Fist 拳">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Fist 拳</td>
                     <td class="border px-4 py-2">撞捶</td>
                     <td class="border px-4 py-2">zong ceoi</td>
                 </tr>
                 <tr class="movement-row" data-type="Fist 拳">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Fist 拳</td>
                     <td class="border px-4 py-2">鞭捶</td>
                     <td class="border px-4 py-2">bin ceoi</td>
                 </tr>
                 <tr class="movement-row" data-type="Block 防">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Block 防</td>
                     <td class="border px-4 py-2">盤橋</td>
                     <td class="border px-4 py-2">pun kiu</td>
                 </tr>
                 <tr class="movement-row" data-type="Block 防">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Block 防</td>
                     <td class="border px-4 py-2">捆橋</td>
                     <td class="border px-4 py-2">kwan kiu</td>
                 </tr>
                 <tr class="movement-row" data-type="Fist 拳">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Fist 拳</td>
                     <td class="border px-4 py-2">千字</td>
                     <td class="border px-4 py-2">cin zi</td>
                 </tr>
                 <tr class="movement-row" data-type="Fist 拳">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Fist 拳</td>
                     <td class="border px-4 py-2">劈捶</td>
                     <td class="border px-4 py-2">pik ceoi</td>
                 </tr>
                 <tr class="movement-row" data-type="Kick 腳">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Kick 腳</td>
                     <td class="border px-4 py-2">釘腳</td>
                     <td class="border px-4 py-2">ding goek</td>
                 </tr>
                 <tr class="movement-row" data-type="Kick 腳">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Kick 腳</td>
                     <td class="border px-4 py-2">正撐腳</td>
                     <td class="border px-4 py-2">zing caang goek</td>
                 </tr>
                 <tr class="movement-row" data-type="Kick 腳">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Kick 腳</td>
                     <td class="border px-4 py-2">側撐腳</td>
                     <td class="border px-4 py-2">zak caang goek</td>
                 </tr>
                 <tr class="movement-row" data-type="Kick 腳">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Kick 腳</td>
                     <td class="border px-4 py-2">後撐腳</td>
                     <td class="border px-4 py-2">hau caang goek</td>
                 </tr>
                 <tr class="movement-row" data-type="Palm 掌">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Palm 掌</td>
                     <td class="border px-4 py-2">披手</td>
                     <td class="border px-4 py-2">pei sau</td>
                 </tr>
                 <tr class="movement-row" data-type="Palm 掌">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Palm 掌</td>
                     <td class="border px-4 py-2">拋掌</td>
                     <td class="border px-4 py-2">paau zoeng</td>
                 </tr>
                 <tr class="movement-row" data-type="Palm 掌">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Palm 掌</td>
                     <td class="border px-4 py-2">撐掌</td>
                     <td class="border px-4 py-2">caang zoeng</td>
                 </tr>
                 <tr class="movement-row" data-type="Palm 掌">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Palm 掌</td>
                     <td class="border px-4 py-2">蝶掌</td>
                     <td class="border px-4 py-2">dip zoeng</td>
                 </tr>
                 <tr class="movement-row" data-type="Palm 掌">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Palm 掌</td>
                     <td class="border px-4 py-2">抱排掌</td>
                     <td class="border px-4 py-2">bou paai zoeng</td>
                 </tr>
                 <tr class="movement-row" data-type="Palm 掌">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Palm 掌</td>
                     <td class="border px-4 py-2">撻掌</td>
                     <td class="border px-4 py-2">taat zoeng</td>
                 </tr>
                 <tr class="movement-row" data-type="Palm 掌">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Palm 掌</td>
                     <td class="border px-4 py-2">虎爪</td>
                     <td class="border px-4 py-2">fu zaau</td>
                 </tr>
                 <tr class="movement-row" data-type="Palm 掌">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Palm 掌</td>
                     <td class="border px-4 py-2">冚掌</td>
                     <td class="border px-4 py-2">ham zoeng</td>
                 </tr>
                 <tr class="movement-row" data-type="Stance 馬步">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Stance 馬步</td>
                     <td class="border px-4 py-2">四平馬</td>
                     <td class="border px-4 py-2">sei ping maa</td>
                 </tr>
                 <tr class="movement-row" data-type="Stance 馬步">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Stance 馬步</td>
                     <td class="border px-4 py-2">吊馬</td>
                     <td class="border px-4 py-2">diu maa</td>
                 </tr>
                 <tr class="movement-row" data-type="Stance 馬步">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Stance 馬步</td>
                     <td class="border px-4 py-2">圈馬</td>
                     <td class="border px-4 py-2">kyun maa</td>
                 </tr>
                 <tr class="movement-row" data-type="Stance 馬步">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Stance 馬步</td>
                     <td class="border px-4 py-2">拐馬</td>
                     <td class="border px-4 py-2">gwaai maa</td>
                 </tr>
                 <tr class="movement-row" data-type="Stance 馬步">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Stance 馬步</td>
                     <td class="border px-4 py-2">偷馬</td>
                     <td class="border px-4 py-2">tau maa</td>
                 </tr>
                 <tr class="movement-row" data-type="Stance 馬步">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Stance 馬步</td>
                     <td class="border px-4 py-2">跪馬</td>
                     <td class="border px-4 py-2">gwai maa</td>
                 </tr>
                 <tr class="movement-row" data-type="Stance 馬步">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Stance 馬步</td>
                     <td class="border px-4 py-2">麒麟馬</td>
                     <td class="border px-4 py-2">kei lin maa</td>
                 </tr>
                 <tr class="movement-row" data-type="Stance 馬步">
+                    <td class="border px-4 py-2 text-center"></td>
                     <td class="border px-4 py-2">Stance 馬步</td>
                     <td class="border px-4 py-2">子午馬</td>
                     <td class="border px-4 py-2">zi ng maa</td>
@@ -309,10 +383,44 @@
         &copy; 2025 Tse Kung Fu Academy. All rights reserved.
     </footer>
 
+    <div id="moveModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white p-4 rounded-lg max-w-2xl w-full mx-4">
+            <div class="flex justify-between items-center mb-4">
+                <h3 id="modalTitle" class="text-xl font-bold"></h3>
+                <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+                    <span class="text-2xl">&times;</span>
+                </button>
+            </div>
+             <div id="modalImage" class="w-full h-96 bg-gray-100 mb-4 bg-contain bg-no-repeat bg-center"></div>
+            <p id="modalDescription" class="text-gray-600"></p>
+        </div>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const filterDropdown = document.getElementById('filter-type');
             const rows = document.querySelectorAll('.movement-row');
+            const modal = document.getElementById('moveModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalImage = document.getElementById('modalImage');
+            const closeModal = document.getElementById('closeModal');
+
+            const moveImages = {
+                '穿手': 'assets/images/moves/01-CyunSau.webp',
+                '擒拿': 'assets/images/moves/02-KamNaa.webp',
+                '掛捶': 'assets/images/moves/03-GaawCeoi.webp',
+                '捎捶': 'assets/images/moves/04-SiuCeoi.webp',
+                '插捶': 'assets/images/moves/05-CaapCeoi.webp',
+                '搶眼捶': 'assets/images/moves/05-CaapCeoi.webp',
+                '拋捶': 'assets/images/moves/06-PaauCeoi.webp',
+                '扱捶': 'assets/images/moves/07-HaapCeoi.webp',
+                '標捶': 'assets/images/moves/08-BiuCeoi.webp',
+                '頂肘': 'assets/images/moves/09-DingZau.webp',
+                '撞捶': 'assets/images/moves/10-ZongCeoi.webp',
+                '陰插捶': 'assets/images/moves/11-JamCaapCeoi.webp',
+                '陽插捶': 'assets/images/moves/12-JoengCaapCeoi.webp',
+                '扭插捶': 'assets/images/moves/11-JamCaapCeoi.webp',
+            };
 
             // Generate unique filter options
             const types = new Set(['all']);
@@ -327,7 +435,6 @@
             // Add filtering functionality
             filterDropdown.addEventListener('change', function () {
                 const selectedType = this.value;
-
                 rows.forEach(row => {
                     if (selectedType === 'all' || row.dataset.type === selectedType) {
                         row.style.display = '';
@@ -335,6 +442,51 @@
                         row.style.display = 'none';
                     }
                 });
+            });
+
+            // Add image indicators
+            rows.forEach(row => {
+                const chineseName = row.querySelector('td:nth-child(3)').textContent;
+                const indicatorCell = row.querySelector('td:first-child');
+                if (moveImages[chineseName]) {
+                    indicatorCell.innerHTML = '<span class="image-indicator" title="Click to view image">📷</span>';
+                }
+            });
+
+            // Update row click handler to use new column structure
+            rows.forEach(row => {
+                row.addEventListener('click', () => {
+                    const chineseName = row.querySelector('td:nth-child(3)').textContent;
+                    const cantonese = row.querySelector('td:nth-child(4)').textContent;
+                    
+                    if (moveImages[chineseName]) {
+                        modalTitle.textContent = `${chineseName} (${cantonese})`;
+                        modalImage.style.backgroundImage = `url('${moveImages[chineseName]}')`;
+                        modal.classList.remove('hidden');
+                        modal.classList.add('flex', 'modal-enter');
+                    }
+                });
+            });
+
+            // Close modal handlers
+            closeModal.addEventListener('click', () => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex', 'modal-enter');
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex', 'modal-enter');
+                }
+            });
+
+            // Close on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex', 'modal-enter');
+                }
             });
         });
     </script>
