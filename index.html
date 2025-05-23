@@ -64,6 +64,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: background-image 0.2s ease-in-out;
     }
 
     /* Critical header styles */
@@ -77,6 +78,12 @@
   </style>
 
   <link rel="preload" as="image" href="assets/images/hero_01_compressed.webp" />
+  <link rel="preload" as="image" href="assets/images/class-01.webp" />
+  <link rel="preload" as="image" href="assets/images/class-02.webp" />
+  <link rel="preload" as="image" href="assets/images/moves/01-CyunSau.webp" />
+  <link rel="preload" as="image" href="assets/images/moves/04-SiuCeoi.webp" />
+  <link rel="preload" as="image" href="assets/images/moves/09-DingZau.webp" />
+  <link rel="preload" as="image" href="assets/images/moves/10-ZongCeoi.webp" />
   <!-- Load Tailwind CSS normally since critical styles are inlined -->
   <link rel="stylesheet" href="assets/css/tailwind.min.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="assets/css/styles.css" media="print" onload="this.media='all'">
@@ -463,6 +470,33 @@
         "priceCurrency": "AUD"
       }
     }
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const heroElement = document.getElementById('hero');
+        const images = [
+            'assets/images/hero_01_compressed.webp',
+            'assets/images/class-01.webp',
+            'assets/images/class-02.webp',
+            'assets/images/moves/01-CyunSau.webp',
+            'assets/images/moves/04-SiuCeoi.webp',
+            'assets/images/moves/05-CaapCeoi.webp',
+        ];
+        
+        let currentImageIndex = 0;
+
+        function rotateHeroImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            const nextImage = images[currentImageIndex];
+            heroElement.style.backgroundImage = `url('${nextImage}')`;
+        }
+
+        // Set initial image
+        heroElement.style.backgroundImage = `url('${images[0]}')`;
+        
+        // Start rotation
+        setInterval(rotateHeroImage, 2000);
+    });
   </script>
 </body>
 </html>
