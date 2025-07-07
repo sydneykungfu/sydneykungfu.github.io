@@ -136,8 +136,7 @@
         alt="Choy Lee Fut Kung Fu Sydney"
         class="w-full max-w-lg mx-auto shadow-md mb-6"
         style="max-width: 500px; max-height: 500px; aspect-ratio: 1 / 1; object-fit: cover;"
-        loading="lazy"
-      >
+      />
     </div>
   </section>
 
@@ -482,6 +481,7 @@
     document.addEventListener('DOMContentLoaded', () => {
         const heroElement = document.getElementById('hero-image');
         const images = [
+            'assets/images/hero_01_compressed.webp',
             'assets/images/hero-images/IMG_0883.webp',
             'assets/images/hero-images/IMG_1040.webp',
             'assets/images/hero-images/01-CyunSau.webp',
@@ -502,7 +502,7 @@
         heroElement.src = images[0];
 
         // Start rotation
-        setInterval(rotateHeroImage, 2000);
+        setInterval(rotateHeroImage, 3000);
     });
   </script>
 </body>
