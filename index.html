@@ -101,7 +101,7 @@
   <div id="navigation-placeholder"></div>
 
   <!-- Hero Section -->
-  <section id="hero2" class="bg-white">
+  <section id="hero1" class="bg-white">
     <div class="bg-black bg-opacity-60 p-10 text-center text-white mx-auto">
       <h1 class="text-4xl font-bold mb-4">Kung Fu Class Sydney Choy Lee Fut</h1>
       <p class="text-lg mb-6">
@@ -128,16 +128,6 @@
       
       <a href="#schedule" class="font-semibold">👉🏼 Sydney Kung Fu Class Schedule</a><br/>
     </div>
-
-    <div class="container mx-auto text-center">
-      <img
-        id="hero-image"
-        src="assets/images/hero_01_compressed.webp"
-        alt="Choy Lee Fut Kung Fu Sydney"
-        class="w-full max-w-lg mx-auto shadow-md mb-6"
-        style="max-width: 500px; max-height: 500px; aspect-ratio: 1 / 1; object-fit: cover;"
-      />
-    </div>
   </section>
 
   <!-- About Section -->
@@ -146,6 +136,7 @@
       <h2 class="text-3xl font-bold mb-6">Why Choose Our Kung Fu Classes in Sydney?</h2>
       <p class="text-lg max-w-3xl mx-auto mb-6">
         Looking for "kung fu sydney" or "kung fu classes" near you? Tse Kung Fu Academy provides expert-led Choy Lee Fut Kung Fu classes in Sydney North Shore, Marsfield, and Wahroonga. Our classes are suitable for kids, teens, and adults, focusing on self-defense, fitness, and traditional martial arts values.
+        We offer small class with hands on training and real combat Kung Fu classes in Sydney.
       </p>
       <p class="text-lg max-w-3xl mx-auto mb-6">
         Choy Lee Fut (蔡李佛) is a powerful traditional Kung Fu. It blends powerful hand techniques, dynamic footwork, and internal development.
@@ -160,6 +151,38 @@
       <p class="text-lg mb-4">
         <a href="enroll.html" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700 mb-4 inline-block">Get Local Classes FREE Trial</a>
       </p>
+    </div>
+  </section>
+
+  <!-- Hero2 Section -->
+  <section id="hero2" class="bg-white">
+    <div class="bg-black bg-opacity-60 p-10 text-center text-white mx-auto">
+    <div class="container mx-auto text-center">
+      <img
+        id="hero-image"
+        src="assets/images/hero_01_compressed.webp"
+        alt="Choy Lee Fut Kung Fu Sydney"
+        class="w-full max-w-lg mx-auto shadow-md mb-6"
+        style="max-width: 500px; max-height: 500px; aspect-ratio: 1 / 1; object-fit: cover;"
+      />
+      
+      <!-- Image Controls -->
+      <div class="flex justify-center items-center gap-4 mt-4">
+        <button id="prev-btn" class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded border border-gray-600 transition-all duration-200 font-medium">
+          ◀
+        </button>
+        <button id="play-pause-btn" class="bg-gray-800 hover:bg-red-700 text-white px-4 mx-4 py-2 rounded border border-red-500 transition-all duration-200 font-medium shadow-md">
+          ⏸︎
+        </button>
+        <button id="next-btn" class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded border border-gray-600 transition-all duration-200 font-medium">
+           ▶
+        </button>
+      </div>
+      
+      <!-- Image Counter -->
+      <div class="text-center mt-2 text-sm text-white opacity-80">
+        <span id="image-counter">1</span> of <span id="total-images">7</span>
+      </div>
     </div>
   </section>
 
@@ -480,6 +503,12 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
         const heroElement = document.getElementById('hero-image');
+        const prevBtn = document.getElementById('prev-btn');
+        const playPauseBtn = document.getElementById('play-pause-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const imageCounter = document.getElementById('image-counter');
+        const totalImages = document.getElementById('total-images');
+        
         const images = [
             'assets/images/hero_01_compressed.webp',
             'assets/images/hero-images/IMG_0883.webp',
@@ -491,18 +520,56 @@
         ];
         
         let currentImageIndex = 0;
+        let isPlaying = true;
+        let rotationInterval;
+
+        function updateImage() {
+            heroElement.src = images[currentImageIndex];
+            imageCounter.textContent = currentImageIndex + 1;
+        }
 
         function rotateHeroImage() {
             currentImageIndex = (currentImageIndex + 1) % images.length;
-            const nextImage = images[currentImageIndex];
-            heroElement.src = nextImage;
+            updateImage();
         }
 
-        // Set initial image
-        heroElement.src = images[0];
+        function showPreviousImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            updateImage();
+            togglePlayPause(true); // Pause after manual change
+        }
+
+        function showNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            updateImage();
+            togglePlayPause(true); // Pause after manual change
+        }
+
+        function togglePlayPause(e, forcePause = false) {
+            if (forcePause || isPlaying) {
+                // Pause
+                clearInterval(rotationInterval);
+                playPauseBtn.innerHTML = '▶';
+                isPlaying = false;
+            } else {
+                // Play
+                rotationInterval = setInterval(rotateHeroImage, 3000);
+                playPauseBtn.innerHTML = '⏸︎';
+                isPlaying = true;
+            }
+        }
+
+        // Event listeners
+        prevBtn.addEventListener('click', showPreviousImage);
+        nextBtn.addEventListener('click', showNextImage);
+        playPauseBtn.addEventListener('click', togglePlayPause);
+
+        // Set initial image and counter
+        updateImage();
+        totalImages.textContent = images.length;
 
         // Start rotation
-        setInterval(rotateHeroImage, 3000);
+        rotationInterval = setInterval(rotateHeroImage, 3000);
     });
   </script>
 </body>
