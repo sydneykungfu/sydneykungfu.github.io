@@ -1,0 +1,20 @@
+---
+layout: default
+title: Blog | Kung Fu Sydney | Choy Lee Fut Tse Academy
+description: Read the latest blog posts from Tse Kung Fu Academy, Sydney. Authentic Choy Lee Fut Kung Fu insights, news, and updates.
+---
+
+<main class="container px-4 py-6">
+  <h1 class="text-2xl">Blog</h1>
+  <ul>
+    {% assign blog_pages = site.pages | where_exp: "page", "page.path != 'blog/index.html'" %}
+    {% assign blog_pages = blog_pages | sort: "date" | reverse %}
+    {% for page in blog_pages %}
+      <li class="mb-2">
+        <a href="/{{ page.path }}" class="text-blue-500 hover:underline font-semibold">{{ page.title | default: page.url }}</a>
+        {% if page.date %}<span class="text-gray-500 text-xs ml-2">{{ page.date | date: "%Y-%m-%d" }}</span>{% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+  <p class="mt-8 text-sm text-gray-400">To add a new blog post, create a new HTML or Markdown file in the <code>/blog</code> folder. It will appear here automatically.</p>
+</main> 
