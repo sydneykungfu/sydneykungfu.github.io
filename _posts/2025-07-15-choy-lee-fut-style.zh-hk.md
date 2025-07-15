@@ -30,7 +30,7 @@ meta:
 着 ⼀ 個 正 確 的 ⽬ 標 來 攻 擊 對 敵 者 的 任 何 部 位
 ， 這 是 蔡 李 佛 派 術 的 特 有 風 格 。
 
-<img src="/assets/images/blogs/choy-lee-fut-style-01.png" alt="蔡李佛元⽼杜漢璋與作者朱紹基"  class="h-96 mx-auto rounded-lg shadow-lg"/>
+<img src="/assets/images/blogs/choy-lee-fut-style-01.png" alt="蔡李佛元⽼杜漢璋與作者朱紹基"  class="max-h-80 mx-auto rounded-lg shadow-lg"/>
 
 雖 然 蔡 李 佛 派 拳 術 ， 沒 有 固 定 的 招 式 以
 攻 擊 敵 ⼈ ， 然 ⽽ ， 其 特 有 的 ⼿ 法 却 可 非 常 顯
