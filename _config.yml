@@ -1,1 +1,3 @@
 permalink: /blog/:title:output_ext
+plugins:
+  - jekyll-sitemap
