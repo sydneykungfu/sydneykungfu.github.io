@@ -27,11 +27,11 @@
   <meta property="og:title" content="{{page.meta.og.title | default: page.title}}" />
   <meta property="og:description" content="{{page.meta.og.description | default: page.meta.description}}" />
   <meta property="og:image" content="{{page.meta.og.image | default: '/assets/images/hero_01_compressed.png'}}" />
-  <meta property="og:url" content="{{page.meta.og.url}}" />
+  <meta property="og:url" content="{{page.meta.og.url | default: page.url}}" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{{page.meta.twitter.title | default: page.title}}" />
-  <meta name="twitter:description" content="{{page.meta.twitter.description | default: page.meta.og.description}}" />
+  <meta name="twitter:description" content="{{page.meta.twitter.description | default: page.meta.description}}" />
   <meta name="twitter:image" content="{{page.meta.twitter.image | default: '/assets/images/hero_01_compressed.png'}}" />
   <link rel="canonical" href="{{site.url}}{{page.canonical}}" />
   {% if page.alt.url and page.alt.lang  %}

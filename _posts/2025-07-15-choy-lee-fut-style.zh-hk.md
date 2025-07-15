@@ -10,6 +10,8 @@ canonical: /blog/choy-lee-fut-style.en.html
 meta:
   description: 蔡李佛拳種介紹，探討蔡李佛派的拳術理念、運動意義與實戰特點。了解朱紹基師傅著作，認識中國傳統功夫的精髓與十法心法。
   keywords: 蔡李佛, 蔡李佛拳, 朱紹基, 中國功夫, 傳統武術, 拳術, 十法, 心法, 功夫教學, 實戰武術, 武術歷史, Choy Lee Fut, Chinese Kung Fu, Kung Fu Sydney
+  og: 
+    image: /assets/images/blogs/choy-lee-fut-style-01.png
 ---
 
 ## 拳的意識形態
@@ -27,6 +29,9 @@ meta:
 風 ⾶ 絮 ， 然 ⽽ 却 有 條 不 紊 ， 其 ⽬ 的 固 然 是 有
 着 ⼀ 個 正 確 的 ⽬ 標 來 攻 擊 對 敵 者 的 任 何 部 位
 ， 這 是 蔡 李 佛 派 術 的 特 有 風 格 。
+
+<img src="/assets/images/blogs/choy-lee-fut-style-01.png" alt="蔡李佛元⽼杜漢璋與作者朱紹基"  class="h-96 mx-auto rounded-lg shadow-lg"/>
+
 雖 然 蔡 李 佛 派 拳 術 ， 沒 有 固 定 的 招 式 以
 攻 擊 敵 ⼈ ， 然 ⽽ ， 其 特 有 的 ⼿ 法 却 可 非 常 顯
 明 地 於 實 戰 中 運 ⽤ 出 來 。 在 蔡 李 佛 派 拳 術 中
