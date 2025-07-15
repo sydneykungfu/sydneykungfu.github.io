@@ -20,3 +20,29 @@
 html {
     scroll-behavior: smooth;
 }
+
+.blog-container h1 {
+  color: #080808; /* Tailwind red-700 */
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.blog-container h2 {
+  color: #080808;; /* Tailwind blue-700 */
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.blog-container a {
+  color: #1d4ed8; /* Tailwind blue-700 */
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.blog-container p {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}

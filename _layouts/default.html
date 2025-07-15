@@ -1,6 +1,6 @@
 <!-- BEGIN common page header -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{page.lang | default: 'en'}}">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXVEYWLYKY"></script>
@@ -33,7 +33,10 @@
   <meta name="twitter:title" content="{{page.meta.twitter.title | default: page.title}}" />
   <meta name="twitter:description" content="{{page.meta.twitter.description | default: page.meta.og.description}}" />
   <meta name="twitter:image" content="{{page.meta.twitter.image | default: '/assets/images/hero_01_compressed.png'}}" />
-  <link rel="canonical" href="{{page.canonical}}" />
+  <link rel="canonical" href="{{site.url}}{{page.canonical}}" />
+  {% if page.alt.url and page.alt.lang  %}
+  <link rel="alternate" hreflang="{{page.alt.lang}}" href="{{site.url}}{{page.alt.url}}" />
+  {% endif %}
   <style>
     /* Critical CSS for immediate render */
     :root {
@@ -94,6 +97,7 @@
   <div id="navigation-placeholder"></div>
 
   {{ content }}
+
 </body>
 </html>
 <!-- END common page footer -->
