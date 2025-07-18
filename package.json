@@ -1,0 +1,24 @@
+{
+  "name": "sydneykungfu.github.io",
+  "version": "1.0.0",
+  "description": "## Update tailwind.min.css",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sydneykungfu/sydneykungfu.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sydneykungfu/sydneykungfu.github.io/issues"
+  },
+  "homepage": "https://github.com/sydneykungfu/sydneykungfu.github.io#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "tailwindcss": "^4.1.11"
+  }
+}
