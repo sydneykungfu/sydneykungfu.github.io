@@ -25,7 +25,7 @@ Translate the blog post to English from Traditional Chinese Hong Kong.
 拋肘	paau zau
 頂肘	ding zau
 掛搥	gwaa ceoi
-捎搥	siu ceoi
+捎搥	saau ceoi
 插搥	caap ceoi
 搶眼搥	coeng ngaan ceoi
 陽插搥	joeng caap ceoi
