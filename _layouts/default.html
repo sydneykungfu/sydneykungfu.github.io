@@ -33,7 +33,11 @@
   <meta name="twitter:title" content="{{page.meta.twitter.title | default: page.title}}" />
   <meta name="twitter:description" content="{{page.meta.twitter.description | default: page.meta.description}}" />
   <meta name="twitter:image" content="{{page.meta.twitter.image | default: '/assets/images/hero_01_compressed.png'}}" />
+  {% if page.canonical == true %}
+  <link rel="canonical" href="{{site.url}}{{page.url}}" />
+  {% elsif page.canonical %}
   <link rel="canonical" href="{{site.url}}{{page.canonical}}" />
+  {% endif %}
   {% if page.alt.url and page.alt.lang  %}
   <link rel="alternate" hreflang="{{page.alt.lang}}" href="{{site.url}}{{page.alt.url}}" />
   {% endif %}
