@@ -10,6 +10,8 @@ Translate the blog post to English from Traditional Chinese Hong Kong.
 5. Use dictionary section for the translation of the movements first
 6. 蔡李佛 need always keep the original name in Trandtional Chinese after "Choy Lee Fut". 
 7. New file name need to follow the reference. Replace zh-hk.md to en.md only
+8. Follw the jekyll markdown header
+9. Make the en version as canonoical.
 
 # Dictionary Section 
 
