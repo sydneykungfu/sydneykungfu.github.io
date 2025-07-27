@@ -4,7 +4,9 @@
   "description": "## Update tailwind.min.css",
   "main": "tailwind.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/tailwind.min.css --minify",
+    "watch:css": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/tailwind.min.css --watch"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,9 @@
   "homepage": "https://github.com/sydneykungfu/sydneykungfu.github.io#readme",
   "devDependencies": {
     "concurrently": "^9.2.0",
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "^2.2.19",
+    "mcp-server-gsc": "^0.2.0"
+  },
+  "dependencies": {
   }
 }

@@ -29,5 +29,4 @@ COPY . .
 EXPOSE 4000
 
 # Serve the site
-# CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--livereload"] 
-CMD ["npx", "concurrently", "\"npx tailwindcss -i ./assets/css/input.css -o ./assets/css/tailwind.min.css --minify --watch\"", "\"bundle exec jekyll serve --host 0.0.0.0 --livereload\""]
+CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--livereload"]
