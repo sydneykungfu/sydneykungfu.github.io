@@ -12,6 +12,8 @@ meta:
   keywords: "Choy Lee Fut, 蔡李佛, Tsang Ciu Jyu, Buk Sing Choy Lee Fut, Jam Joeng, Gong Jau, Heoi Sat, Tau Lau, Soeng Saang Soeng Hak, mutual generation, mutual restraint, martial arts philosophy, kung fu principles, Chinese martial arts, self-defense, martial arts strategy, kung fu theory, martial arts explanation, traditional kung fu, martial arts balance, martial arts harmony, martial arts relationships"
   og:
     image: /assets/images/blogs/choy-lee-fut-buk-sing-concepts-01.png
+blog:
+  showMagazineNote: true
 ---
 
 Chinese martial arts are profound and vast. Even a lifetime of study may not reveal the entirety of a single style. I, Tsang Ciu Jyu, humbly share my limited understanding from years of research, focusing on the concepts of Jam Joeng 陰陽 (Yin Yang), Gong Jau 剛柔 (Hard and Soft), Heoi Sat 虛實 (Empty and Solid), Tau Lau 偷漏 (Steal and Leak), Soeng Saang Soeng Hak 相生相尅 (Mutual Generation and Mutual Restraint), and the methods of power generation and chaining techniques:

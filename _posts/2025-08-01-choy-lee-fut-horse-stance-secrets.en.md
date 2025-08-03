@@ -12,6 +12,8 @@ meta:
   keywords: "Choy Lee Fut 蔡李佛, horse stance, Maa Bou 馬步, Sei Ping Maa 四平馬, Zi Ng Maa 子午馬, Diu Maa 吊馬, Gwaai Maa 拐馬, Tau Maa 偷馬, Lee Koon Hung, kung fu stances, martial arts training, stance fundamentals, kung fu basics, Chinese martial arts, stance secrets, balance training, power generation, martial arts foundation, traditional kung fu, stance techniques, kung fu forms, martial arts stance, horse stance training, kung fu stance secrets"
   og: 
     image: /assets/images/blogs/choy-lee-fut-horse-stance-01.png
+blog:
+  showMagazineNote: true
 ---
 
 In Chinese martial arts, the horse stance holds a very important position. Traditionally, one should practice horse stance before learning fist techniques—this is the proper path of martial arts training. Those who deviate from this path will find it difficult to achieve ideal martial arts proficiency. It can be said that regardless of any martial art style, horse stance must serve as the foundation. If horse stance is not practiced well, even excellent fist techniques become like a mirage, difficult to put into practice.

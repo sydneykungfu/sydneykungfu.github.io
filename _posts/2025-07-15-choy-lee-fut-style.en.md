@@ -12,6 +12,8 @@ meta:
   keywords: Choy Lee Fut, Choy Li Fut, Chinese Kung Fu, traditional martial arts, Ten Methods, Chu Siu Ki, self-defense, kung fu philosophy, martial arts training, kung fu Sydney, Chinese martial arts, kung fu techniques, kung fu history, kung fu forms
   og: 
     image: /assets/images/blogs/choy-lee-fut-style-01.png
+blog:
+  showMagazineNote: true
 ---
 
 

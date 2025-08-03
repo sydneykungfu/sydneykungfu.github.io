@@ -12,6 +12,8 @@ meta:
   keywords: 蔡李佛, 木人椿, 木人樁, 蔡李佛拳, 傳統武術, 中國功夫, 功夫訓練, 實戰武術, 拳術, 步法, 手法, 蘇金福, 鴻勝蔡李佛, 武術歷史, 功夫教學, 木人樁訓練, 木人椿法
   og: 
     image: /assets/images/blogs/choy-lee-fut-wooden-dummy-02.png
+blog:
+  showMagazineNote: true
 ---
 
 鴻 勝 蔡 李 佛 ⽊ ⼈ 椿 法 以 各 種 挙 的 綜 合 ⼿

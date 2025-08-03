@@ -12,6 +12,8 @@ meta:
   keywords: "Choy Lee Fut 蔡李佛, horse stance, Maa Bou 馬步, Sei Ping Maa 四平馬, Zi Ng Maa 子午馬, Diu Maa 吊馬, Gwaai Maa 拐馬, Tau Maa 偷馬, Lee Koon Hung, kung fu stances, martial arts training, stance fundamentals, kung fu basics, Chinese martial arts, stance secrets, balance training, power generation, martial arts foundation, traditional kung fu, stance techniques, kung fu forms, martial arts stance, horse stance training, kung fu stance secrets"
   og: 
     image: /assets/images/blogs/choy-lee-fut-horse-stance-01.png
+blog:
+  showMagazineNote: true
 ---
 
 在 中 國 武 術 上 ， ⾺ 步 所 佔 的 地 位 非 常 重

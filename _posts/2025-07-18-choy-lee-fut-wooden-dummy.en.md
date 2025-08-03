@@ -12,6 +12,8 @@ meta:
   keywords: Choy Lee Fut, muk yan coeng, muk yan zong, Choy Lee Fut Kyun, traditional martial arts, Chinese kung fu, kung fu training, practical martial arts, fist techniques, footwork, So Gam Fok, Hung Sing Choy Lee Fut, martial arts history, kung fu teaching, wooden dummy training, muk yan coeng faat
   og: 
     image: /assets/images/blogs/choy-lee-fut-wooden-dummy-02.png
+blog:
+  showMagazineNote: true
 ---
 
 Hung Sing Choy Lee Fut 鴻勝蔡李佛⽊⼈椿法 (Wooden Dummy Techniques) integrates various hand techniques for comprehensive training. In different environments, the use of various hand methods aims to train bridge-arm strength, agile footwork, quick hands, sharp eyesight, and spirit. The hand techniques combine many forms from Choy Lee Fut, including sap jing kyun (⼗ 形 拳), ng jing zang (五 形 拳), fut kyun (佛 拳), kao daa suk (靠 打 拳), mui faa zoeng (梅 花

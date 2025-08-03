@@ -15,24 +15,54 @@ layout: default
     </section>
     {% endif %}
 
-    {{ content }}
+    {% if page.blog.showMagazineNote %}
+    <section class="text-center text-sm italic border border-gray-300 p-2">
+        {% if page.lang == 'zh-hk' %}
+        此文章刊登於 1970年代《蔡李佛》雜誌。⽅⽟書同學會督印，朱紹基主編。 
+        轉載請註明以上及 sydneykungfu.au 出處。
+        如有版權問題，請<a href="/#contact">聯絡我們</a>。
+        {% endif %}
+        {% if page.lang == 'en' %}
+        This article was published in the 1970s Choy Lee Fut magazine. Fong Yuk Shu Alumni Assoc. Press, Chu Shiu Ki Edited.
+        Please credit the above and sydneykungfu.au when sharing content.
+        <a href="/#contact">Contact us</a> for any copyright issues.
+        {% endif %}
+    </section>
+    {% endif %}
 
+    <section class="p-2">
+    {{ content }}
+    </section>
+
+    <section class="text-center mb-2">
     {% if page.lang == 'en' %}
-    <section class="text-center py-6">
         <a href="/enroll.html">Enroll Now</a>
         | 
         <a href="/blog">More Articles</a>
         |
         <a href="/">Back to Home</a>
-    </section>
     {% endif %}
     {% if page.lang == 'zh-hk' %}
-    <section class="text-center">
         <a href="/enroll.html">報名</a>
         | 
         <a href="/blog">更多文章</a>
         |
         <a href="/">返回主頁</a>
+    {% endif %}
+    </section>
+
+    {% if page.blog.showMagazineNote %}
+    <section class="text-center text-sm italic border border-gray-300 p-2">
+        {% if page.lang == 'zh-hk' %}
+        此文章刊登於 1970年代《蔡李佛》雜誌。⽅⽟書同學會督印，朱紹基主編。 
+        轉載請註明以上及 sydneykungfu.au 出處。
+        如有版權問題，請<a href="/#contact">聯絡我們</a>。
+        {% endif %}
+        {% if page.lang == 'en' %}
+        This article was published in the 1970s Choy Lee Fut magazine. Fong Yuk Shu Alumni Assoc. Press, Chu Shiu Ki Edited.
+        Please credit the above and sydneykungfu.au when sharing content.
+        <a href="/#contact">Contact us</a> for any copyright issues.
+        {% endif %}
     </section>
     {% endif %}
 </main>

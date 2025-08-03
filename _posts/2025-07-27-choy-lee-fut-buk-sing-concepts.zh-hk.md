@@ -12,6 +12,8 @@ meta:
   keywords: "Choy Lee Fut, 蔡李佛, 曾昭宇, 北勝蔡李佛, 陰陽, 偷漏, 連還插拳, 插搥, 相生相尅, mutual generation, mutual restraint, martial arts philosophy, kung fu principles, Chinese martial arts, self-defense, martial arts strategy, kung fu theory, 相生, 相尅, martial arts explanation, 功夫理論, 傳統武術, martial arts balance, martial arts harmony, martial arts relationships"
   og: 
     image: /assets/images/blogs/choy-lee-fut-buk-sing-concepts-01.png
+blog:
+  showMagazineNote: true
 ---
 
 我 國 之 武 術 ， 精 深 淵 博 ， 即 窮 畢 ⽣ 之 研

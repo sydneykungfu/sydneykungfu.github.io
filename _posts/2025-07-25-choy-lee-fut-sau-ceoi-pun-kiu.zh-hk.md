@@ -12,6 +12,8 @@ meta:
   keywords: 蔡李佛, 蟠橋, 盤橋, 捎搥, 杜漢璋, 朱紹基, 中國功夫, 傳統武術, 功夫技術, 實戰應用, 發力技巧, 攻防要訣, 功夫悉尼, 蔡李佛功夫, 功夫教學, 武術技巧, 功夫歷史, 功夫形式, 蟠橋技術, 捎搥技術, 功夫實戰
   og: 
     image: /assets/images/blogs/choy-lee-fut-pun-kiu-10.png
+blog:
+  showMagazineNote: true
 ---
 
 # 蟠 橋

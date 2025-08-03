@@ -12,6 +12,8 @@ meta:
   keywords: 蔡李佛, 蔡李佛拳, 朱紹基, 中國功夫, 傳統武術, 拳術, 十法, 心法, 功夫教學, 實戰武術, 武術歷史, Choy Lee Fut, Chinese Kung Fu, Kung Fu Sydney
   og: 
     image: /assets/images/blogs/choy-lee-fut-style-01.png
+blog:
+  showMagazineNote: true
 ---
 
 ## 拳的意識形態

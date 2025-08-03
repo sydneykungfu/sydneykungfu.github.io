@@ -12,6 +12,8 @@ meta:
   keywords: "Choy Lee Fut 蔡李佛, Pun Kiu 蟠橋, Pan Kiu 盤橋, Sau Ceoi 捎搥, Du Hon Cheung, Chu Siu Kee, Chinese Kung Fu, traditional martial arts, kung fu techniques, practical applications, power generation, combat principles, kung fu Sydney, Choy Lee Fut 蔡李佛 kung fu, kung fu teaching, martial arts techniques, kung fu history, kung fu forms, Pun Kiu techniques, Sau Ceoi techniques, kung fu combat"
   og: 
     image: /assets/images/blogs/choy-lee-fut-pun-kiu-10.png
+blog:
+  showMagazineNote: true
 ---
 
 # Pun Kiu 蟠橋
