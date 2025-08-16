@@ -19,12 +19,30 @@ meta:
     Please credit sydneykungfu.au when sharing content.
 </section>
 
-<div class="mb-8">
+<!-- Sticky filter: no mb-8 here, and ensure it's not inside a parent with margin/padding -->
+<div class="sticky z-20 bg-white bg-opacity-95 border-b border-gray-200 py-4" style="top: 76px">
   <input id="lineage-filter" type="text" placeholder="Filter by name..." class="border border-gray-300 rounded px-3 py-2 w-full text-xl" />
 </div>
+<!-- Add margin below sticky filter for spacing -->
+<div class="mb-8"></div>
 <div id="lineage-chart" class="my-8"></div>
 
 <script>
+function getQueryParam(name) {
+  const url = new URL(window.location.href);
+  return url.searchParams.get(name) || "";
+}
+
+function setQueryParam(name, value) {
+  const url = new URL(window.location.href);
+  if (value) {
+    url.searchParams.set(name, value);
+  } else {
+    url.searchParams.delete(name);
+  }
+  history.pushState(null, '', url.toString());
+}
+
 fetch('/assets/data/lineage.json')
   .then(res => res.json())
   .then(data => {
@@ -127,7 +145,10 @@ fetch('/assets/data/lineage.json')
       `;
     }
 
-    let currentFilter = "";
+    let currentFilter = getQueryParam('q');
+    const filterInput = document.getElementById('lineage-filter');
+    filterInput.value = currentFilter;
+
     function update() {
       const filter = currentFilter.trim();
       const filtered = buildFilteredTree(data, filter);
@@ -136,8 +157,9 @@ fetch('/assets/data/lineage.json')
         : '<div class="text-gray-500">No results found.</div>';
     }
 
-    document.getElementById('lineage-filter').addEventListener('input', e => {
+    filterInput.addEventListener('input', e => {
       currentFilter = e.target.value;
+      setQueryParam('q', currentFilter);
       update();
     });
 
