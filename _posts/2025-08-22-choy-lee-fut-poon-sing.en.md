@@ -3,7 +3,10 @@ layout: blog
 title: Anti-Japanese Hero – Choy Lee Fut 蔡李佛 Master – Poon Sing 師傅 Biography
 date: 2025-08-22
 lang: en
-canonical: /blog/choy-lee-fut-poon-sing.en.html
+alt:
+  lang: zh-hk
+  url: /blog/choy-lee-fut-poon-sing.zh-hk.html
+canonical: true
 meta:
   description: "Poon Sing 師傅, a Choy Lee Fut 蔡李佛 martial arts master, has carried forward over forty years of kung fu tradition, diligently teaching his students with a balance of hardness and softness, deeply respected across the Chinese martial arts community."
   keywords: "Poon Sing, Choy Lee Fut, 蔡李佛, martial arts, kung fu heritage, Chinese martial arts, traditional kung fu, Hong Kong martial arts, kung fu master"
