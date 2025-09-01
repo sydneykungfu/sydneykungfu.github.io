@@ -14,3 +14,7 @@
 ### run 
 
 > docker run --rm -p 4000:4000 -v "$PWD":/srv/jekyll my-jekyll-site
+
+### Adding watermark
+
+magick assets/images/blogs/choy-lee-fut-lee-koon-hung-wong-tat-mau-san-sau-01.png -gravity southeast -pointsize 36 -fill "rgba(255,255,255,0.8)" -annotate +10+10 "source: sydneykungfu.au" assets/images/blogs/choy-lee-fut-lee-koon-hung-wong-tat-mau-san-sau-01-wm.png
