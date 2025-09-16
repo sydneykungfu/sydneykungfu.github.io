@@ -1,12 +1,12 @@
 ---
 layout: blog
-title: Choy Lee Fut 蔡李佛 Kick Techniques - Demonstration: Chu Siu Ki, Chong Wai Kuen
+title: "Choy Lee Fut Kick Techniques - Demonstration: Chu Siu Ki, Chong Wai Kuen"
 date: 2025-09-14
 lang: en
 alt:
   lang: zh-hk
   url: /blog/choy-lee-fut-kick-techniques.zh-hk.html
-canonical: /blog/choy-lee-fut-kick-techniques.en.html
+canonical: true
 meta:
   description: "Detailed explanation of Choy Lee Fut 蔡李佛 kick techniques, with demonstrations by Chu Siu Ki and Chong Wai Kuen. Covers zak caang goek 側撐腳, gwaa mei goek 掛眉腳, zik dang goek 直蹬腳, liu jam goek 撩陰腳, soeng fei goek 雙飛腳, and more. Includes history, technical details, and training methods."
   keywords: "Choy Lee Fut kicks, Chu Siu Ki, Chong Wai Kuen, zak caang goek, gwaa mei goek, zik dang goek, liu jam goek, soeng fei goek, martial arts teaching, Chinese martial arts, Hong Kong kung fu, Choy Lee Fut combat, martial arts training, traditional kung fu, sanda, martial arts history"

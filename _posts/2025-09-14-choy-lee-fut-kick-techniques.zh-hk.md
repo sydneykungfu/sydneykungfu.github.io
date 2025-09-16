@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: 蔡李佛脚法 - 演式 ： 朱紹基 莊偉權
+title: "蔡李佛脚法 - 演式 ： 朱紹基 莊偉權"
 date: 2025-09-14
 lang: zh-hk
 alt:
