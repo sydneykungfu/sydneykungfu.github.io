@@ -4,6 +4,9 @@ title: Choy Lee Fut - Lao Sau by Master Chu Shiu Ki
 date: 2025-09-30
 lang: en
 canonical: true
+alt:
+  lang: zh-hk
+  url: /blog/choy-lee-fut-caap-ceoi.zh-HK.html
 meta:
   description: In-depth exploration of Choy Lee Fut 蔡李佛 Kung Fu's Lao Sau 撈⼿ and Na Sau 拿⼿ techniques, including principles, forms, power generation, and practical application. Demonstrated by Master Chu Shiu Ki 朱紹基師傅, helping you fully understand the essence of traditional Chinese martial arts offense and defense.
   keywords: Choy Lee Fut, 蔡李佛, Lao Sau, 撈⼿, Na Sau, 拿⼿, Chu Shiu Ki, 朱紹基, Chinese Kung Fu, Traditional Martial Arts, Kung Fu Techniques, Practical Application, Power Skills, Offense and Defense, Kung Fu Sydney, Martial Arts Teaching, Kung Fu History, Martial Forms, Chin Na, Pun Kiu, 盤橋, Saau Ceoi, 捎搥

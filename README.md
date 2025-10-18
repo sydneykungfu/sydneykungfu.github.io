@@ -19,9 +19,16 @@
 
 magick assets/images/blogs/choy-lee-fut-lee-koon-hung-wong-tat-mau-san-sau-01.png -gravity southeast -pointsize 36 -fill "rgba(255,255,255,0.8)" -annotate +10+10 "source: sydneykungfu.au" assets/images/blogs/choy-lee-fut-lee-koon-hung-wong-tat-mau-san-sau-01-wm.png
 
-for i in {01..13}; do
-  magick assets/images/blogs/choy-lee-fut-kick-techniques-$i.png \
+for i in {01..02}; do
+  magick assets/images/blogs/choy-lee-fut-caap-ceoi-$i.png \
     -gravity southeast -pointsize 36 -fill "rgba(0,0,0,0.5)" \
     -annotate +10+10 "source: sydneykungfu.au" \
-    assets/images/blogs/choy-lee-fut-kick-techniques-${i}-wm.png
+    assets/images/blogs/choy-lee-fut-caap-ceoi-${i}-wm.png
+done
+
+for i in {01..02}; do
+magick "assets/images/blogs/choy-lee-fut-caap-ceoi-${i}.png" \
+  -gravity southeast -pointsize 36 -fill 'rgba(0,0,0,0.5)' \
+  -annotate +10+10 'source: sydneykungfu.au' \
+  "assets/images/blogs/choy-lee-fut-caap-ceoi-${i}-wm.png"
 done
