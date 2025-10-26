@@ -26,9 +26,9 @@ for i in {01..02}; do
     assets/images/blogs/choy-lee-fut-caap-ceoi-${i}-wm.png
 done
 
-for i in {01..02}; do
-magick "assets/images/blogs/choy-lee-fut-caap-ceoi-${i}.png" \
+for i in {01..05}; do
+magick "assets/images/blogs/choy-lee-fut-buk-sing-wai-sing-${i}.png" \
   -gravity southeast -pointsize 36 -fill 'rgba(0,0,0,0.5)' \
   -annotate +10+10 'source: sydneykungfu.au' \
-  "assets/images/blogs/choy-lee-fut-caap-ceoi-${i}-wm.png"
+  "assets/images/blogs/choy-lee-fut-buk-sing-wai-sing-${i}-wm.png"
 done
