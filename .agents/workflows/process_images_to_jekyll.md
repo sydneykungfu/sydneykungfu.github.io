@@ -10,7 +10,7 @@ This workflow is intended to be triggered when you manually attach images contai
    Read and extract the Chinese text content present in the attached images.
 
 2. **Extract Image Content**  
-   Analyze the images and extract visual descriptions or key content depicted in the images, to be used as alt text or image context. Images saved in `assets/images/blogs/`
+   Analyze the image contes. Extract visual descriptions or key content depicted in the images, to be used as alt text or image context. Images saved in `assets/images/blogs/` in png format.
 
 3. **Create a Jekyll `.md` Page (Chinese)**  
    Create a new Jekyll markdown (`.md`) post file (typically in `_posts` or your designated Chinese posts directory). Include the extracted Chinese text and image content. Ensure the images are properly linked.
