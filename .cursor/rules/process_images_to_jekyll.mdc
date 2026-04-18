@@ -1,0 +1,30 @@
+---
+description: Use the Process Images to Jekyll workflow when handling attached images in this repo.
+alwaysApply: true
+---
+
+# Process Images to Jekyll (Rule)
+
+When working in this repository, follow these guidelines whenever the user:
+- Attaches one or more images and
+- Mentions processing them into blog posts, Jekyll posts, or bilingual (Chinese/English) content.
+
+## Behavior
+
+- Prefer to follow the detailed steps defined in the workflow file:
+  - `.agents/workflows/process_images_to_jekyll_cursor.md`
+- Treat that workflow as the source of truth for:
+  - How to inspect and crop images so that only the kung fu moves/techniques are kept, and save those cropped regions under `assets/images/blogs/` as `.png`
+  - How to extract Chinese text and visual descriptions
+  - How to structure the Chinese and English Jekyll posts (frontmatter, body, images)
+
+## How to respond
+
+When the user attaches images and asks to process them (or similar wording):
+1. Explicitly note that you are following the **“Process Images to Jekyll (Cursor Workflow)”** in `.agents/workflows/process_images_to_jekyll_cursor.md`.
+2. Execute the steps from that workflow against the attached images.
+3. At the end, summarize:
+   - Paths of the generated Chinese and English posts
+   - Paths and filenames of any cropped images created in `assets/images/blogs/`
+   - Any key assumptions you made (e.g., chosen slugs, directories).
+
