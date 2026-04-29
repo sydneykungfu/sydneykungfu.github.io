@@ -20,11 +20,11 @@ meta:
   <div class="max-w-3xl mx-auto px-4 py-8">
     <h1 class="text-3xl font-bold mb-6">悉尼功夫 – 附近最佳功夫班</h1>
 
-    <h2 class="text-2xl font-bold mb-2">報名表格 👇👇👇</h2>
+    <h2 id="enroll-form" class="text-2xl font-bold mb-2" style="scroll-margin-top: 5rem">報名表格 👇👇👇</h2>
 
     <p class="text-lg mb-2">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNLhIwc0D4bmBNuAlrZ8p9-38qFTWtVmVwyIWaphRDmoXcfQ/viewform" 
-          target="_blank" 
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNLhIwc0D4bmBNuAlrZ8p9-38qFTWtVmVwyIWaphRDmoXcfQ/viewform"
+          target="_blank"
           class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700 inline-block">
         點擊 &amp; 填寫報名表格
       </a>
@@ -46,7 +46,7 @@ meta:
     </p>
 
     <h2 class="text-2xl font-bold mb-4 mt-8">課程時間表及收費</h2>
-    {% include schedule-cards-zh.html %}
+    {% include schedule-cards-zh.html enroll_url="#enroll-form" %}
 
     <h2 class="text-2xl font-bold mb-2 mt-8">課程簡介</h2>
     <p class="text-lg mb-8">
