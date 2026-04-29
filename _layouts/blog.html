@@ -56,7 +56,7 @@ layout: default
         {% if page.lang == 'zh-hk' %}
         此文章刊登於 1970年代《蔡李佛》雜誌。⽅⽟書同學會督印，朱紹基主編。 
         轉載請註明以上及 sydneykungfu.au 出處。
-        如有版權問題，請<a href="/#contact">聯絡我們</a>。
+        如有版權問題，請<a href="/zh//#contact">聯絡我們</a>。
         {% endif %}
         {% if page.lang == 'en' %}
         This article was published in the 1970s Choy Lee Fut magazine. Fong Yuk Shu Alumni Assoc. Press, Chu Shiu Ki Edited.
@@ -65,4 +65,16 @@ layout: default
         {% endif %}
     </section>
     {% endif %}
+
+    <section class="text-center mt-4">
+      {% if page.lang == 'zh-hk' %}
+      <p class="mt-8"><a href="/zh/enroll.html" class="bg-red-600 px-6 py-3 rounded font-semibold hover:bg-red-700" style="color: white !important;">預約免費體驗課（本地）</a></p>
+      <p class="mt-8"><a href="/zh/online-private-class.html" class="bg-red-600 px-6 py-3 rounded font-semibold hover:bg-red-700" style="color: white;">網上私人班</a></p>
+      <p class="mt-8"><a href="/zh/#contact" class="bg-red-600 px-6 py-3 rounded font-semibold hover:bg-red-700" style="color: white;">聯絡本地私人班</a></p>
+      {% else %}
+      <p class="mt-8"><a href="/enroll.html" class="bg-red-600 px-6 py-3 rounded font-semibold hover:bg-red-700" style="color: white !important;">Book a Free Trial (Local)</a></p>
+      <p class="mt-8"><a href="/online-private-class.html" class="bg-red-600 px-6 py-3 rounded font-semibold hover:bg-red-700" style="color: white;">Online PRIVATE class</a></p>
+      <p class="mt-8"><a href="/#contact" class="bg-red-600 px-6 py-3 rounded font-semibold hover:bg-red-700" style="color: white;">Contact for Local PRIVATE class</a></p>
+      {% endif %}
+    </section>
 </main>
