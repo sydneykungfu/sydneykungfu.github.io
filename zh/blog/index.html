@@ -1,0 +1,62 @@
+---
+layout: default
+lang: zh-HK
+title: 文章 | 悉尼功夫 | 蔡李佛謝氏武館
+permalink: /zh/blog/
+meta:
+  keywords: "功夫文章, 功夫博客, 蔡李佛, 功夫訓練, 武術哲學, 悉尼功夫"
+  description: "閱讀謝氏蔡李佛武館最新文章，探索蔡李佛功夫技巧、歷史及哲學。"
+  og:
+    title: 文章 | 悉尼功夫 | 蔡李佛謝氏武館
+    description: "閱讀謝氏蔡李佛武館最新文章，探索蔡李佛功夫技巧、歷史及哲學。"
+    image: "https://sydneykungfu.au/assets/images/hero_01_compressed.png"
+    url: "https://sydneykungfu.au/zh/blog/"
+  twitter:
+    title: 文章 | 悉尼功夫 | 蔡李佛謝氏武館
+    description: "閱讀謝氏蔡李佛武館最新文章，探索蔡李佛功夫技巧、歷史及哲學。"
+    image: "https://sydneykungfu.au/assets/images/hero_01_compressed.png"
+---
+
+<div class="max-w-3xl mx-auto px-4 py-8">
+  <div class="flex items-center justify-between mb-2">
+    <h1 class="text-3xl font-bold">文章</h1>
+    <span class="text-sm">
+      <a href="/blog/" class="text-blue-600 hover:underline">EN</a> |
+      <strong>繁</strong>
+    </span>
+  </div>
+  <p class="text-gray-600 mb-8">謝氏蔡李佛武館的功夫技巧、歷史及哲學文章。</p>
+
+  <!-- 資源 -->
+  <h2 class="text-lg font-semibold text-gray-500 uppercase tracking-wide mb-4">資源</h2>
+  <div class="grid gap-4 mb-10">
+    <a href="/zh/choyleefut-history.html" class="block bg-white rounded-lg shadow-sm p-4 hover:shadow-md transition-shadow border border-gray-100">
+      <p class="font-semibold text-gray-800">蔡李佛歷史</p>
+      <p class="text-sm text-gray-500 mt-1">蔡李佛的起源與傳承</p>
+    </a>
+    <a href="/zh/about-sifu-angus.html" class="block bg-white rounded-lg shadow-sm p-4 hover:shadow-md transition-shadow border border-gray-100">
+      <p class="font-semibold text-gray-800">關於謝師傅</p>
+      <p class="text-sm text-gray-500 mt-1">謝師傅的武術背景與傳承</p>
+    </a>
+    <a href="/lineage/" class="block bg-white rounded-lg shadow-sm p-4 hover:shadow-md transition-shadow border border-gray-100">
+      <p class="font-semibold text-gray-800">蔡李佛源流表</p>
+      <p class="text-sm text-gray-500 mt-1">蔡李佛歷代宗師源流</p>
+    </a>
+  </div>
+
+  <!-- 文章 -->
+  <h2 class="text-lg font-semibold text-gray-500 uppercase tracking-wide mt-4 mb-4">文章</h2>
+  <div class="grid gap-4">
+    {% for post in site.posts %}
+      {% if post.lang == 'zh-hk' %}
+      <a href="{{ post.url }}" class="block bg-white rounded-lg shadow-sm p-4 hover:shadow-md transition-shadow border border-gray-100">
+        <p class="text-xs text-gray-400 mb-1">{{ post.date | date: "%Y年%m月%d日" }}</p>
+        <p class="font-semibold text-gray-800">{{ post.title }}</p>
+        {% if post.meta.description %}
+        <p class="text-sm text-gray-500 mt-1" style="overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;">{{ post.meta.description }}</p>
+        {% endif %}
+      </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
