@@ -25,7 +25,7 @@ meta:
 </div>
 <!-- Add margin below sticky filter for spacing -->
 <div class="mb-8"></div>
-<div id="lineage-chart" class="my-8"></div>
+<div id="lineage-chart" class="my-8" style="overflow-x: auto;"></div>
 
 <script>
 function getQueryParam(name) {
@@ -46,7 +46,22 @@ function setQueryParam(name, value) {
 fetch('/assets/data/lineage.json')
   .then(res => res.json())
   .then(data => {
-    // Helper: check if node matches filter
+    // Assign a stable numeric id to every node
+    let _idCounter = 0;
+    function assignIds(node) {
+      node._id = _idCounter++;
+      if (Array.isArray(node.students)) node.students.forEach(assignIds);
+    }
+    assignIds(data);
+
+    // Track expand/collapse state per node id; default: expanded for gen <= 3
+    const expandedState = new Map();
+
+    function isExpanded(node, forceExpanded) {
+      if (forceExpanded) return true;
+      return expandedState.has(node._id) ? expandedState.get(node._id) : true;
+    }
+
     function nodeMatches(node, filter) {
       if (!filter) return false;
       const f = filter.toLowerCase();
@@ -57,26 +72,10 @@ fetch('/assets/data/lineage.json')
       );
     }
 
-    // Recursively search for matches, return {show, node, children}
-    function filterTree(node, filter) {
-      let matched = nodeMatches(node, filter);
-      let children = [];
-      if (Array.isArray(node.students)) {
-        children = node.students.map(child => filterTree(child, filter)).filter(c => c.show);
-      }
-      // If any child matched, or this node matched, we show this node
-      if (matched || children.length > 0) {
-        return { show: true, node, children, matched };
-      }
-      return { show: false };
-    }
-
-    // Find all paths to matches, then reconstruct tree with ancestors and descendants
     function findPaths(node, filter, path = []) {
       let matches = [];
-      let isMatch = nodeMatches(node, filter);
-      let newPath = [...path, node];
-      if (isMatch) matches.push(newPath);
+      const newPath = [...path, node];
+      if (nodeMatches(node, filter)) matches.push(newPath);
       if (Array.isArray(node.students)) {
         for (const child of node.students) {
           matches = matches.concat(findPaths(child, filter, newPath));
@@ -85,65 +84,77 @@ fetch('/assets/data/lineage.json')
       return matches;
     }
 
-    // Build a minimal tree containing all ancestors and descendants of matches
     function buildFilteredTree(node, filter) {
       if (!filter) return node;
       const paths = findPaths(node, filter);
       if (paths.length === 0) return null;
-      // Mark all nodes in all paths as "keep"
       const keepSet = new Set();
-      for (const path of paths) {
-        for (const n of path) keepSet.add(n);
+      for (const path of paths) for (const n of path) keepSet.add(n);
+      function cloneAll(node) {
+        return { ...node, students: Array.isArray(node.students) ? node.students.map(cloneAll) : [] };
       }
-      // Recursively clone only kept nodes and their full subtrees if they are a match
       function clone(node) {
         if (!keepSet.has(node)) return null;
-        let students = [];
-        if (Array.isArray(node.students)) {
-          students = node.students.map(clone).filter(Boolean);
-        }
-        // If this node is a match, include all its descendants
-        if (nodeMatches(node, filter)) {
-          students = node.students ? node.students.map(cloneAll).filter(Boolean) : [];
-        }
-        return { ...node, students };
-      }
-      // Clone all descendants
-      function cloneAll(node) {
-        let students = [];
-        if (Array.isArray(node.students)) {
-          students = node.students.map(cloneAll).filter(Boolean);
-        }
+        let students = Array.isArray(node.students) ? node.students.map(clone).filter(Boolean) : [];
+        if (nodeMatches(node, filter)) students = Array.isArray(node.students) ? node.students.map(cloneAll) : [];
         return { ...node, students };
       }
       return clone(node);
     }
 
-    function renderNode(node, level = 0, highlight = "") {
+    function renderNode(node, level = 0, forceExpanded = false, highlight = "") {
       if (!node) return "";
-      const gn = node["generation"] || "";
+      const id = node._id;
+      const hasChildren = Array.isArray(node.students) && node.students.length > 0;
+      const expanded = isExpanded(node, forceExpanded);
       const cn = node["Chinese Name"] || "";
       const mn = node["Mandarin Name"] || "";
       const ct = node["Cantonese Name"] || "";
+      const gn = node["generation"] || "";
       const remarks = node["Remarks"] || "";
-      const indent = level * 1.5;
-      // Highlight if matches filter
+      const namePart = mn && ct ? `${mn} / ${ct}` : (mn || ct);
       const isHighlight = highlight && nodeMatches(node, highlight);
+      const childrenId = `ch${id}`;
+      const indent = level * 0.5;
+
       return `
         <div class="mb-4" style="margin-left: ${indent}rem;">
-          <div class="bg-white border border-gray-300 rounded-lg px-4 py-2 shadow flex flex-col ${isHighlight ? 'bg-yellow-100 border-yellow-400' : ''}">
-            <span class="text-xl font-bold text-gray-800">${cn}</span>
-            <span class="text-sm text-gray-700">Generation ${gn} ${mn}${mn && ct ? " / " : ""}${ct}</span>
-            ${remarks ? `<span class="text-xs text-gray-500">${remarks}</span>` : ""}
-          </div>
-          ${Array.isArray(node.students) && node.students.length > 0 ? `
-            <div class="mt-2">
-              ${node.students.map(child => renderNode(child, level + 1, highlight)).join('')}
+          <div class="border border-gray-300 rounded-lg px-4 py-2 shadow flex items-start ${isHighlight ? 'bg-yellow-100 border-yellow-400' : 'bg-white'}">
+            <div class="flex flex-col min-w-0 flex-1">
+              <span class="text-xl font-bold text-gray-800">${cn}</span>
+              <span class="text-sm text-gray-700">Generation ${gn}${namePart ? `  ${namePart}` : ''}</span>
+              ${remarks ? `<span class="text-xs text-gray-500">${remarks}</span>` : ''}
             </div>
-          ` : ""}
+            ${hasChildren ? `
+              <button
+                data-id="${id}"
+                data-children="${childrenId}"
+                aria-expanded="${expanded}"
+                class="ml-2 flex-shrink-0 text-gray-400 hover:text-gray-700 w-8 h-8 flex items-center justify-center text-lg rounded hover:bg-gray-100 active:bg-gray-200"
+              >${expanded ? '▾' : '▸'}</button>
+            ` : ''}
+          </div>
+          ${hasChildren ? `
+            <div id="${childrenId}" class="mt-2"${!expanded ? ' style="display:none"' : ''}>
+              ${node.students.map(child => renderNode(child, level + 1, forceExpanded, highlight)).join('')}
+            </div>
+          ` : ''}
         </div>
       `;
     }
+
+    // Toggle without re-rendering the whole tree
+    document.getElementById('lineage-chart').addEventListener('click', e => {
+      const btn = e.target.closest('[data-id]');
+      if (!btn) return;
+      const id = Number(btn.dataset.id);
+      const childrenDiv = document.getElementById(btn.dataset.children);
+      const nowExpanded = btn.getAttribute('aria-expanded') === 'true';
+      expandedState.set(id, !nowExpanded);
+      btn.setAttribute('aria-expanded', !nowExpanded);
+      btn.textContent = !nowExpanded ? '▾' : '▸';
+      if (childrenDiv) childrenDiv.style.display = !nowExpanded ? '' : 'none';
+    });
 
     let currentFilter = getQueryParam('q');
     const filterInput = document.getElementById('lineage-filter');
@@ -151,9 +162,10 @@ fetch('/assets/data/lineage.json')
 
     function update() {
       const filter = currentFilter.trim();
+      const forceExpanded = filter !== "";
       const filtered = buildFilteredTree(data, filter);
       document.getElementById('lineage-chart').innerHTML = filtered
-        ? renderNode(filtered, 0, filter)
+        ? renderNode(filtered, 0, forceExpanded, filter)
         : '<div class="text-gray-500">No results found.</div>';
     }
 
@@ -163,7 +175,6 @@ fetch('/assets/data/lineage.json')
       update();
     });
 
-    // Initial render
     update();
   });
 </script>
