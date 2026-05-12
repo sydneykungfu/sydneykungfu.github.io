@@ -773,6 +773,31 @@
               "students": [
                 {
                   "generation": 5,
+                  "Mandarin Name": "Du Shen",
+                  "Cantonese Name": "To Sum",
+                  "Chinese Name": "杜深",
+                  "Remarks": "son",
+                  "students": [
+                    {
+                      "generation": 6,
+                      "Mandarin Name": "Du Zhao Jin",
+                      "Cantonese Name": "To Siu Chun",
+                      "Chinese Name": "杜兆津",
+                      "Remarks": "",
+                      "students": []
+                    },
+                    {
+                      "generation": 6,
+                      "Mandarin Name": "Du Yue Ping",
+                      "Cantonese Name": "To Yuet Ping",
+                      "Chinese Name": "杜月屏",
+                      "Remarks": "",
+                      "students": []
+                    }
+                  ]
+                },
+                {
+                  "generation": 5,
                   "Mandarin Name": "Zhu Shao Ji",
                   "Cantonese Name": "Chu Siu Kei",
                   "Chinese Name": "朱兆基 / 朱紹基",
@@ -801,6 +826,14 @@
                       "Chinese Name": "謝智銓",
                       "Remarks": "",
                       "students": []
+                    },
+                    {
+                      "generation": 6,
+                      "Mandarin Name": "",
+                      "Cantonese Name": "Lau Man King",
+                      "Chinese Name": "劉文勁",
+                      "Remarks": "",
+                      "students": []
                     }
                   ]
                 },
@@ -824,31 +857,6 @@
                       "Mandarin Name": "",
                       "Cantonese Name": "",
                       "Chinese Name": "Chris Childs",
-                      "Remarks": "",
-                      "students": []
-                    }
-                  ]
-                },
-                {
-                  "generation": 5,
-                  "Mandarin Name": "Du Shen",
-                  "Cantonese Name": "To Sum",
-                  "Chinese Name": "杜深",
-                  "Remarks": "son",
-                  "students": [
-                    {
-                      "generation": 6,
-                      "Mandarin Name": "Du Zhao Jin",
-                      "Cantonese Name": "To Siu Chun",
-                      "Chinese Name": "杜兆津",
-                      "Remarks": "",
-                      "students": []
-                    },
-                    {
-                      "generation": 6,
-                      "Mandarin Name": "Du Yue Ping",
-                      "Cantonese Name": "To Yuet Ping",
-                      "Chinese Name": "杜月屏",
                       "Remarks": "",
                       "students": []
                     }
