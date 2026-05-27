@@ -1,0 +1,15 @@
+    <section class="text-center mt-4">
+      {% if page.lang == 'zh-HK' %}
+      <p class="mt-8"><a href="/zh/enroll.html" class="bg-red-600 px-6 py-3 rounded font-semibold hover:bg-red-700" style="color: white !important;">預約免費體驗課（本地）</a></p>
+      <p class="mt-8"><a href="/zh/online-private-class.html" class="bg-red-600 px-6 py-3 rounded font-semibold hover:bg-red-700" style="color: white;">網上私人班</a></p>
+      <p class="mt-8"><a href="/zh/#contact" class="bg-red-600 px-6 py-3 rounded font-semibold hover:bg-red-700" style="color: white;">聯絡本地私人班</a></p>
+      {% elsif page.lang == 'zh-CN' %}
+      <p class="mt-8"><a href="/zh-CN/enroll.html" class="bg-red-600 px-6 py-3 rounded font-semibold hover:bg-red-700" style="color: white !important;">预约免费体验课（本地）</a></p>
+      <p class="mt-8"><a href="/zh-CN/online-private-class.html" class="bg-red-600 px-6 py-3 rounded font-semibold hover:bg-red-700" style="color: white;">网上私人班</a></p>
+      <p class="mt-8"><a href="/zh-CN/#contact" class="bg-red-600 px-6 py-3 rounded font-semibold hover:bg-red-700" style="color: white;">联系本地私人班</a></p>
+      {% else %}
+      <p class="mt-8"><a href="/enroll.html" class="bg-red-600 px-6 py-3 rounded font-semibold hover:bg-red-700" style="color: white !important;">Book a Free Trial (Local)</a></p>
+      <p class="mt-8"><a href="/online-private-class.html" class="bg-red-600 px-6 py-3 rounded font-semibold hover:bg-red-700" style="color: white;">Online PRIVATE class</a></p>
+      <p class="mt-8"><a href="/#contact" class="bg-red-600 px-6 py-3 rounded font-semibold hover:bg-red-700" style="color: white;">Contact for Local PRIVATE class</a></p>
+      {% endif %}
+    </section>
