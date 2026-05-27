@@ -1,54 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXVEYWLYKY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-PXVEYWLYKY');
-    </script>
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "r1u8uws17g");
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Sydney Kung Fu Movements | Tse Kung Fu Academy</title>
-    <meta name="description" content="Explore a comprehensive list of Kung Fu movements in Choy Lee Fut categorized by type. Learn their Chinese names and Cantonese pronunciations.">
-    <meta name="keywords" content="Kung Fu Classes Sydney, Learn Self-Defense in Sydney, Choy Lee Fut Kung Fu,蔡李佛招式,蔡李佛殺手鐧,蔡李佛十訣,Kung Fu Classes, Kung Fu School Near me, Martial Arts Class Free Trial, Choy Lee Fut Classes, 澳洲悉尼, 蔡李佛功夫, Self-Defense, Sydney, North Shore, Marsfield, Wahroonga, Local Kung Fu Class,Choy Lay Fut, Choy Lee Fut, Traditional Chinese Martial Arts">
-    <meta name="author" content="Angus Tse">
-    <meta property="og:title" content="Choy Lee Fut Kung Fu Movements | Tse Kung Fu Academy | Marsfield & Wahroonga, Sydney North Shore" />
-    <meta property="og:description" content="Explore a comprehensive list of Kung Fu movements in Choy Lee Fut categorized by type. Learn their Chinese names and Cantonese pronunciations." />
-    <meta property="og:image" content="https://sydneykungfu.au/assets/images/hero_01_compressed.png" />
-    <meta property="og:url" content="https://sydneykungfu.au" />
-    <meta property="og:type" content="website" />
-    <link rel="canonical" href="https://sydneykungfu.au/kungfu-movements.html" />
-    <link rel="stylesheet" href="assets/css/tailwind.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="icon" href="assets/images/favicon_io/favicon.ico" type="image/x-icon">
-    <script src="assets/js/navigation.js" defer></script>
-    <!-- Meta Pixel Code -->
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '603218188706963');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=603218188706963&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
+---
+layout: default
+lang: en
+title: "Sydney Kung Fu Movements | Tse Kung Fu Academy"
+permalink: /kungfu-movements.html
+meta:
+  keywords: "Kung Fu Classes Sydney, Learn Self-Defense in Sydney, Choy Lee Fut Kung Fu,蔡李佛招式,蔡李佛殺手鐧,蔡李佛十訣,Kung Fu Classes, Kung Fu School Near me, Martial Arts Class Free Trial, Choy Lee Fut Classes, 澳洲悉尼, 蔡李佛功夫, Self-Defense, Sydney, North Shore, Marsfield, Wahroonga, Local Kung Fu Class,Choy Lay Fut, Choy Lee Fut, Traditional Chinese Martial Arts"
+  description: "Explore a comprehensive list of Kung Fu movements in Choy Lee Fut categorized by type. Learn their Chinese names and Cantonese pronunciations."
+  og:
+    title: "Choy Lee Fut Kung Fu Movements | Tse Kung Fu Academy | Marsfield & Wahroonga, Sydney North Shore"
+    description: "Explore a comprehensive list of Kung Fu movements in Choy Lee Fut categorized by type. Learn their Chinese names and Cantonese pronunciations."
+    image: "https://sydneykungfu.au/assets/images/hero_01_compressed.png"
+    url: "https://sydneykungfu.au/kungfu-movements.html"
+  twitter:
+    title: "Choy Lee Fut Kung Fu Movements | Tse Kung Fu Academy"
+    description: "Explore a comprehensive list of Kung Fu movements in Choy Lee Fut categorized by type. Learn their Chinese names and Cantonese pronunciations."
+    image: "https://sydneykungfu.au/assets/images/hero_01_compressed.png"
+---
+
     <style>
         .movement-row {
             cursor: pointer;
@@ -76,10 +44,6 @@
             display: inline-block;
         }
     </style>
-</head>
-<body class="bg-gray-100 font-sans text-gray-800">
-    <!-- Navigation -->
-    <div id="navigation-placeholder"></div>
 
     <!-- Header -->
     <header class="bg-white py-24 text-center">
@@ -424,11 +388,6 @@
         </table>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-black text-white text-center py-4">
-        &copy; 2025 Tse Kung Fu Academy. All rights reserved.
-    </footer>
-
     <div id="moveModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
         <div class="bg-white p-4 rounded-lg max-w-2xl w-full mx-4">
             <div class="flex justify-between items-center mb-4">
@@ -504,7 +463,7 @@
                 row.addEventListener('click', () => {
                     const chineseName = row.querySelector('td:nth-child(3)').textContent;
                     const cantonese = row.querySelector('td:nth-child(4)').textContent;
-                    
+
                     if (moveImages[chineseName]) {
                         modalTitle.textContent = `${chineseName} (${cantonese})`;
                         modalImage.style.backgroundImage = `url('${moveImages[chineseName]}')`;
@@ -536,5 +495,3 @@
             });
         });
     </script>
-</body>
-</html>
