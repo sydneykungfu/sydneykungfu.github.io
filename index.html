@@ -9,16 +9,42 @@ meta:
   og:
     title: "Kung Fu Sydney | Kung Fu Classes Sydney | Choy Lee Fut Tse Academy"
     description: "Looking for Kung Fu Sydney? Join Tse Kung Fu Academy for authentic Choy Lee Fut Kung Fu classes in Sydney. Learn self-defense, traditional martial arts, and get fit with our expert instructors. Book your free trial today!"
-    image: "https://sydneykungfu.au/assets/images/sifu_angus.webp"
+    image: "https://sydneykungfu.au/assets/images/hero-images/adult_class_group_photo_aimodified.PNG"
     url: "https://sydneykungfu.au"
   twitter:
     title: "Kung Fu Sydney | Kung Fu Classes Sydney | Choy Lee Fut Tse Academy"
     description: "Looking for Kung Fu Sydney? Join Tse Kung Fu Academy for authentic Choy Lee Fut Kung Fu classes in Sydney. Learn self-defense, traditional martial arts, and get fit with our expert instructors. Book your free trial today!"
-    image: "https://sydneykungfu.au/assets/images/sifu_angus.webp"
+    image: "https://sydneykungfu.au/assets/images/hero-images/adult_class_group_photo_aimodified.PNG"
 ---
+  <style>
+    #hero1 {
+      position: relative;
+      overflow: hidden;
+    }
+    #hero1 .hero-slide {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+      z-index: 1;
+    }
+    #hero1 .hero-slide.active { opacity: 1; }
+    #hero1 .hero-overlay {
+      position: relative;
+      z-index: 2;
+      background: rgba(0, 0, 0, 0.55);
+    }
+  </style>
+
   <!-- Hero Section -->
-  <section id="hero1" class="bg-white">
-    <div class="bg-black bg-opacity-60 p-10 text-center text-white mx-auto">
+  <section id="hero1">
+    <div class="hero-slide active" style="background-image: url('/assets/images/hero-images/adult_class_group_photo_aimodified.PNG');"></div>
+    <div class="hero-slide" style="background-image: url('/assets/images/hero-images/IMG_1040.webp');"></div>
+    <div class="hero-slide" style="background-image: url('/assets/images/hero-images/IMG_0883.webp');"></div>
+    <div class="hero-slide" style="background-image: url('/assets/images/hero-images/kid-group-practice.jpeg');"></div>
+    <div class="hero-overlay p-10 text-center text-white mx-auto">
       <h1 class="text-4xl font-bold mb-4">Kung Fu Class Sydney Choy Lee Fut</h1>
       <p class="text-lg mb-6">
         The best Kung Fu classes in Sydney! Tse Kung Fu Academy offers authentic Choy Lee Fut Kung Fu 蔡李佛功夫 for all ages and levels. Self-Defence, Real Combat Kung Fu, Train your body, discipline your mind. Book your free trial and join our Sydney Kung Fu community.
@@ -58,6 +84,18 @@ meta:
       </p>
     </div>
   </section>
+
+  <script>
+    (function() {
+      var slides = document.querySelectorAll('#hero1 .hero-slide');
+      var current = 0;
+      setInterval(function() {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      }, 5000);
+    })();
+  </script>
 
   <!-- About Section -->
   <section id="about" class="py-16 bg-white">
