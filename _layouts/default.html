@@ -129,8 +129,8 @@
       "description": "Adult Kung Fu classes in Sydney offering Choy Lee Fut training for fitness, self-defense, and personal development.",
       "image": "https://sydneykungfu.au/assets/images/hero_01_compressed.webp",
       "email": "angus@sydneykungfu.au",
-      "telephone": "+61 491 403 514",
-      "url": "https://sydneykungfu.au/kungfu-classes-adults-sydney.html",
+      "telephone": "+61 491 703 514",
+      "url": "https://sydneykungfu.au",
       "sameAs": [
         "https://instagram.com/sydney.kungfu",
         "https://facebook.com/sydney.kungfu"
@@ -145,7 +145,7 @@
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": "Tuesday",
-          "opens": "17:00",
+          "opens": "18:00",
           "closes": "19:00"
         },
         {
@@ -158,19 +158,19 @@
       "location": [
         {
           "@type": "Place",
-          "name": "Wahroonga Park",
+          "name": "Outside PCYC Waitara",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Wahroonga Park, NSW 2076",
+            "streetAddress": "Outside PCYC Waitara, NSW 2077",
             "addressLocality": "Sydney",
             "addressRegion": "NSW",
-            "postalCode": "2076",
+            "postalCode": "2077",
             "addressCountry": "AU"
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": -33.715483, 
-            "longitude": 151.117099
+            "latitude": -33.708047,
+            "longitude": 151.101276
           }
         },
         {
@@ -191,13 +191,44 @@
           }
         }
       ],
-      "offers": {
-        "@type": "Offer",
-        "name": "Free Trial Class for Adults",
-        "description": "Sign up for a free trial class to experience adult Kung Fu training.",
-        "url": "https://sydneykungfu.au/enroll.html",
-        "price": "0",
-        "priceCurrency": "AUD"
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Kung Fu Classes",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Free Trial Class",
+            "description": "Sign up for a free trial class to experience Kung Fu training.",
+            "url": "https://sydneykungfu.au/enroll.html",
+            "price": "0",
+            "priceCurrency": "AUD"
+          },
+          {
+            "@type": "Course",
+            "name": "Adult & Youth Kung Fu",
+            "description": "Choy Lee Fut Kung Fu classes for ages 14 and up. Self-defence, traditional forms, pad work, and conditioning.",
+            "provider": { "@type": "Organization", "name": "Tse Kung Fu Academy" },
+            "offers": {
+              "@type": "Offer",
+              "price": "80",
+              "priceCurrency": "AUD",
+              "eligibleDuration": "P1M"
+            }
+          },
+          {
+            "@type": "Course",
+            "name": "Kids & Youth Kung Fu",
+            "description": "Kung Fu classes for children ages 6–14. Build confidence, discipline, fitness, and practical self-defence skills.",
+            "url": "https://sydneykungfu.au/kungfu-classes-kids-sydney.html",
+            "provider": { "@type": "Organization", "name": "Tse Kung Fu Academy" },
+            "offers": {
+              "@type": "Offer",
+              "price": "60",
+              "priceCurrency": "AUD",
+              "eligibleDuration": "P1M"
+            }
+          }
+        ]
       }
     }
   </script>
