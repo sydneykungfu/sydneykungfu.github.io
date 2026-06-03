@@ -13,8 +13,48 @@ meta:
     <h1 class="text-3xl font-bold mb-6">Kung Fu Classes Sydney – Book a Free Trial</h1>
 
     <p class="text-lg mb-6">
-      Tse Kung Fu Academy teaches traditional <strong><a href="choyleefut-history.html" class="text-blue-600">Choy Lee Fut</a></strong> and <strong><a href="about-choi-mok-pai.html" class="text-blue-600">Choi Mok Pai</a></strong> Kung Fu in Sydney for adults, kids, and families. Classes run on Saturdays in Marsfield and Tuesday evenings in Waitara — no experience needed. Your <strong>first class is completely free</strong>, no payment information required.
+      Tse Kung Fu Academy teaches traditional <strong>Choy Lee Fut</strong> and <strong>Choi Mok Pai</strong> Kung Fu in Sydney for adults, kids, and families. Classes run on Saturdays in Marsfield and Tuesday evenings in Waitara — no experience needed. Your <strong>first class is completely free</strong>, no payment information required.
     </p>
+
+    <div class="mb-8">
+      <div class="rounded-lg overflow-hidden aspect-square">
+        <div id="slideshow-track" class="flex h-full transition-transform duration-300 ease-in-out">
+          <img src="/assets/images/hero-images/kid_class_square.jpg"
+               alt="Kids kung fu class at Marsfield Park Sydney"
+               class="flex-shrink-0 w-full h-full object-cover">
+          <img src="/assets/images/hero-images/kung-fu-kid-class-waitara-square.png"
+               alt="Kids kung fu class at Waitara Sydney"
+               class="flex-shrink-0 w-full h-full object-cover">
+          <img src="/assets/images/hero-images/adult_class_group_photo_aimodified.PNG"
+               alt="Adult kung fu class Sydney"
+               class="flex-shrink-0 w-full h-full object-cover">
+        </div>
+      </div>
+      <div class="flex justify-center gap-3 mt-3" id="ss-dots">
+        <button class="w-2 h-2 rounded-full bg-red-600" aria-label="Photo 1"></button>
+        <button class="w-2 h-2 rounded-full bg-red-200" aria-label="Photo 2"></button>
+        <button class="w-2 h-2 rounded-full bg-red-200" aria-label="Photo 3"></button>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var track = document.getElementById('slideshow-track');
+        var dots  = document.querySelectorAll('#ss-dots button');
+        var total = dots.length;
+        var cur   = 0;
+
+        function go(n) {
+          cur = (n + total) % total;
+          track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+          dots.forEach(function (d, i) {
+            d.className = 'w-2 h-2 rounded-full ' + (i === cur ? 'bg-red-600' : 'bg-red-200');
+          });
+        }
+
+        dots.forEach(function (d, i) { d.addEventListener('click', function () { go(i); }); });
+        setInterval(function () { go(cur + 1); }, 3000);
+      })();
+    </script>
 
     <h2 id="enroll-form" class="text-2xl font-bold mb-4" style="scroll-margin-top: 5rem">Book Your Free Trial Class</h2>
 
@@ -26,8 +66,6 @@ meta:
 
     <p class="text-gray-600 mb-8">Takes 2 minutes &middot; No payment info required &middot; First class is completely free</p>
 
-    <p class="text-lg mb-2"><strong>First class is free</strong> for new students.</p>
-
     <p class="text-lg mt-8 mb-2">
       <strong>Private classes</strong> <a href="index.html#contact" class="text-blue-600">contact us for more details.</a>
     </p>
@@ -35,14 +73,16 @@ meta:
       <strong>Online private classes</strong> are also available in <a href="online-private-class.html" class="text-blue-600">here</a>.
     </p>
 
+    <!-- PLACEHOLDER TESTIMONIAL — replace quote and attribution before go-live -->
+    <figure class="bg-white border-l-4 border-red-600 rounded-lg shadow-sm px-6 py-5 mb-8 mt-8">
+      <blockquote class="text-gray-700 text-lg italic mb-3">
+        "My son has been training here for three months and the change has been incredible. He's more confident, more focused at school, and he actually looks forward to Saturday mornings. Sifu Angus is patient with the kids and genuinely cares about their progress."
+      </blockquote>
+      <figcaption class="text-sm text-gray-500 font-semibold">— Michelle T., mum of a 9-year-old, Marsfield class</figcaption>
+    </figure>
+
     <h2 class="text-2xl font-bold mb-4 mt-8">Class Schedule &amp; Price</h2>
     {% include schedule-cards-en.html enroll_url="https://docs.google.com/forms/d/e/1FAIpQLSeNLhIwc0D4bmBNuAlrZ8p9-38qFTWtVmVwyIWaphRDmoXcfQ/viewform" new_window=true %}
-
-    <h2 class="text-2xl font-bold mb-2 mt-8">Syllabus Overview</h2>
-    <p class="text-lg mb-8">
-      We offer an optional ranking / sash system for students who wish to progress in their Kung Fu journey.
-      Checkout our <a href="class-content.html" target="_blank" class="text-blue-600">class content page</a> for more details.
-    </p>
 
     <h2 class="text-2xl font-bold mb-4 mt-8">Frequently Asked Questions</h2>
     <div class="space-y-6 mb-8">
@@ -52,7 +92,7 @@ meta:
       </div>
       <div>
         <h3 class="font-bold text-lg mb-1">How much do classes cost?</h3>
-        <p class="text-gray-700">Adult classes (14+) are $80/month or $25 per class. Kids classes (7–14 yo) are $60/month or $20 per class. Family discounts are available — see the schedule above for details.</p>
+        <p class="text-gray-700">Adult classes (14+) are $80/month or $25 per class. Kids classes (6–14 yo) are $60/month or $20 per class. Family discounts are available — see the schedule above for details.</p>
       </div>
       <div>
         <h3 class="font-bold text-lg mb-1">Where are classes held?</h3>
@@ -60,7 +100,7 @@ meta:
       </div>
       <div>
         <h3 class="font-bold text-lg mb-1">What age groups do you cater for?</h3>
-        <p class="text-gray-700">We run separate classes for kids aged 7–14 and adults/youth 14+. Families training together qualify for a discounted family rate.</p>
+        <p class="text-gray-700">We run separate classes for kids aged 6–14 and adults/youth 14+. Families training together qualify for a discounted family rate.</p>
       </div>
       <div>
         <h3 class="font-bold text-lg mb-1">What style of Kung Fu do you teach?</h3>
@@ -87,7 +127,7 @@ meta:
         "name": "How much do classes cost?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Adult classes (14+) are $80/month or $25 per class. Kids classes (7–14 yo) are $60/month or $20 per class. Family discounts are available."
+          "text": "Adult classes (14+) are $80/month or $25 per class. Kids classes (6–14 yo) are $60/month or $20 per class. Family discounts are available."
         }
       },
       {
@@ -103,7 +143,7 @@ meta:
         "name": "What age groups do you cater for?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We run separate classes for kids aged 7–14 and adults/youth 14+. Families training together qualify for a discounted family rate."
+          "text": "We run separate classes for kids aged 6–14 and adults/youth 14+. Families training together qualify for a discounted family rate."
         }
       },
       {
@@ -117,3 +157,16 @@ meta:
     ]
   }
   </script>
+
+  <!-- Sticky CTA bar — mobile only -->
+  <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-3 flex items-center justify-between shadow-lg md:hidden" id="sticky-cta">
+    <p class="text-sm text-gray-600 leading-tight">First class is <strong>free</strong><br>No payment needed</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNLhIwc0D4bmBNuAlrZ8p9-38qFTWtVmVwyIWaphRDmoXcfQ/viewform"
+       target="_blank"
+       class="bg-red-600 text-white font-bold px-5 py-3 rounded hover:bg-red-700 whitespace-nowrap">
+      Book Free Trial &rarr;
+    </a>
+  </div>
+  <style>
+    @media (max-width: 767px) { body { padding-bottom: 72px; } }
+  </style>
