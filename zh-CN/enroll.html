@@ -21,26 +21,56 @@ meta:
     <h1 class="text-3xl font-bold mb-6">悉尼功夫班 – 预约免费试课</h1>
 
     <p class="text-lg mb-6">
-      谢氏武馆教授传统<strong><a href="choyleefut-history.html" class="text-blue-600">蔡李佛</a></strong>及<strong><a href="about-choi-mok-pai.html" class="text-blue-600">蔡莫派</a></strong>（南少林）功夫，适合成人、儿童及家庭。课程每周六于马士菲公园、周二晚上于威特拉举行——无需任何功夫基础。<strong>首课完全免费</strong>，无需提供付款资料。
+      谢氏武馆教授传统<strong>蔡李佛</strong>及<strong>蔡莫派</strong>（南少林）功夫，适合成人、儿童及家庭。课程每周六于马士菲公园、周二晚上于威特拉举行——无需任何功夫基础。<strong>首课完全免费</strong>，无需提供付款资料。
     </p>
 
-    <h2 id="enroll-form" class="text-2xl font-bold mb-2" style="scroll-margin-top: 5rem">报名表格 👇👇👇</h2>
+    <div class="mb-8">
+      <div class="rounded-lg overflow-hidden aspect-square">
+        <div id="slideshow-track" class="flex h-full transition-transform duration-300 ease-in-out">
+          <img src="/assets/images/hero-images/kid_class_square.jpg"
+               alt="悉尼马士菲儿童功夫班"
+               class="flex-shrink-0 w-full h-full object-cover">
+          <img src="/assets/images/hero-images/kung-fu-kid-class-waitara-square.png"
+               alt="悉尼威特拉儿童功夫班"
+               class="flex-shrink-0 w-full h-full object-cover">
+          <img src="/assets/images/hero-images/adult_class_group_photo_aimodified.PNG"
+               alt="悉尼成人功夫班"
+               class="flex-shrink-0 w-full h-full object-cover">
+        </div>
+      </div>
+      <div class="flex justify-center gap-3 mt-3" id="ss-dots">
+        <button class="w-2 h-2 rounded-full bg-red-600" aria-label="第一张"></button>
+        <button class="w-2 h-2 rounded-full bg-red-200" aria-label="第二张"></button>
+        <button class="w-2 h-2 rounded-full bg-red-200" aria-label="第三张"></button>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var track = document.getElementById('slideshow-track');
+        var dots  = document.querySelectorAll('#ss-dots button');
+        var total = dots.length;
+        var cur   = 0;
+        function go(n) {
+          cur = (n + total) % total;
+          track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+          dots.forEach(function (d, i) {
+            d.className = 'w-2 h-2 rounded-full ' + (i === cur ? 'bg-red-600' : 'bg-red-200');
+          });
+        }
+        dots.forEach(function (d, i) { d.addEventListener('click', function () { go(i); }); });
+        setInterval(function () { go(cur + 1); }, 3000);
+      })();
+    </script>
 
-    <p class="text-lg mb-2">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNLhIwc0D4bmBNuAlrZ8p9-38qFTWtVmVwyIWaphRDmoXcfQ/viewform"
-          target="_blank"
-          class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700 inline-block">
-        点击 &amp; 填写报名表格
-      </a>
-    </p>
+    <h2 id="enroll-form" class="text-2xl font-bold mb-4" style="scroll-margin-top: 5rem">预约免费试课</h2>
 
-    <p class="text-lg mb-8">
-      ☝️☝️☝️ 预约免费试课 <br/>
-      🆓 无需付款资料。 <br/>
-      💆 填写并参加免费试课。
-    </p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNLhIwc0D4bmBNuAlrZ8p9-38qFTWtVmVwyIWaphRDmoXcfQ/viewform"
+        target="_blank"
+        class="bg-red-600 px-8 py-4 rounded text-white font-bold text-xl hover:bg-red-700 inline-block w-full text-center mb-3">
+      立即预约免费试课 &rarr;
+    </a>
 
-    <p class="tmb-2"><strong>新生首课免费</strong></p>
+    <p class="text-gray-600 mb-8">只需两分钟 &middot; 无需付款资料 &middot; 首课完全免费</p>
 
     <p class="mt-8 mb-2">
       <strong>私人班</strong> <a href="index.html#contact" class="text-blue-600">请联系我们了解详情。</a>
@@ -53,11 +83,13 @@ meta:
     <h2 class="text-2xl font-bold mb-4 mt-8">课程时间表及收费</h2>
     {% include schedule-cards-zh-CN.html enroll_url="https://docs.google.com/forms/d/e/1FAIpQLSeNLhIwc0D4bmBNuAlrZ8p9-38qFTWtVmVwyIWaphRDmoXcfQ/viewform" new_window=true %}
 
-    <h2 class="text-2xl font-bold mb-2 mt-8">课程简介</h2>
-    <p class="text-lg mb-8">
-      我们设有选择性级别 / 带制度，供有志于功夫进阶的学员参加。
-      详情请参阅 <a href="class-content.html" target="_blank" class="text-blue-600">课程内容页面</a>。
-    </p>
+    <!-- PLACEHOLDER TESTIMONIAL — replace quote and attribution before go-live -->
+    <figure class="bg-white border-l-4 border-red-600 rounded-lg shadow-sm px-6 py-5 mb-8 mt-8">
+      <blockquote class="text-gray-700 text-lg italic mb-3">
+        「我儿子学了三个月，变化非常大。他更自信，学业更专注，而且每个星期六早上都很期待去上课。谢师傅对小朋友很有耐心，真心关心他们的进步。」
+      </blockquote>
+      <figcaption class="text-sm text-gray-500 font-semibold">— 陈太，9岁男孩的妈妈，马士菲班</figcaption>
+    </figure>
 
     <h2 class="text-2xl font-bold mb-4 mt-8">常见问题</h2>
     <div class="space-y-6 mb-8">
@@ -67,7 +99,7 @@ meta:
       </div>
       <div>
         <h3 class="font-bold text-lg mb-1">学费是多少？</h3>
-        <p class="text-gray-700">成人班（14岁或以上）每月$80或每课$25。儿童班（7至14岁）每月$60或每课$20。家庭优惠详见上方时间表。</p>
+        <p class="text-gray-700">成人班（14岁或以上）每月$80或每课$25。儿童班（6至14岁）每月$60或每课$20。家庭优惠详见上方时间表。</p>
       </div>
       <div>
         <h3 class="font-bold text-lg mb-1">课程在哪里上课？</h3>
@@ -75,11 +107,11 @@ meta:
       </div>
       <div>
         <h3 class="font-bold text-lg mb-1">适合哪些年龄组别？</h3>
-        <p class="text-gray-700">我们为7至14岁儿童及14岁或以上青年与成人分别设有课堂。家庭同练可享家庭优惠。</p>
+        <p class="text-gray-700">我们为6至14岁儿童及14岁或以上青年与成人分别设有课堂。家庭同练可享家庭优惠。</p>
       </div>
       <div>
         <h3 class="font-bold text-lg mb-1">教授哪种功夫？</h3>
-        <p class="text-gray-700">我们教授两门传统南方功夫：<strong>蔡李佛</strong>（步法流畅，打击刚猛）及<strong><a href="../about-choi-mok-pai.html" class="text-blue-600">蔡莫派</a></strong>（南少林，擅长近身搏击与爆发力）。</p>
+        <p class="text-gray-700">我们教授两门传统南方功夫：<strong>蔡李佛</strong>（步法流畅，打击刚猛）及<strong>蔡莫派</strong>（南少林，擅长近身搏击与爆发力）。</p>
       </div>
     </div>
   </div>
@@ -102,7 +134,7 @@ meta:
         "name": "学费是多少？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "成人班（14岁或以上）每月$80或每课$25。儿童班（7至14岁）每月$60或每课$20。家庭优惠详见时间表。"
+          "text": "成人班（14岁或以上）每月$80或每课$25。儿童班（6至14岁）每月$60或每课$20。家庭优惠详见时间表。"
         }
       },
       {
@@ -118,7 +150,7 @@ meta:
         "name": "适合哪些年龄组别？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "我们为7至14岁儿童及14岁或以上青年与成人分别设有课堂。家庭同练可享家庭优惠。"
+          "text": "我们为6至14岁儿童及14岁或以上青年与成人分别设有课堂。家庭同练可享家庭优惠。"
         }
       },
       {
@@ -132,3 +164,16 @@ meta:
     ]
   }
   </script>
+
+  <!-- Sticky CTA bar — mobile only -->
+  <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-3 flex items-center justify-between shadow-lg md:hidden" id="sticky-cta">
+    <p class="text-sm text-gray-600 leading-tight">首课<strong>免费</strong><br>无需付款资料</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNLhIwc0D4bmBNuAlrZ8p9-38qFTWtVmVwyIWaphRDmoXcfQ/viewform"
+       target="_blank"
+       class="bg-red-600 text-white font-bold px-5 py-3 rounded hover:bg-red-700 whitespace-nowrap">
+      预约免费试课 &rarr;
+    </a>
+  </div>
+  <style>
+    @media (max-width: 767px) { body { padding-bottom: 72px; } }
+  </style>

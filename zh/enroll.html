@@ -21,26 +21,56 @@ meta:
     <h1 class="text-3xl font-bold mb-6">悉尼功夫班 – 預約免費試堂</h1>
 
     <p class="text-lg mb-6">
-      謝氏武館教授傳統<strong><a href="choyleefut-history.html" class="text-blue-600">蔡李佛</a></strong>及<strong><a href="about-choi-mok-pai.html" class="text-blue-600">蔡莫派</a></strong>（南少林）功夫，適合成人、兒童及家庭。課程每週六於馬士菲公園、週二晚上於威特拉舉行——無需任何功夫基礎。<strong>首堂完全免費</strong>，無需提供付款資料。
+      謝氏武館教授傳統<strong>蔡李佛</strong>及<strong>蔡莫派</strong>（南少林）功夫，適合成人、兒童及家庭。課程每週六於馬士菲公園、週二晚上於威特拉舉行——無需任何功夫基礎。<strong>首堂完全免費</strong>，無需提供付款資料。
     </p>
 
-    <h2 id="enroll-form" class="text-2xl font-bold mb-2" style="scroll-margin-top: 5rem">報名表格 👇👇👇</h2>
+    <div class="mb-8">
+      <div class="rounded-lg overflow-hidden aspect-square">
+        <div id="slideshow-track" class="flex h-full transition-transform duration-300 ease-in-out">
+          <img src="/assets/images/hero-images/kid_class_square.jpg"
+               alt="悉尼馬士菲兒童功夫班"
+               class="flex-shrink-0 w-full h-full object-cover">
+          <img src="/assets/images/hero-images/kung-fu-kid-class-waitara-square.png"
+               alt="悉尼威特拉兒童功夫班"
+               class="flex-shrink-0 w-full h-full object-cover">
+          <img src="/assets/images/hero-images/adult_class_group_photo_aimodified.PNG"
+               alt="悉尼成人功夫班"
+               class="flex-shrink-0 w-full h-full object-cover">
+        </div>
+      </div>
+      <div class="flex justify-center gap-3 mt-3" id="ss-dots">
+        <button class="w-2 h-2 rounded-full bg-red-600" aria-label="第一張"></button>
+        <button class="w-2 h-2 rounded-full bg-red-200" aria-label="第二張"></button>
+        <button class="w-2 h-2 rounded-full bg-red-200" aria-label="第三張"></button>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var track = document.getElementById('slideshow-track');
+        var dots  = document.querySelectorAll('#ss-dots button');
+        var total = dots.length;
+        var cur   = 0;
+        function go(n) {
+          cur = (n + total) % total;
+          track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+          dots.forEach(function (d, i) {
+            d.className = 'w-2 h-2 rounded-full ' + (i === cur ? 'bg-red-600' : 'bg-red-200');
+          });
+        }
+        dots.forEach(function (d, i) { d.addEventListener('click', function () { go(i); }); });
+        setInterval(function () { go(cur + 1); }, 3000);
+      })();
+    </script>
 
-    <p class="text-lg mb-2">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNLhIwc0D4bmBNuAlrZ8p9-38qFTWtVmVwyIWaphRDmoXcfQ/viewform"
-          target="_blank"
-          class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700 inline-block">
-        點擊 &amp; 填寫報名表格
-      </a>
-    </p>
+    <h2 id="enroll-form" class="text-2xl font-bold mb-4" style="scroll-margin-top: 5rem">預約免費試堂</h2>
 
-    <p class="text-lg mb-8">
-      ☝️☝️☝️ 預約免費試堂 <br/>
-      🆓 無需付款資料。 <br/>
-      💆 填寫並參加免費試堂。
-    </p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNLhIwc0D4bmBNuAlrZ8p9-38qFTWtVmVwyIWaphRDmoXcfQ/viewform"
+        target="_blank"
+        class="bg-red-600 px-8 py-4 rounded text-white font-bold text-xl hover:bg-red-700 inline-block w-full text-center mb-3">
+      立即預約免費試堂 &rarr;
+    </a>
 
-    <p class="text-lg mb-2"><strong>新生首堂免費</strong></p>
+    <p class="text-gray-600 mb-8">只需兩分鐘 &middot; 無需付款資料 &middot; 首堂完全免費</p>
 
     <p class="text-lg mt-8 mb-2">
       <strong>私人班</strong> <a href="index.html#contact" class="text-blue-600">請聯絡我們了解詳情。</a>
@@ -53,11 +83,13 @@ meta:
     {% include schedule-cards-zh.html enroll_url="https://docs.google.com/forms/d/e/1FAIpQLSeNLhIwc0D4bmBNuAlrZ8p9-38qFTWtVmVwyIWaphRDmoXcfQ/viewform" 
       new_window=true %}
 
-    <h2 class="text-2xl font-bold mb-2 mt-8">課程簡介</h2>
-    <p class="text-lg mb-8">
-      我們設有選擇性級別 / 帶制度，供有志於功夫進階的學員參加。
-      詳情請參閱 <a href="class-content.html" target="_blank" class="text-blue-600">課程內容頁面</a>。
-    </p>
+    <!-- PLACEHOLDER TESTIMONIAL — replace quote and attribution before go-live -->
+    <figure class="bg-white border-l-4 border-red-600 rounded-lg shadow-sm px-6 py-5 mb-8 mt-8">
+      <blockquote class="text-gray-700 text-lg italic mb-3">
+        「我的兒子學了三個月，變化非常大。他更自信，學業更專注，而且每個星期六早上都很期待去上課。謝師傅對小朋友很有耐心，真心關心他們的進步。」
+      </blockquote>
+      <figcaption class="text-sm text-gray-500 font-semibold">— 陳太，9歲男孩的媽媽，馬士菲班</figcaption>
+    </figure>
 
     <h2 class="text-2xl font-bold mb-4 mt-8">常見問題</h2>
     <div class="space-y-6 mb-8">
@@ -67,7 +99,7 @@ meta:
       </div>
       <div>
         <h3 class="font-bold text-lg mb-1">學費是多少？</h3>
-        <p class="text-gray-700">成人班（14歲或以上）每月$80或每堂$25。兒童班（7至14歲）每月$60或每堂$20。家庭優惠詳見上方時間表。</p>
+        <p class="text-gray-700">成人班（14歲或以上）每月$80或每堂$25。兒童班（6至14歲）每月$60或每堂$20。家庭優惠詳見上方時間表。</p>
       </div>
       <div>
         <h3 class="font-bold text-lg mb-1">課程在哪裡上課？</h3>
@@ -75,7 +107,7 @@ meta:
       </div>
       <div>
         <h3 class="font-bold text-lg mb-1">適合哪些年齡組別？</h3>
-        <p class="text-gray-700">我們為7至14歲兒童及14歲或以上青年與成人分別設有課堂。家庭同修可享家庭優惠。</p>
+        <p class="text-gray-700">我們為6至14歲兒童及14歲或以上青年與成人分別設有課堂。家庭同修可享家庭優惠。</p>
       </div>
       <div>
         <h3 class="font-bold text-lg mb-1">教授哪種功夫？</h3>
@@ -102,7 +134,7 @@ meta:
         "name": "學費是多少？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "成人班（14歲或以上）每月$80或每堂$25。兒童班（7至14歲）每月$60或每堂$20。家庭優惠詳見時間表。"
+          "text": "成人班（14歲或以上）每月$80或每堂$25。兒童班（6至14歲）每月$60或每堂$20。家庭優惠詳見時間表。"
         }
       },
       {
@@ -118,7 +150,7 @@ meta:
         "name": "適合哪些年齡組別？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "我們為7至14歲兒童及14歲或以上青年與成人分別設有課堂。家庭同修可享家庭優惠。"
+          "text": "我們為6至14歲兒童及14歲或以上青年與成人分別設有課堂。家庭同修可享家庭優惠。"
         }
       },
       {
@@ -132,3 +164,16 @@ meta:
     ]
   }
   </script>
+
+  <!-- Sticky CTA bar — mobile only -->
+  <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-3 flex items-center justify-between shadow-lg md:hidden" id="sticky-cta">
+    <p class="text-sm text-gray-600 leading-tight">首堂<strong>免費</strong><br>無需付款資料</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNLhIwc0D4bmBNuAlrZ8p9-38qFTWtVmVwyIWaphRDmoXcfQ/viewform"
+       target="_blank"
+       class="bg-red-600 text-white font-bold px-5 py-3 rounded hover:bg-red-700 whitespace-nowrap">
+      預約免費試堂 &rarr;
+    </a>
+  </div>
+  <style>
+    @media (max-width: 767px) { body { padding-bottom: 72px; } }
+  </style>
