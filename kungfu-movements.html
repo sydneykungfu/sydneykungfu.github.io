@@ -425,6 +425,12 @@ meta:
                 '陰插搥': 'assets/images/moves/11-JamCaapCeoi.webp',
                 '陽插搥': 'assets/images/moves/12-JoengCaapCeoi.webp',
                 '扭插搥': 'assets/images/moves/11-JamCaapCeoi.webp',
+                '四平馬': 'assets/images/moves/sei-ping-maa.png',
+                '吊馬': 'assets/images/moves/diu-maa.png',
+                '圈馬': 'assets/images/moves/kyun-maa.png',
+                '拐馬': 'assets/images/moves/gwaai-maa.png',
+                '偷馬': 'assets/images/moves/tau-maa.png',
+                '麒麟馬': 'assets/images/moves/kei-lin-maa.png',
             };
 
             // Generate unique filter options
@@ -447,7 +453,21 @@ meta:
                         row.style.display = 'none';
                     }
                 });
+                const url = new URL(window.location);
+                if (selectedType === 'all') {
+                    url.searchParams.delete('filter');
+                } else {
+                    url.searchParams.set('filter', selectedType);
+                }
+                history.replaceState(null, '', url);
             });
+
+            // Apply filter from query string
+            const urlFilter = new URLSearchParams(window.location.search).get('filter');
+            if (urlFilter && [...filterDropdown.options].some(o => o.value === urlFilter)) {
+                filterDropdown.value = urlFilter;
+                filterDropdown.dispatchEvent(new Event('change'));
+            }
 
             // Add image indicators
             rows.forEach(row => {
