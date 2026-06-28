@@ -1,7 +1,7 @@
 export const meta = {
-  name: 'audit-ai-llm',
-  description: 'Audit all English pages for AI/LLM structured data gaps and apply JSON-LD fixes',
-  whenToUse: 'Run after adding new pages, or periodically to ensure all pages have appropriate structured data for AI/LLM discoverability.',
+  name: 'audit-ai-llm-en',
+  description: 'Audit English pages (root) for AI/LLM structured data gaps and apply JSON-LD fixes',
+  whenToUse: 'Run after adding new English pages, or use audit-ai-llm-all to audit all languages at once.',
   phases: [
     { title: 'Discover', detail: 'Find all auditable HTML pages in the repo' },
     { title: 'Audit & Fix', detail: 'Read each page, identify JSON-LD gaps, apply improvements' },
