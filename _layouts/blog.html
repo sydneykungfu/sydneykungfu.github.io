@@ -78,3 +78,41 @@ layout: default
       {% endif %}
     </section>
 </main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.meta.description | jsonify }},
+  "datePublished": "{{ page.date | date: '%Y-%m-%dT00:00:00+10:00' }}",
+  "inLanguage": "{% if page.lang == 'zh-hk' %}zh-HK{% elsif page.lang == 'zh-CN' %}zh-CN{% else %}en{% endif %}",
+  "url": "https://sydneykungfu.au{{ page.url }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://sydneykungfu.au{{ page.url }}"
+  },
+  {% if page.meta.og.image %}
+  "image": "https://sydneykungfu.au{{ page.meta.og.image }}",
+  {% endif %}
+  "author": {
+    "@type": "Organization",
+    "name": "Tse Kung Fu Academy",
+    "url": "https://sydneykungfu.au"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tse Kung Fu Academy",
+    "url": "https://sydneykungfu.au",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sydneykungfu.au/assets/images/hero_01_compressed.webp"
+    }
+  },
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://sydneykungfu.au/blog",
+    "name": "Tse Kung Fu Academy Blog"
+  }
+}
+</script>
