@@ -33,6 +33,7 @@
   <meta name="description" content="{{page.meta.description}}" />
   <meta name="keywords" content="{{page.meta.keywords}}" />
   <meta name="author" content="Angus Tse" />
+  {% if page.noindex %}<meta name="robots" content="noindex, nofollow, noarchive">{% endif %}
   <meta property="og:title" content="{{page.meta.og.title | default: page.title}}" />
   <meta property="og:description" content="{{page.meta.og.description | default: page.meta.description}}" />
   <meta property="og:image" content="{{page.meta.og.image | default: '/assets/images/hero_01_compressed.png'}}" />
