@@ -1,0 +1,104 @@
+---
+layout: default
+lang: en
+title: "Ask About Choy Lee Fut | AI Chat | Tse Kung Fu Academy"
+permalink: /choyleefut-ai-chat.html
+meta:
+  keywords: "Choy Lee Fut AI chat, Choy Lee Fut questions, Choy Lay Fut, 蔡李佛, Kung Fu terminology, Cantonese Kung Fu terms"
+  description: "Ask questions about Choy Lee Fut kung fu history, techniques, and terminology. Powered by traditional text sources and answered in English or Chinese."
+  og:
+    title: "Ask About Choy Lee Fut | AI Chat | Tse Kung Fu Academy"
+    description: "Ask questions about Choy Lee Fut kung fu history, techniques, and terminology. Powered by traditional text sources and answered in English or Chinese."
+    image: "https://sydneykungfu.au/assets/images/hero_01_compressed.png"
+    url: "https://sydneykungfu.au/choyleefut-ai-chat.html"
+  twitter:
+    title: "Ask About Choy Lee Fut | AI Chat | Tse Kung Fu Academy"
+    description: "Ask questions about Choy Lee Fut kung fu history, techniques, and terminology."
+    image: "https://sydneykungfu.au/assets/images/hero_01_compressed.png"
+---
+
+<style>
+  .kf-widget {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .kf-tagline {
+    font-size: 1rem;
+    color: #4b5563;
+    margin-bottom: 1rem;
+  }
+  .kf-disclaimer {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    margin-bottom: 1rem;
+    border-left: 3px solid #e5e7eb;
+    padding-left: 0.75rem;
+  }
+  .kf-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .kf-input {
+    flex: 1;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    outline: none;
+  }
+  .kf-input:focus {
+    border-color: #dc2626;
+    box-shadow: 0 0 0 2px rgba(220,38,38,0.15);
+  }
+  .kf-btn {
+    padding: 0.5rem 1.25rem;
+    background: #dc2626;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .kf-btn:hover { background: #b91c1c; }
+  .kf-btn:disabled { background: #9ca3af; cursor: default; }
+  .kf-login-btn { width: 100%; padding: 0.65rem; }
+  .kf-response { font-size: 0.95rem; }
+  .kf-answer { color: #111827; line-height: 1.7; white-space: pre-wrap; }
+  .kf-loading { color: #6b7280; font-style: italic; }
+  .kf-error { color: #dc2626; }
+  .kf-refusal { color: #374151; font-style: italic; }
+  .kf-quota-exceeded { color: #d97706; }
+  .kf-sources-label { font-size: 0.8rem; color: #9ca3af; margin-top: 1rem; margin-bottom: 0.25rem; }
+  .kf-citations { list-style: none; padding: 0; margin: 0; }
+  .kf-citations li { font-size: 0.8rem; color: #6b7280; }
+  .kf-quota { font-size: 0.75rem; color: #9ca3af; margin-top: 1rem; }
+</style>
+
+<div class="max-w-3xl mx-auto px-4 py-10">
+  <h1 class="text-3xl font-bold mb-2 text-center">Ask About Choy Lee Fut</h1>
+  <p class="text-center text-gray-500 mb-8 text-sm">
+    Questions answered from traditional Chinese source texts.<br>
+    Ask in English or Chinese (繁體中文).
+  </p>
+
+  <div id="kungfu-widget"></div>
+
+  <div class="mt-10 max-w-xl mx-auto text-sm text-gray-400 space-y-2">
+    <p><strong class="text-gray-500">What it covers:</strong> history, lineage, movements, terminology, and classical text excerpts from the Choy Lee Fut corpus.</p>
+    <p><strong class="text-gray-500">What it won't do:</strong> give medical or injury advice, coach technique over video, or answer questions outside the source material.</p>
+  </div>
+</div>
+
+<script src="/assets/js/widget.js"
+  data-auth0-domain="dev-hfqgyqwo3250bdzs.us.auth0.com"
+  data-auth0-client-id="fPLMekqSNq5qpNZ3XoV7QO3eQubbbxY4"
+  data-auth0-audience="https://api.sydneykungfu.au"
+  data-api-url="https://kungfu-chatbot-api-570853029688.australia-southeast1.run.app"
+  data-container-id="kungfu-widget">
+</script>
