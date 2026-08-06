@@ -129,13 +129,20 @@
 
   function _renderCitations(citations) {
     if (!citations || citations.length === 0) return '';
-    var items = citations.map(function (c) {
+    var items = citations.map(function (c, i) {
       var loc = _escape(c.document);
       if (c.volume !== null && c.volume !== undefined) {
         loc += ', Vol. ' + _escape(String(c.volume));
       }
       loc += ', p. ' + _escape(String(c.page));
-      return '<li>' + loc + '</li>';
+      var passageId = 'kf-passage-' + i;
+      var toggle = c.text
+        ? ' <a class="kf-view-source" href="#" data-passage="' + passageId + '">View source</a>' +
+          '<div id="' + passageId + '" class="kf-passage" hidden>' +
+          _escape(c.text) +
+          '</div>'
+        : '';
+      return '<li>' + loc + toggle + '</li>';
     });
     return (
       '<p class="kf-sources-label">Sources:</p>' +
@@ -197,6 +204,16 @@
             '<p class="kf-answer">' + _escape(data.answer) + '</p>' +
             _renderCitations(data.citations) +
             _renderQuota(data.quota_remaining);
+          responseDiv.querySelectorAll('.kf-view-source').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+              e.preventDefault();
+              var block = document.getElementById(link.dataset.passage);
+              if (block) {
+                block.hidden = !block.hidden;
+                link.textContent = block.hidden ? 'View source' : 'Hide source';
+              }
+            });
+          });
         }
       }).catch(function (err) {
         if (err.status === 401) {
