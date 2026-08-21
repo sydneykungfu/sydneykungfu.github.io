@@ -2,18 +2,18 @@
 
   <div class="wizard-step" data-step="1">
     <div class="mb-4" data-required data-type="text">
-      <label class="block font-semibold mb-1">Learner Name *</label>
-      <input type="text" name="learnerName" class="w-full border border-gray-300 rounded px-3 py-2">
+      <label class="block font-semibold mb-1" for="learnerName">Learner Name *</label>
+      <input type="text" id="learnerName" name="learnerName" class="w-full border border-gray-300 rounded px-3 py-2">
       <p class="wizard-error hidden text-red-600 text-sm mt-1">This is a required question</p>
     </div>
     <div class="mb-4" data-required data-type="text">
-      <label class="block font-semibold mb-1">Email Address *</label>
-      <input type="email" name="email" class="w-full border border-gray-300 rounded px-3 py-2">
+      <label class="block font-semibold mb-1" for="email">Email Address *</label>
+      <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded px-3 py-2">
       <p class="wizard-error hidden text-red-600 text-sm mt-1">This is a required question</p>
     </div>
     <div class="mb-4">
-      <label class="block font-semibold mb-1">Contact No. (Optional)</label>
-      <input type="text" name="contactNo" class="w-full border border-gray-300 rounded px-3 py-2">
+      <label class="block font-semibold mb-1" for="contactNo">Contact No. (Optional)</label>
+      <input type="text" id="contactNo" name="contactNo" class="w-full border border-gray-300 rounded px-3 py-2">
     </div>
     <div class="mb-4" data-required data-type="radio-group">
       <label class="block font-semibold mb-2">Age Range *</label>
@@ -39,14 +39,14 @@
   <div class="wizard-step hidden" data-step="parent-guardian">
     <p class="text-gray-600 mb-4">For learner younger than 18 years old.</p>
     <div class="mb-4" data-required data-type="text">
-      <label class="block font-semibold mb-1">Parent / Guardian Name *</label>
-      <input type="text" name="parentGuardianName" class="w-full border border-gray-300 rounded px-3 py-2">
+      <label class="block font-semibold mb-1" for="parentGuardianName">Parent / Guardian Name *</label>
+      <input type="text" id="parentGuardianName" name="parentGuardianName" class="w-full border border-gray-300 rounded px-3 py-2">
       <p class="wizard-error hidden text-red-600 text-sm mt-1">This is a required question</p>
     </div>
     <div class="mb-4" data-required data-type="text">
-      <label class="block font-semibold mb-1">Parent / Guardian Contact No. *</label>
+      <label class="block font-semibold mb-1" for="parentGuardianContact">Parent / Guardian Contact No. *</label>
       <p class="text-gray-500 text-sm mb-1">For Emergency purpose.</p>
-      <input type="text" name="parentGuardianContact" class="w-full border border-gray-300 rounded px-3 py-2">
+      <input type="text" id="parentGuardianContact" name="parentGuardianContact" class="w-full border border-gray-300 rounded px-3 py-2">
       <p class="wizard-error hidden text-red-600 text-sm mt-1">This is a required question</p>
     </div>
     <button type="button" data-action="back" class="border border-gray-300 px-6 py-3 rounded font-semibold hover:bg-gray-50 mr-2">Back</button>
@@ -121,16 +121,16 @@
       <p>In the event of injury during the Activities, I authorise Academy staff to arrange any necessary first aid or emergency medical treatment, and to contact:</p>
     </div>
     <div class="mb-4">
-      <label class="block font-semibold mb-1">Emergency contact name &amp; Phone</label>
-      <input type="text" name="emergencyContact" class="w-full border border-gray-300 rounded px-3 py-2">
+      <label class="block font-semibold mb-1" for="emergencyContact">Emergency contact name &amp; Phone</label>
+      <input type="text" id="emergencyContact" name="emergencyContact" class="w-full border border-gray-300 rounded px-3 py-2">
     </div>
     <div class="mb-4" data-required data-type="checkbox-group">
       <label class="flex items-center gap-2"><input type="checkbox" name="waiverAccepted" value="on"> I have read and agree to the waiver terms. *</label>
       <p class="wizard-error hidden text-red-600 text-sm mt-1">This is a required question</p>
     </div>
     <div class="mb-4" data-required data-type="text">
-      <label class="block font-semibold mb-1">Your full name as a Signature *</label>
-      <input type="text" name="signatureName" class="w-full border border-gray-300 rounded px-3 py-2">
+      <label class="block font-semibold mb-1" for="signatureName">Your full name as a Signature *</label>
+      <input type="text" id="signatureName" name="signatureName" class="w-full border border-gray-300 rounded px-3 py-2">
       <p class="wizard-error hidden text-red-600 text-sm mt-1">This is a required question</p>
     </div>
     <div class="mb-4" data-required data-type="radio-group">
