@@ -31,10 +31,12 @@
     function groupHasValue(group) {
       var inputs = group.querySelectorAll('input, textarea');
       if (group.dataset.type === 'checkbox-group') {
-        return Array.prototype.some.call(inputs, function (i) { return i.type === 'checkbox' && i.checked; });
+        return Array.prototype.some.call(inputs, function (i) { return i.type === 'checkbox' && i.checked; })
+          || Array.prototype.some.call(inputs, function (i) { return i.type === 'text' && i.value.trim().length > 0; });
       }
       if (group.dataset.type === 'radio-group') {
-        return Array.prototype.some.call(inputs, function (i) { return i.type === 'radio' && i.checked; });
+        return Array.prototype.some.call(inputs, function (i) { return i.type === 'radio' && i.checked; })
+          || Array.prototype.some.call(inputs, function (i) { return i.type === 'text' && i.value.trim().length > 0; });
       }
       var input = inputs[0];
       return !!input && input.value.trim().length > 0;
