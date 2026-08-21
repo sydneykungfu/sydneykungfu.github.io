@@ -64,13 +64,7 @@ meta:
 
     <h2 id="enroll-form" class="text-2xl font-bold mb-4" style="scroll-margin-top: 5rem">预约免费试课</h2>
 
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNLhIwc0D4bmBNuAlrZ8p9-38qFTWtVmVwyIWaphRDmoXcfQ/viewform"
-        target="_blank"
-        class="bg-red-600 px-8 py-4 rounded text-white font-bold text-xl hover:bg-red-700 inline-block w-full text-center mb-3">
-      立即预约免费试课 &rarr;
-    </a>
-
-    <p class="text-gray-600 mb-8">只需两分钟 &middot; 无需付款资料 &middot; 首课完全免费</p>
+    {% include enroll-wizard.html %}
 
     <p class="mt-8 mb-2">
       <strong>私人班</strong> <a href="index.html#contact" class="text-blue-600">请联系我们了解详情。</a>
@@ -81,7 +75,7 @@ meta:
     </p>
 
     <h2 class="text-2xl font-bold mb-4 mt-8">课程时间表及收费</h2>
-    {% include schedule-cards-zh-CN.html enroll_url="https://docs.google.com/forms/d/e/1FAIpQLSeNLhIwc0D4bmBNuAlrZ8p9-38qFTWtVmVwyIWaphRDmoXcfQ/viewform" new_window=true %}
+    {% include schedule-cards-zh-CN.html enroll_url="#enroll-form" %}
 
     <!-- PLACEHOLDER TESTIMONIAL — replace quote and attribution before go-live -->
     <figure class="bg-white border-l-4 border-red-600 rounded-lg shadow-sm px-6 py-5 mb-8 mt-8">
@@ -168,8 +162,7 @@ meta:
   <!-- Sticky CTA bar — mobile only -->
   <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-3 flex items-center justify-between shadow-lg md:hidden" id="sticky-cta">
     <p class="text-sm text-gray-600 leading-tight">首课<strong>免费</strong><br>无需付款资料</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNLhIwc0D4bmBNuAlrZ8p9-38qFTWtVmVwyIWaphRDmoXcfQ/viewform"
-       target="_blank"
+    <a href="#enroll-form"
        class="bg-red-600 text-white font-bold px-5 py-3 rounded hover:bg-red-700 whitespace-nowrap">
       预约免费试课 &rarr;
     </a>
