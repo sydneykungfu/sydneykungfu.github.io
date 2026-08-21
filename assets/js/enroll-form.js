@@ -39,7 +39,9 @@
           || Array.prototype.some.call(inputs, function (i) { return i.type === 'text' && i.value.trim().length > 0; });
       }
       var input = inputs[0];
-      return !!input && input.value.trim().length > 0;
+      if (!input || input.value.trim().length === 0) return false;
+      if (input.type === 'email') return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
+      return true;
     }
 
     function validateStep(step) {
