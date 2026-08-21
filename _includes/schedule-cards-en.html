@@ -9,7 +9,7 @@
     <p class="text-gray-700"><strong>6-14 yo</strong> $60 /month. or $20 /class.</p>
     <p class="mt-2"><a href="/kungfu-classes-kids-sydney.html" class="text-blue-600 hover:underline text-sm">Learn more about our Kids Kung Fu program →</a></p>
     <p class="mt-8 mb-2"><a href="{{ include.enroll_url | default: '/enroll.html' }}"
-      target="{{ include.new_window | default: false | ternary: '_blank', '_self' }}"
+      {% if include.new_window %}target="_blank" rel="noopener"{% endif %}
       class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">Book a FREE trial</a></p>
     <p class="mb-6"><a href="/#contact" class="text-blue-600 hover:underline text-sm">Questions? Contact us →</a></p>
     <div class="mt-2">
@@ -34,7 +34,7 @@
     <p class="text-gray-700"><strong>6-14 yo</strong> $60 /month. or $20 /class.</p>
     <p class="mt-2"><a href="/kungfu-classes-kids-sydney.html" class="text-blue-600 hover:underline text-sm">Learn more about our Kids Kung Fu program →</a></p>
     <p class="mt-8 mb-2"><a href="{{ include.enroll_url | default: '/enroll.html' }}"
-      target="{{ include.new_window | default: false | ternary: '_blank', '_self' }}"
+      {% if include.new_window %}target="_blank" rel="noopener"{% endif %}
       class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">Book a FREE trial</a></p>
     <p class="mb-6"><a href="/#contact" class="text-blue-600 hover:underline text-sm">Questions? Contact us →</a></p>
     <div class="mt-2">
@@ -60,7 +60,7 @@
     <p class="text-gray-700"><strong>14 yo+</strong> $80 /month. or $25 /class.</p>
     <p class="mt-2"><a href="/class-content.html" class="text-blue-600 hover:underline text-sm">See our adult syllabus & progression levels →</a></p>
     <p class="mt-8 mb-2"><a href="{{ include.enroll_url | default: '/enroll.html' }}"
-      target="{{ include.new_window | default: false | ternary: '_blank', '_self' }}"
+      {% if include.new_window %}target="_blank" rel="noopener"{% endif %}
       class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">Book a FREE trial</a></p>
     <p class="mb-6"><a href="/#contact" class="text-blue-600 hover:underline text-sm">Questions? Contact us →</a></p>
     <div class="mt-2">
