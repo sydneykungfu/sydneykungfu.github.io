@@ -1,5 +1,5 @@
 (function () {
-  var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw6fMbxx41Cf74-sLCV65FNI8ZLGmCXSEW-LiumguH4f6UBLfYpmTudY8B3CFEDlFIdoQ/exec';
+  var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzs8A69iTSSRwieKv8paarL8XXVgOeemVFiWZLHoL9SEWrK7L8g9uSsC9-HlBjQvcyz8w/exec';
   var MINOR_AGE_RANGES = ['3--5', '6-8', '9-11', '12-14', '15-17'];
 
   function init() {
