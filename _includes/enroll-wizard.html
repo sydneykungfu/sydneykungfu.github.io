@@ -1,0 +1,160 @@
+<div id="enroll-wizard" class="bg-white rounded-lg shadow-sm p-6 mb-3">
+
+  <div class="wizard-step" data-step="1">
+    <div class="mb-4" data-required data-type="text">
+      <label class="block font-semibold mb-1">Learner Name *</label>
+      <input type="text" name="learnerName" class="w-full border border-gray-300 rounded px-3 py-2">
+      <p class="wizard-error hidden text-red-600 text-sm mt-1">This is a required question</p>
+    </div>
+    <div class="mb-4" data-required data-type="text">
+      <label class="block font-semibold mb-1">Email Address *</label>
+      <input type="email" name="email" class="w-full border border-gray-300 rounded px-3 py-2">
+      <p class="wizard-error hidden text-red-600 text-sm mt-1">This is a required question</p>
+    </div>
+    <div class="mb-4">
+      <label class="block font-semibold mb-1">Contact No. (Optional)</label>
+      <input type="text" name="contactNo" class="w-full border border-gray-300 rounded px-3 py-2">
+    </div>
+    <div class="mb-4" data-required data-type="radio-group">
+      <label class="block font-semibold mb-2">Age Range *</label>
+      <div class="grid grid-cols-3 sm:grid-cols-4 gap-2">
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="3--5"> 3&ndash;5</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="6-8"> 6-8</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="9-11"> 9-11</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="12-14"> 12-14</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="15-17"> 15-17</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="18-24"> 18-24</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="25-30"> 25-30</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="31-40"> 31-40</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="41-45"> 41-45</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="46-50"> 46-50</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="51-60"> 51-60</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="61+"> 61+</label>
+      </div>
+      <p class="wizard-error hidden text-red-600 text-sm mt-1">This is a required question</p>
+    </div>
+    <button type="button" data-action="next" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">Next</button>
+  </div>
+
+  <div class="wizard-step hidden" data-step="parent-guardian">
+    <p class="text-gray-600 mb-4">For learner younger than 18 years old.</p>
+    <div class="mb-4" data-required data-type="text">
+      <label class="block font-semibold mb-1">Parent / Guardian Name *</label>
+      <input type="text" name="parentGuardianName" class="w-full border border-gray-300 rounded px-3 py-2">
+      <p class="wizard-error hidden text-red-600 text-sm mt-1">This is a required question</p>
+    </div>
+    <div class="mb-4" data-required data-type="text">
+      <label class="block font-semibold mb-1">Parent / Guardian Contact No. *</label>
+      <p class="text-gray-500 text-sm mb-1">For Emergency purpose.</p>
+      <input type="text" name="parentGuardianContact" class="w-full border border-gray-300 rounded px-3 py-2">
+      <p class="wizard-error hidden text-red-600 text-sm mt-1">This is a required question</p>
+    </div>
+    <button type="button" data-action="back" class="border border-gray-300 px-6 py-3 rounded font-semibold hover:bg-gray-50 mr-2">Back</button>
+    <button type="button" data-action="next" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">Next</button>
+  </div>
+
+  <div class="wizard-step hidden" data-step="3">
+    <div class="mb-4" data-required data-type="checkbox-group">
+      <label class="block font-semibold mb-2">What are your main interests in Kung Fu training? *</label>
+      <label class="flex items-center gap-2 mb-1"><input type="checkbox" name="interests" value="Self-defense"> Self-defense</label>
+      <label class="flex items-center gap-2 mb-1"><input type="checkbox" name="interests" value="Traditional forms & techniques"> Traditional forms &amp; techniques</label>
+      <label class="flex items-center gap-2 mb-1"><input type="checkbox" name="interests" value="Weapons training (Wooden Staff, Broadsword, etc.)"> Weapons training (Wooden Staff, Broadsword, etc.)</label>
+      <label class="flex items-center gap-2 mb-1"><input type="checkbox" name="interests" value="Sparring & combat applications"> Sparring &amp; combat applications</label>
+      <label class="flex items-center gap-2 mb-1"><input type="checkbox" name="interests" value="Strength & fitness"> Strength &amp; fitness</label>
+      <label class="flex items-center gap-2 mb-1">Other: <input type="text" name="interestsOther" class="border border-gray-300 rounded px-2 py-1"></label>
+      <p class="wizard-error hidden text-red-600 text-sm mt-1">This is a required question</p>
+    </div>
+    <div class="mb-4" data-required data-type="radio-group">
+      <label class="block font-semibold mb-2">Have you practiced martial arts before? *</label>
+      <label class="flex items-center gap-2 mb-1"><input type="radio" name="priorExperience" value="No, I am a complete beginner"> No, I am a complete beginner</label>
+      <label class="flex items-center gap-2 mb-1"><input type="radio" name="priorExperience" value="Yes, I have some experience in Choy Lee Fut only"> Yes, I have some experience in Choy Lee Fut only</label>
+      <label class="flex items-center gap-2 mb-1"><input type="radio" name="priorExperience" value="Yes, I have trained in other styles"> Yes, I have trained in other styles</label>
+      <p class="wizard-error hidden text-red-600 text-sm mt-1">This is a required question</p>
+    </div>
+    <button type="button" data-action="back" class="border border-gray-300 px-6 py-3 rounded font-semibold hover:bg-gray-50 mr-2">Back</button>
+    <button type="button" data-action="next" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">Next</button>
+  </div>
+
+  <div class="wizard-step hidden" data-step="4">
+    <div class="mb-4" data-required data-type="checkbox-group">
+      <label class="block font-semibold mb-2">What days/times are you choose for training? *</label>
+      <p class="text-gray-500 text-sm mb-2">Feel free to suggest any time/location. I will consider it in the near future.</p>
+      <label class="flex items-center gap-2 mb-1"><input type="checkbox" name="availability" value="Marsfield Park - Saturday 9:30-11:30AM"> Marsfield Park - Saturday 9:30-11:30AM</label>
+      <label class="flex items-center gap-2 mb-1"><input type="checkbox" name="availability" value="Marsfield Park - Saturday 11:45-12:45PM"> Marsfield Park - Saturday 11:45-12:45PM</label>
+      <label class="flex items-center gap-2 mb-1"><input type="checkbox" name="availability" value="Outside PCYC Waitara - Tuesday 6:00-7:00pm"> Outside PCYC Waitara - Tuesday 6:00-7:00pm</label>
+      <label class="flex items-center gap-2 mb-1"><input type="checkbox" name="availability" value="Private Class"> Private Class</label>
+      <label class="flex items-center gap-2 mb-1">Other: <input type="text" name="availabilityOther" class="border border-gray-300 rounded px-2 py-1"></label>
+      <p class="wizard-error hidden text-red-600 text-sm mt-1">This is a required question</p>
+    </div>
+    <button type="button" data-action="back" class="border border-gray-300 px-6 py-3 rounded font-semibold hover:bg-gray-50 mr-2">Back</button>
+    <button type="button" data-action="next" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">Next</button>
+  </div>
+
+  <div class="wizard-step hidden" data-step="5">
+    <h3 class="text-xl font-bold mb-3">Martial Arts Training Waiver</h3>
+    <div class="text-sm text-gray-700 border border-gray-200 rounded p-4 mb-4 max-h-64 overflow-y-auto space-y-3">
+      <p><strong>RISK WARNING, WAIVER AND RELEASE — TSE KUNG FU ACADEMY</strong></p>
+      <p>(Hard Clutch Pty Ltd, ABN 34 678 262 809, trading as Tse Kung Fu Academy)</p>
+      <p><strong>1. Nature of the activity and risks</strong></p>
+      <p>Tse Kung Fu Academy provides Choy Lee Fut Kung Fu classes and related activities, including adult and children's classes and childcare incursions ("the Activities"). Participation in the Activities involves inherent risks, including but not limited to:</p>
+      <ul class="list-disc pl-5">
+        <li>Impact injury from striking, blocking, sparring or partner drills</li>
+        <li>Sprains, strains, joint injury and muscle soreness</li>
+        <li>Falls, collisions and contact with other participants or equipment</li>
+        <li>Concussion or other head injury</li>
+        <li>Aggravation of pre-existing injuries or medical conditions</li>
+        <li>Injury arising from the outdoor park locations used for classes (uneven ground, weather exposure)</li>
+      </ul>
+      <p>This is a general description of risk and is not exhaustive. By signing this form, you acknowledge that you have read and understood this risk warning, and that it constitutes a formal risk warning for the purposes of section 5M of the Civil Liability Act 2002 (NSW) and equivalent provisions in other States or Territories where applicable.</p>
+      <p><strong>2. Voluntary participation and assumption of risk</strong></p>
+      <p>I voluntarily choose to participate (or to allow the person named below to participate) in the Activities, in full knowledge of the risks described above, and I accept those risks.</p>
+      <p><strong>3. Exclusion of liability</strong></p>
+      <p>To the maximum extent permitted by law, including under section 5N of the Civil Liability Act 2002 (NSW), I agree that this waiver excludes, restricts and modifies any liability of Hard Clutch Pty Ltd, its instructors, employees, contractors and agents arising from breach of any express or implied warranty that the Activities will be provided with reasonable care and skill. This exclusion does not apply to the extent the law does not permit it to apply — including liability for reckless conduct or gross negligence, or where a non-excludable consumer guarantee applies under the Australian Consumer Law.</p>
+      <p><strong>4. Release</strong></p>
+      <p>I release and agree not to sue Hard Clutch Pty Ltd, its instructors, employees, contractors and agents for any injury, loss or damage arising out of my (or my child's) participation in the Activities, except to the extent caused by their reckless or grossly negligent conduct.</p>
+      <p><strong>5. Health declaration</strong></p>
+      <p>I confirm that I (or the participant named below) am, to the best of my knowledge, fit and healthy enough to participate in the Activities. I will notify the Academy of any medical condition, injury or disability that may affect safe participation, including:</p>
+      <p><strong>6. Participants under 18</strong></p>
+      <p>(To be completed by a parent or legal guardian if the participant is under 18 years of age.)</p>
+      <p>I am the parent/legal guardian of the participant named below. I have explained the nature of the Activities and the risks described in section 1 to the participant, in terms appropriate to their age and understanding. I accept this risk warning and the terms of this waiver on the participant's behalf, and I confirm I have authority to do so.</p>
+      <p><strong>7. Emergency contact and medical treatment</strong></p>
+      <p>In the event of injury during the Activities, I authorise Academy staff to arrange any necessary first aid or emergency medical treatment, and to contact:</p>
+    </div>
+    <div class="mb-4">
+      <label class="block font-semibold mb-1">Emergency contact name &amp; Phone</label>
+      <input type="text" name="emergencyContact" class="w-full border border-gray-300 rounded px-3 py-2">
+    </div>
+    <div class="mb-4" data-required data-type="checkbox-group">
+      <label class="flex items-center gap-2"><input type="checkbox" name="waiverAccepted" value="on"> I have read and agree to the waiver terms. *</label>
+      <p class="wizard-error hidden text-red-600 text-sm mt-1">This is a required question</p>
+    </div>
+    <div class="mb-4" data-required data-type="text">
+      <label class="block font-semibold mb-1">Your full name as a Signature *</label>
+      <input type="text" name="signatureName" class="w-full border border-gray-300 rounded px-3 py-2">
+      <p class="wizard-error hidden text-red-600 text-sm mt-1">This is a required question</p>
+    </div>
+    <div class="mb-4" data-required data-type="radio-group">
+      <label class="block font-semibold mb-2">How did you hear about us? *</label>
+      <label class="flex items-center gap-2 mb-1"><input type="radio" name="howHeard" value="Google"> Google</label>
+      <label class="flex items-center gap-2 mb-1"><input type="radio" name="howHeard" value="Facebook"> Facebook</label>
+      <label class="flex items-center gap-2 mb-1"><input type="radio" name="howHeard" value="Instagram"> Instagram</label>
+      <label class="flex items-center gap-2 mb-1"><input type="radio" name="howHeard" value="YouTube"> YouTube</label>
+      <label class="flex items-center gap-2 mb-1"><input type="radio" name="howHeard" value="小紅書"> 小紅書</label>
+      <label class="flex items-center gap-2 mb-1"><input type="radio" name="howHeard" value="Friend"> Friend</label>
+      <label class="flex items-center gap-2 mb-1"><input type="radio" name="howHeard" value="Existing member referral"> Existing member referral</label>
+      <label class="flex items-center gap-2 mb-1"><input type="radio" name="howHeard" value="Community board"> Community board</label>
+      <label class="flex items-center gap-2 mb-1">Other: <input type="text" name="howHeardOther" class="border border-gray-300 rounded px-2 py-1"></label>
+      <p class="wizard-error hidden text-red-600 text-sm mt-1">This is a required question</p>
+    </div>
+
+    <div style="position: absolute; left: -9999px;" aria-hidden="true">
+      <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+    </div>
+
+    <p id="enroll-submit-error" class="hidden text-red-600 text-sm mb-3">Something went wrong submitting your form. Please try again, or contact us directly.</p>
+    <button type="button" data-action="back" class="border border-gray-300 px-6 py-3 rounded font-semibold hover:bg-gray-50 mr-2">Back</button>
+    <button type="button" data-action="submit" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">Submit</button>
+  </div>
+
+</div>
+<script src="/assets/js/enroll-form.js" defer></script>
