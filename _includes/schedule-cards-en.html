@@ -23,7 +23,7 @@
     <div class="md:w-48 md:flex-shrink-0">
       <div class="font-semibold">Tuesday <span class="font-normal text-gray-500 text-sm">· Kid & Youth</span></div>
       <div class="text-gray-700 text-sm">6:00pm - 7:00pm</div>
-      <a href="https://www.google.com/maps?cid=323470375572608909" target="_blank" rel="noopener" class="text-blue-600 hover:underline text-sm">PCYC Waitara ↗</a>
+      <a href="https://www.google.com/maps?cid=323470375572608909" target="_blank" rel="noopener" class="text-blue-600 hover:underline text-sm">Outside PCYC Hornsby ↗</a>
     </div>
     <div class="md:flex-1 text-gray-700">
       <span class="font-medium">6-14yo</span> · $60/month or $20/class
@@ -43,6 +43,24 @@
       <div class="font-semibold">Saturday <span class="font-normal text-gray-500 text-sm">· Adult & Youth</span></div>
       <div class="text-gray-700 text-sm">9:30am - 11:30am</div>
       <a href="https://www.google.com/maps?cid=15595409756178236116" target="_blank" rel="noopener" class="text-blue-600 hover:underline text-sm">Marsfield Park ↗</a>
+    </div>
+    <div class="md:flex-1 text-gray-700">
+      <span class="font-medium">14yo+</span> · $80/month or $25/class
+      <a href="/class-content.html" class="block text-blue-600 hover:underline text-sm">Adult syllabus →</a>
+    </div>
+    <div class="md:w-44 md:flex-shrink-0 md:text-right">
+      <a href="{{ include.enroll_url | default: '/enroll.html' }}"
+        {% if include.new_window %}target="_blank" rel="noopener"{% endif %}
+        class="bg-red-600 px-4 py-2 rounded text-white font-semibold hover:bg-red-700 inline-block text-sm">Book a FREE Trial</a>
+    </div>
+  </div>
+
+  <!-- Tuesday Adult & Youth -->
+  <div class="p-4 flex flex-col gap-3 md:flex-row md:items-center md:gap-4">
+    <div class="md:w-48 md:flex-shrink-0">
+      <div class="font-semibold">Tuesday <span class="font-normal text-gray-500 text-sm">· Adult & Youth</span></div>
+      <div class="text-gray-700 text-sm">7:00pm - 8:00pm</div>
+      <a href="https://www.google.com/maps?cid=323470375572608909" target="_blank" rel="noopener" class="text-blue-600 hover:underline text-sm">Outside PCYC Hornsby ↗</a>
     </div>
     <div class="md:flex-1 text-gray-700">
       <span class="font-medium">14yo+</span> · $80/month or $25/class
