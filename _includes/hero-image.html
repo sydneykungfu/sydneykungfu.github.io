@@ -7,6 +7,10 @@
         alt="蔡李佛功夫悉尼"
         class="w-full max-w-lg mx-auto shadow-md mb-6"
         style="max-width: 500px; max-height: 500px; aspect-ratio: 1 / 1; object-fit: cover;"
+        width="500"
+        height="500"
+        loading="lazy"
+        decoding="async"
       />
       
       <!-- Image Controls -->
@@ -59,20 +63,28 @@
             imageCounter.textContent = currentImageIndex + 1;
         }
 
+        function prefetchNextImage() {
+            // warm the cache for the next slide so rotation doesn't show a blank frame
+            new Image().src = images[(currentImageIndex + 1) % images.length];
+        }
+
         function rotateHeroImage() {
             currentImageIndex = (currentImageIndex + 1) % images.length;
             updateImage();
+            prefetchNextImage();
         }
 
         function showPreviousImage() {
             currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
             updateImage();
+            prefetchNextImage();
             togglePlayPause(true); // Pause after manual change
         }
 
         function showNextImage() {
             currentImageIndex = (currentImageIndex + 1) % images.length;
             updateImage();
+            prefetchNextImage();
             togglePlayPause(true); // Pause after manual change
         }
 
