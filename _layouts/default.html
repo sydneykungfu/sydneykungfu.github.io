@@ -100,9 +100,12 @@
     }
   </style>
 
-  <!-- Load Tailwind CSS normally since critical styles are inlined -->
-  <link rel="stylesheet" href="/assets/css/tailwind.min.css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="/assets/css/styles.css" media="print" onload="this.media='all'">
+  <!-- Loaded render-blocking: both files are small (~17KB combined) and the
+       layout classes here (.container, .flex, .grid, etc.) aren't covered by
+       the critical CSS above, so deferring them caused a full-page reflow
+       (large CLS) once they arrived. -->
+  <link rel="stylesheet" href="/assets/css/tailwind.min.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
   <link rel="icon" href="/assets/images/favicon_io/favicon.ico" type="image/x-icon">
   <script src="/assets/js/navigation.js" defer></script>
   <!-- Meta Pixel Code -->
