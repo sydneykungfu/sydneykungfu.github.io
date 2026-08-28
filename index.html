@@ -41,11 +41,11 @@ meta:
 
   <!-- Hero Section -->
   <section id="hero1">
-    <div class="hero-slide active" style="background-image: url('/assets/images/hero-images/adult-group-practice.jpeg');"></div>
-    <div class="hero-slide" style="background-image: url('/assets/images/hero-images/kid-group-practice.jpeg');"></div>
-    <div class="hero-slide" style="background-image: url('/assets/images/hero-images/IMG_1040.webp');"></div>
-    <div class="hero-slide" style="background-image: url('/assets/images/hero-images/IMG_0883.webp');"></div>
-    <div class="hero-slide" style="background-image: url('/assets/images/hero-images/adult_class_group_photo_aimodified.PNG');"></div>
+    <div class="hero-slide active" style="background-image: url('/assets/images/hero-images/adult-group-practice.webp');"></div>
+    <div class="hero-slide" data-bg="/assets/images/hero-images/kid-group-practice.webp"></div>
+    <div class="hero-slide" data-bg="/assets/images/hero-images/IMG_1040.webp"></div>
+    <div class="hero-slide" data-bg="/assets/images/hero-images/IMG_0883.webp"></div>
+    <div class="hero-slide" data-bg="/assets/images/hero-images/adult_class_group_photo_aimodified.webp"></div>
     <div class="hero-overlay p-10 text-center text-white mx-auto">
       <h1 class="text-4xl font-bold mb-4">Kung Fu Class Sydney Choy Lee Fut</h1>
       <p class="text-lg mb-6">
@@ -80,10 +80,21 @@ meta:
     (function() {
       var slides = document.querySelectorAll('#hero1 .hero-slide');
       var current = 0;
+
+      function loadSlide(slide) {
+        if (slide.dataset.bg) {
+          slide.style.backgroundImage = "url('" + slide.dataset.bg + "')";
+          delete slide.dataset.bg;
+        }
+      }
+
       setInterval(function() {
         slides[current].classList.remove('active');
         current = (current + 1) % slides.length;
+        loadSlide(slides[current]);
         slides[current].classList.add('active');
+        // preload the slide after next so it's ready by the time it's shown
+        loadSlide(slides[(current + 1) % slides.length]);
       }, 5000);
     })();
   </script>
