@@ -2,3 +2,5 @@ url: https://sydneykungfu.au
 permalink: /blog/:title:output_ext
 plugins:
   - jekyll-sitemap
+exclude:
+  - CLAUDE.md
