@@ -221,10 +221,28 @@ meta:
             </p>
           </div>
         </blockquote>
-        <script async src="//www.instagram.com/embed.js"></script>
       </div>
     </div>
   </section>
+
+  <script>
+    (function() {
+      // The Instagram embed script is only needed once this section is
+      // actually near the viewport — no point fetching/running it for
+      // visitors who never scroll this far.
+      var demoSection = document.getElementById('demo');
+      var observer = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting) {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = '//www.instagram.com/embed.js';
+          document.body.appendChild(s);
+          observer.disconnect();
+        }
+      }, { rootMargin: '500px' });
+      observer.observe(demoSection);
+    })();
+  </script>
 
   <!-- Sifu Section -->
   <section id="sifu" class="py-16 bg-white">
