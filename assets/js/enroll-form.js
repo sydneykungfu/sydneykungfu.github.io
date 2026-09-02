@@ -110,7 +110,7 @@
       var waiverCheckbox = wizard.querySelector('[name="waiverAccepted"]');
 
       var payload = {
-        sourcePage: location.pathname,
+        sourcePage: location.pathname + location.search,
         learnerName: textValue('learnerName'),
         email: textValue('email'),
         contactNo: textValue('contactNo'),
