@@ -75,4 +75,9 @@
   {% endif %}
 
 </div>
+<div class="bg-red-50 border border-red-200 rounded-lg p-4 mb-6 text-sm text-gray-700 space-y-1">
+  <p class="font-semibold">💡 Two classes a week, one monthly price</p>
+  <p>Kids &mdash; join both Sat &amp; Tue classes and pay monthly for 50% off your second class, just <strong>$90/month</strong> total.</p>
+  {% if include.filter != "kids" %}<p>Adults &mdash; join both Sat &amp; Tue classes and pay monthly for 50% off your second class, just <strong>$120/month</strong> total.</p>{% endif %}
+</div>
 <p class="text-center mb-6"><a href="/#contact" class="text-blue-600 hover:underline text-sm">Questions? Contact us →</a></p>
