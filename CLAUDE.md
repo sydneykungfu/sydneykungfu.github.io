@@ -67,3 +67,11 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 ## Update CSS
 
 Refer to README.md "Update tailwind.min.css" section
+
+## QA
+
+QA is mandatory before handing off to the human and before any `git commit`.
+
+1. Build and serve the site via Jekyll in Docker — see README.md "Start Jekyll site" — and check the pages at http://0.0.0.0:4000/.
+2. Check mobile view first (top priority).
+3. Check desktop view second.
