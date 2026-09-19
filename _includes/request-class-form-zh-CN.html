@@ -1,0 +1,82 @@
+<div id="request-class-form-wrapper" class="bg-white rounded-lg shadow-sm p-6 mb-3">
+  <form id="request-class-form">
+    <div class="mb-4" data-required data-type="text">
+      <label class="block font-semibold mb-1" for="rc-name">姓名 *</label>
+      <input type="text" id="rc-name" name="name" class="w-full border border-gray-300 rounded px-3 py-2">
+      <p class="wizard-error hidden text-red-600 text-sm mt-1">此为必答题</p>
+    </div>
+    <div class="mb-4" data-required data-type="text">
+      <label class="block font-semibold mb-1" for="rc-email">电邮地址 *</label>
+      <input type="email" id="rc-email" name="email" class="w-full border border-gray-300 rounded px-3 py-2">
+      <p class="wizard-error hidden text-red-600 text-sm mt-1">此为必答题</p>
+    </div>
+    <div class="mb-4">
+      <label class="block font-semibold mb-1" for="rc-phone">联系电话（可选）</label>
+      <input type="text" id="rc-phone" name="phone" class="w-full border border-gray-300 rounded px-3 py-2">
+    </div>
+    <div class="mb-4" data-required data-type="radio-group">
+      <label class="block font-semibold mb-2">年龄组别 *</label>
+      <div class="grid grid-cols-3 sm:grid-cols-4 gap-2">
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="3--5"> 3&ndash;5</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="6-8"> 6-8</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="9-11"> 9-11</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="12-14"> 12-14</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="15-17"> 15-17</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="18-24"> 18-24</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="25-30"> 25-30</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="31-40"> 31-40</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="41-45"> 41-45</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="46-50"> 46-50</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="51-60"> 51-60</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="61+"> 61+</label>
+      </div>
+      <p class="wizard-error hidden text-red-600 text-sm mt-1">此为必答题</p>
+    </div>
+    <div class="mb-4" data-required data-type="text">
+      <label class="block font-semibold mb-1" for="rc-suburb">希望上课的地区 *</label>
+      <input type="text" id="rc-suburb" name="suburb" placeholder="例如：Chatswood" class="w-full border border-gray-300 rounded px-3 py-2">
+      <p class="wizard-error hidden text-red-600 text-sm mt-1">此为必答题</p>
+    </div>
+    <div class="mb-4" data-required data-type="checkbox-group">
+      <label class="block font-semibold mb-2">希望上课的日子 *</label>
+      <p class="text-gray-500 text-sm mb-2">请至少选择一项。</p>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+        <label class="flex items-center gap-1"><input type="checkbox" name="preferredDays" value="Monday"> 星期一</label>
+        <label class="flex items-center gap-1"><input type="checkbox" name="preferredDays" value="Tuesday"> 星期二</label>
+        <label class="flex items-center gap-1"><input type="checkbox" name="preferredDays" value="Wednesday"> 星期三</label>
+        <label class="flex items-center gap-1"><input type="checkbox" name="preferredDays" value="Thursday"> 星期四</label>
+        <label class="flex items-center gap-1"><input type="checkbox" name="preferredDays" value="Friday"> 星期五</label>
+        <label class="flex items-center gap-1"><input type="checkbox" name="preferredDays" value="Saturday"> 星期六</label>
+        <label class="flex items-center gap-1"><input type="checkbox" name="preferredDays" value="Sunday"> 星期日</label>
+      </div>
+      <p class="wizard-error hidden text-red-600 text-sm mt-1">请至少选择一天</p>
+    </div>
+    <div class="mb-4" data-required data-type="checkbox-group">
+      <label class="block font-semibold mb-2">希望上课的时段 *</label>
+      <p class="text-gray-500 text-sm mb-2">请至少选择一项。</p>
+      <div class="flex flex-wrap gap-4">
+        <label class="flex items-center gap-1"><input type="checkbox" name="preferredTime" value="Morning"> 早上</label>
+        <label class="flex items-center gap-1"><input type="checkbox" name="preferredTime" value="Afternoon"> 下午</label>
+        <label class="flex items-center gap-1"><input type="checkbox" name="preferredTime" value="Evening"> 晚上</label>
+      </div>
+      <p class="wizard-error hidden text-red-600 text-sm mt-1">请至少选择一个时段</p>
+    </div>
+    <div class="mb-4">
+      <label class="block font-semibold mb-1" for="rc-notes">其他信息（可选）</label>
+      <textarea id="rc-notes" name="notes" rows="3" class="w-full border border-gray-300 rounded px-3 py-2"></textarea>
+    </div>
+
+    <div style="position: absolute; left: -9999px;" aria-hidden="true">
+      <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+    </div>
+
+    <p id="request-class-submit-error" class="hidden text-red-600 text-sm mb-3">提交时发生问题，请重试或直接联系我们。</p>
+    <button type="submit" data-action="submit" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">提交查询</button>
+  </form>
+
+  <div id="request-class-success" class="hidden text-center py-6">
+    <p class="text-xl font-semibold mb-2">谢谢你的查询！</p>
+    <p class="text-gray-600">如我们安排到合适的课程，会尽快联系你。</p>
+  </div>
+</div>
+<script src="/assets/js/request-class-form.js" defer></script>

@@ -1,0 +1,82 @@
+<div id="request-class-form-wrapper" class="bg-white rounded-lg shadow-sm p-6 mb-3">
+  <form id="request-class-form">
+    <div class="mb-4" data-required data-type="text">
+      <label class="block font-semibold mb-1" for="rc-name">Name *</label>
+      <input type="text" id="rc-name" name="name" class="w-full border border-gray-300 rounded px-3 py-2">
+      <p class="wizard-error hidden text-red-600 text-sm mt-1">This is a required question</p>
+    </div>
+    <div class="mb-4" data-required data-type="text">
+      <label class="block font-semibold mb-1" for="rc-email">Email Address *</label>
+      <input type="email" id="rc-email" name="email" class="w-full border border-gray-300 rounded px-3 py-2">
+      <p class="wizard-error hidden text-red-600 text-sm mt-1">This is a required question</p>
+    </div>
+    <div class="mb-4">
+      <label class="block font-semibold mb-1" for="rc-phone">Contact No. (Optional)</label>
+      <input type="text" id="rc-phone" name="phone" class="w-full border border-gray-300 rounded px-3 py-2">
+    </div>
+    <div class="mb-4" data-required data-type="radio-group">
+      <label class="block font-semibold mb-2">Age Range *</label>
+      <div class="grid grid-cols-3 sm:grid-cols-4 gap-2">
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="3--5"> 3&ndash;5</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="6-8"> 6-8</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="9-11"> 9-11</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="12-14"> 12-14</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="15-17"> 15-17</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="18-24"> 18-24</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="25-30"> 25-30</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="31-40"> 31-40</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="41-45"> 41-45</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="46-50"> 46-50</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="51-60"> 51-60</label>
+        <label class="flex items-center gap-1"><input type="radio" name="ageRange" value="61+"> 61+</label>
+      </div>
+      <p class="wizard-error hidden text-red-600 text-sm mt-1">This is a required question</p>
+    </div>
+    <div class="mb-4" data-required data-type="text">
+      <label class="block font-semibold mb-1" for="rc-suburb">Suburb You'd Like to Train In *</label>
+      <input type="text" id="rc-suburb" name="suburb" placeholder="e.g. Chatswood" class="w-full border border-gray-300 rounded px-3 py-2">
+      <p class="wizard-error hidden text-red-600 text-sm mt-1">This is a required question</p>
+    </div>
+    <div class="mb-4" data-required data-type="checkbox-group">
+      <label class="block font-semibold mb-2">Preferred Day(s) *</label>
+      <p class="text-gray-500 text-sm mb-2">Select at least one.</p>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+        <label class="flex items-center gap-1"><input type="checkbox" name="preferredDays" value="Monday"> Monday</label>
+        <label class="flex items-center gap-1"><input type="checkbox" name="preferredDays" value="Tuesday"> Tuesday</label>
+        <label class="flex items-center gap-1"><input type="checkbox" name="preferredDays" value="Wednesday"> Wednesday</label>
+        <label class="flex items-center gap-1"><input type="checkbox" name="preferredDays" value="Thursday"> Thursday</label>
+        <label class="flex items-center gap-1"><input type="checkbox" name="preferredDays" value="Friday"> Friday</label>
+        <label class="flex items-center gap-1"><input type="checkbox" name="preferredDays" value="Saturday"> Saturday</label>
+        <label class="flex items-center gap-1"><input type="checkbox" name="preferredDays" value="Sunday"> Sunday</label>
+      </div>
+      <p class="wizard-error hidden text-red-600 text-sm mt-1">Please select at least one day</p>
+    </div>
+    <div class="mb-4" data-required data-type="checkbox-group">
+      <label class="block font-semibold mb-2">Preferred Time of Day *</label>
+      <p class="text-gray-500 text-sm mb-2">Select at least one.</p>
+      <div class="flex flex-wrap gap-4">
+        <label class="flex items-center gap-1"><input type="checkbox" name="preferredTime" value="Morning"> Morning</label>
+        <label class="flex items-center gap-1"><input type="checkbox" name="preferredTime" value="Afternoon"> Afternoon</label>
+        <label class="flex items-center gap-1"><input type="checkbox" name="preferredTime" value="Evening"> Evening</label>
+      </div>
+      <p class="wizard-error hidden text-red-600 text-sm mt-1">Please select at least one time of day</p>
+    </div>
+    <div class="mb-4">
+      <label class="block font-semibold mb-1" for="rc-notes">Anything Else? (Optional)</label>
+      <textarea id="rc-notes" name="notes" rows="3" class="w-full border border-gray-300 rounded px-3 py-2"></textarea>
+    </div>
+
+    <div style="position: absolute; left: -9999px;" aria-hidden="true">
+      <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+    </div>
+
+    <p id="request-class-submit-error" class="hidden text-red-600 text-sm mb-3">Something went wrong submitting your request. Please try again, or contact us directly.</p>
+    <button type="submit" data-action="submit" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">Submit Request</button>
+  </form>
+
+  <div id="request-class-success" class="hidden text-center py-6">
+    <p class="text-xl font-semibold mb-2">Thanks — we've got your request!</p>
+    <p class="text-gray-600">We'll be in touch if we set up a class near you.</p>
+  </div>
+</div>
+<script src="/assets/js/request-class-form.js" defer></script>
