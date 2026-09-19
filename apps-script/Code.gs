@@ -1,4 +1,5 @@
 var SHEET_NAME = 'Website Enrollments';
+var CLASS_REQUEST_SHEET_NAME = 'Class Requests';
 var SPAM_SHEET_NAME = 'Suspected Spam';
 var HONEYPOT_FIELD = 'website';
 var NOTIFY_EMAIL = 'sydney.kungfu.chi@gmail.com';
@@ -9,6 +10,10 @@ function doPost(e) {
   if (data[HONEYPOT_FIELD]) {
     logSpam(data);
     return jsonResponse({ success: true });
+  }
+
+  if (data.formType === 'class-request') {
+    return handleClassRequest(data);
   }
 
   var required = ['learnerName', 'email', 'ageRange', 'interests', 'priorExperience', 'availability', 'waiverAccepted', 'signatureName', 'howHeard'];
@@ -80,6 +85,66 @@ function testMail() {
   });
 }
 
+function handleClassRequest(data) {
+  var required = ['name', 'email', 'ageRange', 'suburb', 'preferredDays', 'preferredTime'];
+  for (var i = 0; i < required.length; i++) {
+    if (!data[required[i]]) {
+      return jsonResponse({ success: false, error: 'Missing required field: ' + required[i] });
+    }
+  }
+
+  var sheet = getOrCreateClassRequestSheet();
+  sheet.appendRow([
+    new Date(),
+    safe(data.sourcePage),
+    safe(data.name),
+    safe(data.email),
+    safe(data.phone),
+    safe(data.ageRange),
+    safe(data.suburb),
+    safe(data.preferredDays),
+    safe(data.preferredTime),
+    safe(data.notes)
+  ]);
+
+  notifyNewClassRequest(data);
+
+  return jsonResponse({ success: true });
+}
+
+function notifyNewClassRequest(data) {
+  try {
+    var subject = 'New class request: ' + data.name;
+    var body = 'A new class location/time request was just submitted.\n\n' +
+      'Name: ' + data.name + '\n' +
+      'Email: ' + data.email + '\n' +
+      'Phone: ' + (data.phone || '-') + '\n' +
+      'Age Range: ' + data.ageRange + '\n' +
+      'Suburb: ' + data.suburb + '\n' +
+      'Preferred Days: ' + data.preferredDays + '\n' +
+      'Preferred Time: ' + data.preferredTime + '\n' +
+      'Notes: ' + (data.notes || '-') + '\n\n' +
+      'Full entry saved in the "Class Requests" sheet tab.';
+    MailApp.sendEmail(NOTIFY_EMAIL, subject, body);
+    console.log('Notification email sent to ' + NOTIFY_EMAIL);
+  } catch (err) {
+    console.error('Mail notification failed: ' + err);
+  }
+}
+
+function testClassRequestMail() {
+  notifyNewClassRequest({
+    name: 'Test Requester',
+    email: 'test@example.com',
+    phone: '0400000000',
+    ageRange: '25-30',
+    suburb: 'Chatswood',
+    preferredDays: 'Monday, Wednesday',
+    preferredTime: 'Evening',
+    notes: ''
+  });
+}
+
 function safe(value) {
   value = value || '';
   return /^[=+\-@]/.test(value) ? "'" + value : value;
@@ -104,6 +169,19 @@ function getOrCreateSheet() {
       'Timestamp', 'Source Page', 'Learner Name', 'Email', 'Contact No.', 'Age Range',
       'Parent/Guardian Name', 'Parent/Guardian Contact', 'Interests', 'Prior Experience',
       'Availability', 'Waiver Accepted', 'Signature Name', 'Emergency Contact', 'How Heard'
+    ]);
+  }
+  return sheet;
+}
+
+function getOrCreateClassRequestSheet() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName(CLASS_REQUEST_SHEET_NAME);
+  if (!sheet) {
+    sheet = ss.insertSheet(CLASS_REQUEST_SHEET_NAME);
+    sheet.appendRow([
+      'Timestamp', 'Source Page', 'Name', 'Email', 'Phone', 'Age Range',
+      'Suburb', 'Preferred Days', 'Preferred Time', 'Notes'
     ]);
   }
   return sheet;
