@@ -24,9 +24,12 @@ meta:
       <p class="text-lg mb-6">
         Transform your fitness, build confidence, and learn authentic self-defense with our adult Kung Fu classes in Sydney. Tse Kung Fu Academy offers Choy Lee Fut training designed specifically for adults - no experience required!
       </p>
-      
+
+      <p class="text-lg font-semibold mb-1">$80/month or $25/class</p>
+      <p class="text-sm text-gray-300 mb-4">Your first class is completely free &mdash; no payment info required.</p>
+
       <p class="text-lg mb-4">
-        <a href="enroll.html" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700 inline-block">
+        <a href="/enroll.html#enroll-form" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700 inline-block">
           Book Your Free Trial Class
         </a>
       </p>
@@ -61,7 +64,38 @@ meta:
         </div>
       </div>
       <div class="mt-8">
-        <a href="enroll.html" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700 inline-block">Start Your Kung Fu Journey Today</a>
+        <a href="/enroll.html#enroll-form" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700 inline-block">Start Your Kung Fu Journey Today</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Syllabus & Progression Section -->
+  <section id="progression" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-4">Adult Syllabus & Progression</h2>
+      <p class="text-center mb-8 text-lg text-gray-700 max-w-3xl mx-auto">
+        We offer an optional ranking / sash system for students who wish to progress in their Kung Fu journey.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-gray-50 shadow-md rounded-lg p-6">
+          <h3 class="text-xl font-semibold text-green-600 mb-2">🟢 Beginner Level (No Sash)</h3>
+          <p class="text-gray-700 text-sm">Learn fundamental movements, coordination, and conditioning.</p>
+        </div>
+        <div class="bg-gray-50 shadow-md rounded-lg p-6">
+          <h3 class="text-xl font-semibold text-yellow-600 mb-2">🟡 Foundation Level (Yellow Sash)</h3>
+          <p class="text-gray-700 text-sm">Build strong foundational power (Long Bridge Power) and introduce basic combat techniques.</p>
+        </div>
+        <div class="bg-gray-50 shadow-md rounded-lg p-6">
+          <h3 class="text-xl font-semibold text-red-600 mb-2">🔴 Intermediate Level (Red Sash)</h3>
+          <p class="text-gray-700 text-sm">One-to-one and multiple attacker combat. Improve long power and begin short power.</p>
+        </div>
+        <div class="bg-gray-50 shadow-md rounded-lg p-6">
+          <h3 class="text-xl font-semibold mb-2">⚫ Advanced Level (Black Sash)</h3>
+          <p class="text-gray-700 text-sm">Refine long and short power. Master multiple-opponent combat.</p>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <a href="/enroll.html#enroll-form" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700 inline-block">Start at Beginner Level — Book a FREE Trial</a>
       </div>
     </div>
   </section>
@@ -74,17 +108,18 @@ meta:
         Our adult-focused classes are designed for busy professionals and fitness enthusiasts. 
         We offer flexible scheduling and progressive training that adapts to your fitness level and goals.
       </p>
-      {% include schedule-cards-en.html filter="adults" %}
+      {% include schedule-cards-en.html filter="adults" enroll_url="/enroll.html#enroll-form" %}
       <div class="text-center mt-8">
         <p class="mb-4"><strong>Class Structure for Adults:</strong></p>
         <ul class="list-disc list-inside mb-6 text-gray-700">
           <li>Traditional Choy Lee Fut forms and techniques</li>
           <li>Pad work for accuracy, timing, and conditioning</li>
           <li>Self-defense applications and practical drills</li>
+          <li>Soft sparring (optional, intermediate level and above)</li>
           <li>Strength and flexibility training</li>
           <li>Progressive skill development</li>
         </ul>
-        <a href="enroll.html" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">Book Your Free Trial</a>
+        <a href="/enroll.html#enroll-form" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">Book Your Free Trial</a>
       </div>
     </div>
   </section>
@@ -132,7 +167,7 @@ meta:
   
       <!-- CTA -->
       <div style="margin-top: 2.5rem;">
-        <a href="enroll.html" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700 mb-4 inline-block">Join Our Adult Kung Fu Classes</a>
+        <a href="/enroll.html#enroll-form" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700 mb-4 inline-block">Join Our Adult Kung Fu Classes</a>
       </div>
     </div>
   </section>
@@ -142,6 +177,10 @@ meta:
     <div class="container mx-auto px-6">
       <h2 class="text-3xl font-bold mb-6 text-center">Frequently Asked Questions</h2>
       <div class="space-y-6 max-w-3xl mx-auto">
+        <div>
+          <h3 class="font-semibold text-xl">How much do the adult Kung Fu classes cost?</h3>
+          <p>Classes are $80/month or $25/class. Join both the Saturday and Tuesday sessions and pay monthly for 50% off your second class &mdash; just $120/month total. Your first class is completely free, with no payment details required to book.</p>
+        </div>
         <div>
           <h3 class="font-semibold text-xl">I'm in my 40s/50s - am I too old to start Kung Fu?</h3>
           <p>Not at all! Our adult classes are designed for all fitness levels and ages. We modify techniques to accommodate different abilities and focus on building strength and flexibility gradually. Many of our students start in their 40s, 50s, and beyond.</p>
@@ -167,7 +206,7 @@ meta:
       <p class="text-lg mb-6">📱 <strong>Text:</strong> <a href="sms:+61491403514" class="text-blue-600">+61 491 703 514</a></p>
       <p class="text-lg mb-6">📱 <strong>WhatsApp:</strong> <a href="https://wa.me/61491403514" class="text-blue-600" target="_blank">+61 491 703 514</a></p>
       <div class="mt-8">
-        <a href="enroll.html" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700 inline-block">Book Your Free Trial Class</a>
+        <a href="/enroll.html#enroll-form" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700 inline-block">Book Your Free Trial Class</a>
       </div>
     </div>
   </section>
@@ -178,7 +217,7 @@ meta:
       <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-6">
         Looking for Kung Fu classes near you? Tse Kung Fu Academy offers Kung Fu class in Sydney, near Macquarie University, Epping, Eastwood,Hornsby, and easily accessible from Sydney North Shore.
       </p>
-      <a href="enroll.html" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">Join a Class Today</a>
+      <a href="/enroll.html#enroll-form" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">Join a Class Today</a>
     </div>
   </section>
 
