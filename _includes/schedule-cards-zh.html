@@ -1,117 +1,98 @@
-<div class="grid gap-6 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 mb-6">
+<div class="rounded-lg shadow-md bg-white divide-y divide-gray-200 mb-6 overflow-hidden">
 
+  {% if include.filter != "adults" %}
   <!-- 星期六 兒童/青年 -->
-  <div class="bg-white shadow-md rounded-lg p-6">
-    <h3 class="text-xl font-bold mb-2">星期六 兒童/青年</h3>
-    <p class="text-gray-700"><strong>時間：</strong>11:45am - 12:45pm</p>
-    <p class="text-gray-700"><strong>地點：</strong>Marsfield Park, NSW 2122</p>
-    <p class="text-gray-500 text-sm">有蓋戶外場地——風雨不改。</p>
-    <p class="text-gray-700"><strong>6-14歲</strong> $60/月；或 $20/課。</p>
-    <p class="mt-2"><a href="/zh/kungfu-classes-kids-sydney.html" class="text-blue-600 hover:underline text-sm">了解更多兒童功夫班詳情 →</a></p>
-    <p class="mt-8 mb-2"><a href="{{ include.enroll_url | default: '/zh/enroll.html' }}"
-      {% if include.new_window %}target="_blank" rel="noopener"{% endif %}
-      class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">預約免費體驗課</a></p>
-    <p class="mb-6"><a href="/zh/#contact" class="text-blue-600 hover:underline text-sm">有問題？聯絡我們 →</a></p>
-    <div class="mt-2">
-      <div class="text-center mb-4">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5583.819274151691!2d151.10011581293327!3d-33.770813013881664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a7d7fbad6d09%3A0xd86e068b93aa42d4!2sChoy%20Lee%20Fut%20Kung%20Fu%20Tse%20Academy!5e1!3m2!1sen!2sau!4v1744844472508!5m2!1sen!2sau"
-          width="100%"
-          height="300"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"></iframe>
-      </div>
+  <div class="p-4 flex flex-col gap-3 md:flex-row md:items-center md:gap-4">
+    <div class="md:w-48 md:flex-shrink-0">
+      <div class="font-semibold">星期六 <span class="font-normal text-gray-500 text-sm">· 兒童/青年</span></div>
+      <div class="text-gray-700 text-sm">11:45am - 12:45pm</div>
+      <a href="https://www.google.com/maps?cid=15595409756178236116" target="_blank" rel="noopener" class="text-blue-600 hover:underline text-sm">Marsfield Park ↗</a>
+    </div>
+    <div class="md:flex-1 text-gray-700">
+      <span class="font-medium">6-14歲</span> · $60/月或 $20/課
+      <a href="/zh/kungfu-classes-kids-sydney.html" class="block text-blue-600 hover:underline text-sm">了解更多兒童功夫班詳情 →</a>
+    </div>
+    <div class="md:w-44 md:flex-shrink-0 md:text-right">
+      <a href="{{ include.enroll_url | default: '/zh/enroll.html' }}"
+        {% if include.new_window %}target="_blank" rel="noopener"{% endif %}
+        class="bg-red-600 px-4 py-2 rounded text-white font-semibold hover:bg-red-700 inline-block text-sm">預約免費體驗課</a>
     </div>
   </div>
 
-  <!-- 星期二 -->
-  <div class="bg-white shadow-md rounded-lg p-6">
-    <h3 class="text-xl font-bold mb-2">星期二 兒童/青年</h3>
-    <p class="text-gray-700"><strong>時間：</strong>6:00pm - 7:00pm</p>
-    <p class="text-gray-700"><strong>地點：</strong>Outside PCYC Hornsby, NSW 2077</p>
-    <p class="text-gray-500 text-sm">有蓋戶外場地——風雨不改。</p>
-    <p class="text-gray-700"><strong>6-14歲</strong> $60/月；或 $20/課。</p>
-    <p class="mt-2"><a href="/zh/kungfu-classes-kids-sydney.html" class="text-blue-600 hover:underline text-sm">了解更多兒童功夫班詳情 →</a></p>
-    <p class="mt-8 mb-2"><a href="{{ include.enroll_url | default: '/zh/enroll.html' }}"
-      {% if include.new_window %}target="_blank" rel="noopener"{% endif %}
-      class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">預約免費體驗課</a></p>
-    <p class="mb-6"><a href="/zh/#contact" class="text-blue-600 hover:underline text-sm">有問題？聯絡我們 →</a></p>
-    <div class="mt-2">
-      <div class="text-center mb-4">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6208.403115087386!2d151.10127588693425!3d-33.70804714564825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a7af96967d5b%3A0x47d3297bf5e178d!2sSydney%20Kung%20Fu%20Tse%20Academy%20Choy%20Lee%20Fut%20-%20Wahroonga!5e1!3m2!1sen!2sau!4v1777546337353!5m2!1sen!2sau"
-          width="100%"
-          height="300"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"></iframe>
-      </div>
+  <!-- 星期二 兒童/青年 -->
+  <div class="p-4 flex flex-col gap-3 md:flex-row md:items-center md:gap-4">
+    <div class="md:w-48 md:flex-shrink-0">
+      <div class="font-semibold">星期二 <span class="font-normal text-gray-500 text-sm">· 兒童/青年</span></div>
+      <div class="text-gray-700 text-sm">6:00pm - 7:00pm</div>
+      <a href="https://www.google.com/maps?cid=323470375572608909" target="_blank" rel="noopener" class="text-blue-600 hover:underline text-sm">Outside PCYC Hornsby ↗</a>
+    </div>
+    <div class="md:flex-1 text-gray-700">
+      <span class="font-medium">6-14歲</span> · $60/月或 $20/課
+      <a href="/zh/kungfu-classes-kids-sydney.html" class="block text-blue-600 hover:underline text-sm">了解更多兒童功夫班詳情 →</a>
+    </div>
+    <div class="md:w-44 md:flex-shrink-0 md:text-right">
+      <a href="{{ include.enroll_url | default: '/zh/enroll.html' }}"
+        {% if include.new_window %}target="_blank" rel="noopener"{% endif %}
+        class="bg-red-600 px-4 py-2 rounded text-white font-semibold hover:bg-red-700 inline-block text-sm">預約免費體驗課</a>
     </div>
   </div>
+  {% endif %}
 
   {% if include.filter != "kids" %}
   <!-- 星期六 成人/青年 -->
-  <div class="bg-white shadow-md rounded-lg p-6">
-    <h3 class="text-xl font-bold mb-2">星期六 成人/青年</h3>
-    <p class="text-gray-700"><strong>時間：</strong>9:30am - 11:30am</p>
-    <p class="text-gray-700"><strong>地點：</strong>Marsfield Park, NSW 2122</p>
-    <p class="text-gray-500 text-sm">有蓋戶外場地——風雨不改。</p>
-    <p class="text-gray-700"><strong>14歲以上</strong> $80/月；或 $25/課。</p>
-    <p class="mt-2"><a href="/class-content.html" class="text-blue-600 hover:underline text-sm">查看成人課程內容及進階級別 →</a></p>
-    <p class="mt-8 mb-2"><a href="{{ include.enroll_url | default: '/zh/enroll.html' }}"
-      {% if include.new_window %}target="_blank" rel="noopener"{% endif %}
-      class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">預約免費體驗課</a></p>
-    <p class="mb-6"><a href="/zh/#contact" class="text-blue-600 hover:underline text-sm">有問題？聯絡我們 →</a></p>
-    <div class="mt-2">
-      <div class="text-center mb-4">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5583.819274151691!2d151.10011581293327!3d-33.770813013881664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a7d7fbad6d09%3A0xd86e068b93aa42d4!2sChoy%20Lee%20Fut%20Kung%20Fu%20Tse%20Academy!5e1!3m2!1sen!2sau!4v1744844472508!5m2!1sen!2sau"
-          width="100%"
-          height="300"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"></iframe>
-      </div>
+  <div class="p-4 flex flex-col gap-3 md:flex-row md:items-center md:gap-4">
+    <div class="md:w-48 md:flex-shrink-0">
+      <div class="font-semibold">星期六 <span class="font-normal text-gray-500 text-sm">· 成人/青年</span></div>
+      <div class="text-gray-700 text-sm">9:30am - 11:30am</div>
+      <a href="https://www.google.com/maps?cid=15595409756178236116" target="_blank" rel="noopener" class="text-blue-600 hover:underline text-sm">Marsfield Park ↗</a>
+    </div>
+    <div class="md:flex-1 text-gray-700">
+      <span class="font-medium">14歲以上</span> · $80/月或 $25/課
+      <a href="/zh/kungfu-classes-adults-sydney.html" class="block text-blue-600 hover:underline text-sm">查看成人課程內容及進階級別 →</a>
+    </div>
+    <div class="md:w-44 md:flex-shrink-0 md:text-right">
+      <a href="{{ include.enroll_url | default: '/zh/enroll.html' }}"
+        {% if include.new_window %}target="_blank" rel="noopener"{% endif %}
+        class="bg-red-600 px-4 py-2 rounded text-white font-semibold hover:bg-red-700 inline-block text-sm">預約免費體驗課</a>
     </div>
   </div>
 
   <!-- 星期二 成人/青年 -->
-  <div class="bg-white shadow-md rounded-lg p-6">
-    <h3 class="text-xl font-bold mb-2">星期二 成人/青年</h3>
-    <p class="text-gray-700"><strong>時間：</strong>7:15pm - 8:15pm</p>
-    <p class="text-gray-700"><strong>地點：</strong>Outside PCYC Hornsby, NSW 2077</p>
-    <p class="text-gray-500 text-sm">有蓋戶外場地——風雨不改。</p>
-    <p class="text-gray-700"><strong>14歲以上</strong> $80/月；或 $25/課。</p>
-    <p class="mt-2"><a href="/class-content.html" class="text-blue-600 hover:underline text-sm">查看成人課程內容及進階級別 →</a></p>
-    <p class="mt-8 mb-2"><a href="{{ include.enroll_url | default: '/zh/enroll.html' }}"
-      {% if include.new_window %}target="_blank" rel="noopener"{% endif %}
-      class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">預約免費體驗課</a></p>
-    <p class="mb-6"><a href="/zh/#contact" class="text-blue-600 hover:underline text-sm">有問題？聯絡我們 →</a></p>
-    <div class="mt-2">
-      <div class="text-center mb-4">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6208.403115087386!2d151.10127588693425!3d-33.70804714564825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a7af96967d5b%3A0x47d3297bf5e178d!2sSydney%20Kung%20Fu%20Tse%20Academy%20Choy%20Lee%20Fut%20-%20Wahroonga!5e1!3m2!1sen!2sau!4v1777546337353!5m2!1sen!2sau"
-          width="100%"
-          height="300"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"></iframe>
-      </div>
+  <div class="p-4 flex flex-col gap-3 md:flex-row md:items-center md:gap-4">
+    <div class="md:w-48 md:flex-shrink-0">
+      <div class="font-semibold">星期二 <span class="font-normal text-gray-500 text-sm">· 成人/青年</span></div>
+      <div class="text-gray-700 text-sm">7:15pm - 8:15pm</div>
+      <a href="https://www.google.com/maps?cid=323470375572608909" target="_blank" rel="noopener" class="text-blue-600 hover:underline text-sm">Outside PCYC Hornsby ↗</a>
+    </div>
+    <div class="md:flex-1 text-gray-700">
+      <span class="font-medium">14歲以上</span> · $80/月或 $25/課
+      <a href="/zh/kungfu-classes-adults-sydney.html" class="block text-blue-600 hover:underline text-sm">查看成人課程內容及進階級別 →</a>
+    </div>
+    <div class="md:w-44 md:flex-shrink-0 md:text-right">
+      <a href="{{ include.enroll_url | default: '/zh/enroll.html' }}"
+        {% if include.new_window %}target="_blank" rel="noopener"{% endif %}
+        class="bg-red-600 px-4 py-2 rounded text-white font-semibold hover:bg-red-700 inline-block text-sm">預約免費體驗課</a>
     </div>
   </div>
   {% endif %}
 
   <!-- 沒有合適時段 -->
-  <div class="bg-white shadow-md rounded-lg p-6">
-    <h3 class="text-xl font-bold mb-2">沒有合適的時段？</h3>
-    <p class="text-gray-700">告訴我們你想在哪裡、什麼時候上課，我們計劃新課堂時會考慮你的意見。</p>
-    <p class="mt-8 mb-2"><a href="/zh/request-a-class.html" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">要求開班</a></p>
+  <div class="p-4 flex flex-col gap-3 md:flex-row md:items-center md:gap-4">
+    <div class="md:w-48 md:flex-shrink-0">
+      <div class="font-semibold">沒有合適的時段？</div>
+    </div>
+    <div class="md:flex-1 text-gray-700">
+      告訴我們你想在哪裡、什麼時候上課。
+    </div>
+    <div class="md:w-44 md:flex-shrink-0 md:text-right">
+      <a href="/zh/request-a-class.html" class="bg-red-600 px-4 py-2 rounded text-white font-semibold hover:bg-red-700 inline-block text-sm">要求開班</a>
+    </div>
   </div>
 
 </div>
 <div class="bg-red-50 border border-red-200 rounded-lg p-4 mb-6 text-sm text-gray-700 space-y-1">
   <p class="font-semibold">💡 一星期上兩堂，月費更划算</p>
-  <p>兒童班——同時報讀星期六及星期二堂，月費付款可享第二堂半價，每月共<strong>$90</strong>。</p>
+  {% if include.filter != "adults" %}<p>兒童班——同時報讀星期六及星期二堂，月費付款可享第二堂半價，每月共<strong>$90</strong>。</p>{% endif %}
   {% if include.filter != "kids" %}<p>成人班——同時報讀星期六及星期二堂，月費付款可享第二堂半價，每月共<strong>$120</strong>。</p>{% endif %}
 </div>
+<p class="text-center mb-6"><a href="/zh/#contact" class="text-blue-600 hover:underline text-sm">有問題？聯絡我們 →</a></p>
