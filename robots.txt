@@ -2,20 +2,38 @@ User-agent: *
 Allow: /
 Disallow: /online-private-class-booking-done.html
 Disallow: /childcare-class.html
+Disallow: /class-content.html
+Disallow: /zh/class-content.html
+Disallow: /zh-CN/class-content.html
 
 User-agent: GPTBot
 Disallow: /childcare-class.html
+Disallow: /class-content.html
+Disallow: /zh/class-content.html
+Disallow: /zh-CN/class-content.html
 
 User-agent: ClaudeBot
 Disallow: /childcare-class.html
+Disallow: /class-content.html
+Disallow: /zh/class-content.html
+Disallow: /zh-CN/class-content.html
 
 User-agent: PerplexityBot
 Disallow: /childcare-class.html
+Disallow: /class-content.html
+Disallow: /zh/class-content.html
+Disallow: /zh-CN/class-content.html
 
 User-agent: CCBot
 Disallow: /childcare-class.html
+Disallow: /class-content.html
+Disallow: /zh/class-content.html
+Disallow: /zh-CN/class-content.html
 
 User-agent: Google-Extended
 Disallow: /childcare-class.html
+Disallow: /class-content.html
+Disallow: /zh/class-content.html
+Disallow: /zh-CN/class-content.html
 
 Sitemap: https://sydneykungfu.au/sitemap.xml
