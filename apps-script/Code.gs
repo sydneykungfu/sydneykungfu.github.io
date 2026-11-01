@@ -21,7 +21,7 @@ function doPost(e) {
     return handleTrialBooking(data);
   }
 
-  var required = ['learnerName', 'email', 'ageRange', 'interests', 'priorExperience', 'availability', 'waiverAccepted', 'signatureName', 'howHeard'];
+  var required = ['learnerName', 'contactNo', 'ageRange', 'interests', 'priorExperience', 'availability', 'waiverAccepted', 'signatureName', 'howHeard'];
   for (var i = 0; i < required.length; i++) {
     if (!data[required[i]]) {
       return jsonResponse({ success: false, error: 'Missing required field: ' + required[i] });
@@ -57,8 +57,8 @@ function notifyNewEnrollment(data) {
     var subject = 'New enrollment: ' + data.learnerName;
     var body = 'A new enrollment was just submitted.\n\n' +
       'Learner: ' + data.learnerName + '\n' +
-      'Email: ' + data.email + '\n' +
-      'Contact No.: ' + (data.contactNo || '-') + '\n' +
+      'Mobile: ' + data.contactNo + '\n' +
+      'Email: ' + (data.email || '-') + '\n' +
       'Age Range: ' + data.ageRange + '\n' +
       'Parent/Guardian: ' + (data.parentGuardianName || '-') + ' / ' + (data.parentGuardianContact || '-') + '\n' +
       'Interests: ' + data.interests + '\n' +
