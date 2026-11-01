@@ -1,5 +1,6 @@
 var SHEET_NAME = 'Website Enrollments';
 var CLASS_REQUEST_SHEET_NAME = 'Class Requests';
+var TRIAL_SHEET_NAME = 'Trial Bookings';
 var SPAM_SHEET_NAME = 'Suspected Spam';
 var HONEYPOT_FIELD = 'website';
 var NOTIFY_EMAIL = 'sydney.kungfu.chi@gmail.com';
@@ -14,6 +15,10 @@ function doPost(e) {
 
   if (data.formType === 'class-request') {
     return handleClassRequest(data);
+  }
+
+  if (data.formType === 'trial') {
+    return handleTrialBooking(data);
   }
 
   var required = ['learnerName', 'email', 'ageRange', 'interests', 'priorExperience', 'availability', 'waiverAccepted', 'signatureName', 'howHeard'];
@@ -82,6 +87,62 @@ function testMail() {
     availability: 'Private Class',
     emergencyContact: '',
     howHeard: 'Google'
+  });
+}
+
+function handleTrialBooking(data) {
+  var required = ['learnerName', 'contactNo'];
+  for (var i = 0; i < required.length; i++) {
+    if (!data[required[i]]) {
+      return jsonResponse({ success: false, error: 'Missing required field: ' + required[i] });
+    }
+  }
+
+  var sheet = getOrCreateTrialSheet();
+  sheet.appendRow([
+    new Date(),
+    safe(data.sourcePage),
+    safe(data.learnerName),
+    safe(data.contactNo),
+    safe(data.email),
+    safe(data.availability),
+    safe(data.message),
+    safe(data.howHeard)
+  ]);
+
+  notifyNewTrialBooking(data);
+
+  return jsonResponse({ success: true });
+}
+
+function notifyNewTrialBooking(data) {
+  try {
+    var subject = 'New free trial booking: ' + data.learnerName;
+    var body = 'A new free trial class booking was just submitted.\n\n' +
+      'Name: ' + data.learnerName + '\n' +
+      'Mobile: ' + data.contactNo + '\n' +
+      'Email: ' + (data.email || '-') + '\n' +
+      'Class: ' + (data.availability || '-') + '\n' +
+      'Message: ' + (data.message || '-') + '\n' +
+      'How they heard about us: ' + (data.howHeard || '-') + '\n' +
+      'Page: ' + (data.sourcePage || '-') + '\n\n' +
+      'Text them to confirm. Full entry saved in the "Trial Bookings" sheet tab.';
+    MailApp.sendEmail(NOTIFY_EMAIL, subject, body);
+    console.log('Notification email sent to ' + NOTIFY_EMAIL);
+  } catch (err) {
+    console.error('Mail notification failed: ' + err);
+  }
+}
+
+function testTrialMail() {
+  notifyNewTrialBooking({
+    learnerName: 'Test Trial',
+    contactNo: '0400000000',
+    email: '',
+    availability: 'Outside PCYC Hornsby - Tuesday 7:15-8:15pm (Adult Class)',
+    message: 'I am a complete beginner',
+    howHeard: 'Google',
+    sourcePage: '/kungfu-classes-adults-hornsby.html'
   });
 }
 
@@ -169,6 +230,18 @@ function getOrCreateSheet() {
       'Timestamp', 'Source Page', 'Learner Name', 'Email', 'Contact No.', 'Age Range',
       'Parent/Guardian Name', 'Parent/Guardian Contact', 'Interests', 'Prior Experience',
       'Availability', 'Waiver Accepted', 'Signature Name', 'Emergency Contact', 'How Heard'
+    ]);
+  }
+  return sheet;
+}
+
+function getOrCreateTrialSheet() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName(TRIAL_SHEET_NAME);
+  if (!sheet) {
+    sheet = ss.insertSheet(TRIAL_SHEET_NAME);
+    sheet.appendRow([
+      'Timestamp', 'Source Page', 'Name', 'Mobile', 'Email', 'Class', 'Message', 'How Heard'
     ]);
   }
   return sheet;

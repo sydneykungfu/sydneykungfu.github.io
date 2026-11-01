@@ -22,7 +22,7 @@ meta:
     <h1 class="text-3xl font-bold mb-6">悉尼功夫班 – 預約免費試堂</h1>
 
     <p class="text-lg mb-6">
-      謝氏武館教授傳統<strong>蔡李佛</strong>及<strong>蔡莫派</strong>（南少林）功夫，適合成人、兒童及家庭。課程每週六於馬士菲公園、週二晚上於威特拉舉行——無需任何功夫基礎。<strong>首堂完全免費</strong>，無需提供付款資料。
+      謝氏武館教授傳統<strong>蔡李佛</strong>及<strong>蔡莫派</strong>（南少林）功夫，適合成人、兒童及家庭。課程每週六於馬士菲公園、週二晚上於Hornsby舉行——無需任何功夫基礎。<strong>首堂完全免費</strong>，無需提供付款資料。
     </p>
 
     <div class="mb-8">
@@ -175,13 +175,4 @@ meta:
   </script>
 
   <!-- Sticky CTA bar — mobile only -->
-  <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-3 flex items-center justify-between shadow-lg md:hidden" id="sticky-cta">
-    <p class="text-sm text-gray-600 leading-tight">首堂<strong>免費</strong><br>無需付款資料</p>
-    <a href="#enroll-form"
-       class="bg-red-600 text-white font-bold px-5 py-3 rounded hover:bg-red-700 whitespace-nowrap">
-      預約免費試堂 &rarr;
-    </a>
-  </div>
-  <style>
-    @media (max-width: 767px) { body { padding-bottom: 72px; } }
-  </style>
+  {% include sticky-cta-zh.html primary="book" wa_text="你好 Sifu Angus，我想查詢報名事宜" %}

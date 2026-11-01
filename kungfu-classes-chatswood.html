@@ -161,13 +161,4 @@ meta:
   </section>
 
   <!-- Sticky CTA bar — mobile only -->
-  <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-3 flex items-center justify-between shadow-lg md:hidden" id="sticky-cta">
-    <p class="text-sm text-gray-600 leading-tight">New class in <strong>Chatswood</strong><br>No commitment</p>
-    <a href="#eoi-form"
-       class="bg-red-600 text-white font-bold px-5 py-3 rounded hover:bg-red-700 whitespace-nowrap">
-      Register Interest &rarr;
-    </a>
-  </div>
-  <style>
-    @media (max-width: 767px) { body { padding-bottom: 72px; } }
-  </style>
+  {% include sticky-cta.html primary="book" book_label="Register Interest" book_href="#eoi-form" note="New class in Chatswood · No commitment" wa_text="Hi Sifu Angus, I'm asking about the new Chatswood class" %}

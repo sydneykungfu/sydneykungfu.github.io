@@ -13,7 +13,7 @@ meta:
     <h1 class="text-3xl font-bold mb-6">Kung Fu Classes Sydney – Book a Free Trial</h1>
 
     <p class="text-lg mb-6">
-      Tse Kung Fu Academy teaches traditional <strong>Choy Lee Fut</strong> and <strong>Choi Mok Pai</strong> Kung Fu in Sydney for adults, kids, and families. Classes run on Saturdays in Marsfield and Tuesday evenings in Waitara — no experience needed. Your <strong>first class is completely free</strong>, no payment information required.
+      Tse Kung Fu Academy teaches traditional <strong>Choy Lee Fut</strong> and <strong>Choi Mok Pai</strong> Kung Fu in Sydney for adults, kids, and families. Classes run on Saturdays in Marsfield and Tuesday evenings in Hornsby — no experience needed. Your <strong>first class is completely free</strong>, no payment information required.
     </p>
 
     <div class="mb-8">
@@ -170,13 +170,4 @@ meta:
   </script>
 
   <!-- Sticky CTA bar — mobile only -->
-  <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-3 flex items-center justify-between shadow-lg md:hidden" id="sticky-cta">
-    <p class="text-sm text-gray-600 leading-tight">First class is <strong>free</strong><br>No payment needed</p>
-    <a href="#enroll-form"
-       class="bg-red-600 text-white font-bold px-5 py-3 rounded hover:bg-red-700 whitespace-nowrap">
-      Book Free Trial &rarr;
-    </a>
-  </div>
-  <style>
-    @media (max-width: 767px) { body { padding-bottom: 72px; } }
-  </style>
+  {% include sticky-cta.html primary="book" book_label="Complete enrolment" wa_text="Hi Sifu Angus, I have a question about enrolling" %}

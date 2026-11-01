@@ -1,7 +1,8 @@
 # Apps Script webhook
 
-`Code.gs` is the source of truth for the Google Apps Script Web App that both the
-enrollment form (`enroll-wizard.html` / `enroll-form.js`) and the class-request form
+`Code.gs` is the source of truth for the Google Apps Script Web App that the
+enrollment form (`enroll-wizard.html` / `enroll-form.js`), the free trial form
+(`trial-form.html` / `trial-form.js`) and the class-request form
 (`request-class-form.html` / `request-class-form.js`) POST to. It's tracked here for
 history and review, but **deployed manually** — no `clasp`, no CI.
 
@@ -22,5 +23,9 @@ history and review, but **deployed manually** — no `clasp`, no CI.
 - Class-request submissions (`request-a-class.html`, sent with `formType:
   'class-request'`) append to a separate **Class Requests** sheet tab (created
   automatically on first submission) and also email `NOTIFY_EMAIL`.
-- Both paths share the same honeypot spam check, logging suspected spam to the
+- Free trial bookings (`trial-form.html` on the Hornsby adult page, sent with
+  `formType: 'trial'`) only require `learnerName` and `contactNo`. They append to a
+  separate **Trial Bookings** sheet tab (created automatically on first submission)
+  and email `NOTIFY_EMAIL`.
+- All paths share the same honeypot spam check, logging suspected spam to the
   **Suspected Spam** tab instead of processing it.

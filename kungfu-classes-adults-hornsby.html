@@ -18,53 +18,166 @@ meta:
 ---
 
   <!-- Hero Section -->
-  <section id="hero" class="py-12 bg-white">
-    <div class="container mx-auto px-6 text-center max-w-3xl">
-      <h1 class="text-4xl font-bold mb-4">Adult Kung Fu Classes in Hornsby</h1>
-      <p class="text-lg mb-6 text-gray-700">
-        Authentic Choy Lee Fut training for adults, Tuesday evenings outside PCYC Hornsby. Build fitness, confidence, and practical self-defense skills — no experience required.
-      </p>
+  <section id="hero" class="pt-6 pb-8 md:py-12 bg-white">
+    <div class="container mx-auto px-4 md:px-6 text-center max-w-3xl">
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">Adult Kung Fu Classes in Hornsby</h1>
 
-      <div class="rounded-lg overflow-hidden shadow-md mb-6 max-w-md mx-auto" style="aspect-ratio: 1 / 1;">
-        <img src="/assets/images/hero-images/adult-group-practice.webp"
+      <!-- Key facts: every linked item does something when tapped -->
+      <ul class="info-strip mb-4">
+        <li><a href="#enroll-form"><span aria-hidden="true">🕖</span> Tuesdays <span class="whitespace-nowrap">7:15&ndash;8:15pm</span> <span class="info-strip__chev" aria-hidden="true">›</span></a></li>
+        <li><a href="https://www.google.com/maps?cid=323470375572608909" target="_blank" rel="noopener"><span aria-hidden="true">📍</span> Outside PCYC Hornsby <span class="info-strip__chev" aria-hidden="true">↗</span></a></li>
+        <li><a href="#enroll-form"><span aria-hidden="true">✅</span> First class free <span class="info-strip__chev" aria-hidden="true">›</span></a></li>
+        <li><span><span aria-hidden="true">💲</span> $80/month after</span></li>
+      </ul>
+
+      <a href="#enroll-form" class="block sm:inline-block bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700 mb-6">
+        Book your free class
+      </a>
+
+      <a href="/assets/images/hero-images/adult-group-practice.webp" data-lightbox class="hero-photo block rounded-lg overflow-hidden shadow-md mb-6 max-w-md mx-auto">
+        <img src="/assets/images/hero-images/adult-group-practice-800.webp"
+             width="800" height="547" fetchpriority="high"
              alt="Adults training Choy Lee Fut Kung Fu outdoors near Hornsby"
              class="w-full h-full object-cover">
-      </div>
-
-      <!-- Quick Facts -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6 text-left sm:text-center">
-        <div class="bg-gray-50 rounded-lg p-3">
-          <div class="text-xs uppercase tracking-wide text-gray-500 font-semibold">When</div>
-          <div class="font-semibold">Tuesdays, 7:15&ndash;8:15pm</div>
-        </div>
-        <div class="bg-gray-50 rounded-lg p-3">
-          <div class="text-xs uppercase tracking-wide text-gray-500 font-semibold">Where</div>
-          <div class="font-semibold">Outside PCYC Hornsby, NSW 2077</div>
-        </div>
-        <div class="bg-gray-50 rounded-lg p-3">
-          <div class="text-xs uppercase tracking-wide text-gray-500 font-semibold">Cost</div>
-          <div class="font-semibold">First class free</div>
-        </div>
-      </div>
-
-      <a href="#enroll-form" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700 inline-block">
-        Book Your Free Trial Class
       </a>
+
+      <p class="text-lg text-gray-700">
+        Authentic Choy Lee Fut training for adults, Tuesday evenings outside PCYC Hornsby. Build fitness, confidence, and practical self-defense skills &mdash; no experience required.
+      </p>
+    </div>
+  </section>
+
+  <!-- Trust Section -->
+  <section id="trust" class="py-8 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6 max-w-3xl grid gap-4 md:grid-cols-2">
+      <div class="bg-white rounded-lg shadow-sm p-4 flex gap-4 items-center">
+        <img src="/assets/images/sifu_angus_portrait.webp" width="96" height="128" loading="lazy"
+             alt="Sifu Angus performing Choy Lee Fut in Hong Kong"
+             class="rounded flex-shrink-0 trust-photo">
+        <div>
+          <p class="font-bold mb-1">Sifu Angus &mdash; 20+ years of Choy Lee Fut, trained in Hong Kong</p>
+          <p class="text-sm text-gray-700 mb-2">6th DAN certified instructor under Grand Master Chu Shiu Ki.</p>
+          <a href="/about-sifu-angus.html" class="text-blue-600 underline text-sm">About Sifu Angus ›</a>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-sm p-4">
+        <h2 class="text-xl font-bold mb-2">Complete beginners welcome</h2>
+        <p class="text-gray-700 mb-2">Your first class: stances, basic punches and pad work. No fitness level needed. Wear comfortable clothes.</p>
+        <p class="text-sm text-gray-600">Ages 14+. Many of our students start in their 40s, 50s and beyond.</p>
+      </div>
+      <!-- TODO: real quote — add one genuine adult student quote here (first name + initial, with their permission). -->
     </div>
   </section>
 
   <!-- Enrollment Section -->
-  <section id="enroll" class="py-10 bg-gray-50">
-    <div class="container mx-auto px-6 max-w-3xl">
-      <h2 id="enroll-form" class="text-2xl font-bold mb-2" style="scroll-margin-top: 5rem">Book Your Free Trial &mdash; Hornsby Tuesday Adult Class</h2>
-      <p class="text-gray-700 mb-4">No payment information required. We've pre-selected the Hornsby Tuesday 7:15&ndash;8:15pm adult class for you below &mdash; just fill in your details.</p>
-      {% include enroll-wizard.html %}
-      <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          var opt = document.querySelector('input[name="availability"][value="Outside PCYC Hornsby - Tuesday 7:15-8:15pm (Adult Class)"]');
-          if (opt) opt.checked = true;
-        });
-      </script>
+  <section id="enroll" class="py-10 bg-gray-100">
+    <div class="container mx-auto px-4 md:px-6 max-w-xl">
+      <h2 class="text-2xl font-bold mb-2">Book your free class</h2>
+      <p class="text-gray-700 mb-4">Tuesday 7:15&ndash;8:15pm &middot; Outside PCYC Hornsby</p>
+      {% include trial-form.html %}
+
+      <div class="mt-6">
+        <p class="text-sm text-gray-600 text-center mb-2">Rather ask a question first? Message Sifu Angus:</p>
+        <div class="grid grid-cols-3 gap-2">
+          <a href="https://wa.me/61491703514" target="_blank" rel="noopener" class="contact-btn contact-btn--wa">WhatsApp</a>
+          <a href="sms:+61491703514" class="contact-btn">Text</a>
+          <a href="tel:+61491703514" class="contact-btn">Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Your Path Section: short version of kungfu-classes-adults-sydney.html#progression — keep wording in sync -->
+  <section id="your-path" class="py-10 bg-white">
+    <div class="container mx-auto px-4 md:px-6 max-w-3xl">
+      <h2 class="text-2xl font-bold mb-2">Your path</h2>
+      <p class="text-gray-700 mb-4">We offer an optional ranking / sash system for students who wish to progress in their Kung Fu journey.</p>
+      <ul class="grid gap-3 sm:grid-cols-2 mb-4">
+        <li class="bg-gray-50 rounded-lg p-4">
+          <h3 class="font-semibold text-green-600 mb-1">🟢 Beginner Level (No Sash)</h3>
+          <p class="text-gray-700 text-sm">Learn fundamental movements, coordination, and conditioning.</p>
+        </li>
+        <li class="bg-gray-50 rounded-lg p-4">
+          <h3 class="font-semibold text-yellow-600 mb-1">🟡 Foundation Level (Yellow Sash)</h3>
+          <p class="text-gray-700 text-sm">Build strong foundational power (Long Bridge Power) and introduce basic combat techniques.</p>
+        </li>
+        <li class="bg-gray-50 rounded-lg p-4">
+          <h3 class="font-semibold text-red-600 mb-1">🔴 Intermediate Level (Red Sash)</h3>
+          <p class="text-gray-700 text-sm">One-to-one and multiple attacker combat. Improve long power and begin short power.</p>
+        </li>
+        <li class="bg-gray-50 rounded-lg p-4">
+          <h3 class="font-semibold mb-1">⚫ Advanced Level (Black Sash)</h3>
+          <p class="text-gray-700 text-sm">Refine long and short power. Master multiple-opponent combat.</p>
+        </li>
+      </ul>
+      <a href="/kungfu-classes-adults-sydney.html#progression" class="text-blue-600 underline">See the full syllabus &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Photos Section -->
+  <section id="photos" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-2">Hornsby Adult Class Photos</h2>
+      <p class="text-center text-gray-600 mb-6">Tap a photo to see it larger.</p>
+      <div class="grid gap-4 sm:grid-cols-3">
+        <a href="/assets/images/hero-images/IMG_1033.webp" data-lightbox class="block">
+          <img loading="lazy" src="/assets/images/hero-images/IMG_1033.webp"
+               alt="Adult students practicing partner drills outdoors at Hornsby Kung Fu class"
+               class="w-full h-64 object-cover rounded-lg shadow-md">
+        </a>
+        <a href="/assets/images/hero-images/IMG_2326.webp" data-lightbox class="block">
+          <img loading="lazy" src="/assets/images/hero-images/IMG_2326.webp"
+               alt="Adult students doing pad work self-defense training at Hornsby Kung Fu class"
+               class="w-full h-64 object-cover rounded-lg shadow-md">
+        </a>
+        <a href="/assets/images/hero-images/adult-group-practice.webp" data-lightbox class="block">
+          <img loading="lazy" src="/assets/images/hero-images/adult-group-practice.webp"
+               alt="Group of adult Kung Fu students training together"
+               class="w-full h-64 object-cover rounded-lg shadow-md">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Class Details Section -->
+  <section id="class-details" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-8">Hornsby Adult Class Details</h2>
+      <div class="grid gap-8 md:grid-cols-2 items-start max-w-4xl mx-auto">
+        <div class="bg-gray-50 shadow-md rounded-lg p-6">
+          <h3 class="text-xl font-bold mb-2">Tuesday Evening Class</h3>
+          <p class="text-gray-700"><strong>Time:</strong> <a href="#enroll-form" class="underline">7:15pm &ndash; 8:15pm ›</a></p>
+          <p class="text-gray-700"><strong>Location:</strong> <a href="https://www.google.com/maps?cid=323470375572608909" target="_blank" rel="noopener" class="underline">Outside PCYC Hornsby, NSW 2077 ↗</a></p>
+          <p class="text-gray-700"><strong>Price:</strong> <a href="#enroll-form" class="underline">First class free ›</a>, then $80/month or $25 per class</p>
+          <p class="text-gray-700"><strong>Ages:</strong> 14+</p>
+          <p class="text-gray-600 text-sm mt-2">Perfect for busy professionals winding down after work.</p>
+          <p class="text-gray-600 text-sm mt-2">💡 Also training Saturdays at Marsfield? Pay monthly for both classes and get 50% off your second class — just $120/month total. <a href="/kungfu-classes-adults-sydney.html" class="text-blue-600 hover:underline">See the Saturday class →</a></p>
+          <p class="mt-4">
+            <a href="https://www.google.com/maps?cid=323470375572608909" target="_blank" rel="noopener" class="text-blue-600 hover:underline text-sm">Get directions to PCYC Hornsby ↗</a>
+          </p>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-md">
+          <iframe
+            src="https://www.google.com/maps?cid=323470375572608909&output=embed"
+            width="100%"
+            height="280"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"></iframe>
+        </div>
+      </div>
+      <div class="text-center mt-10 max-w-2xl mx-auto">
+        <p class="mb-4"><strong>What to expect:</strong></p>
+        <ul class="list-disc list-inside mb-6 text-gray-700 text-left inline-block">
+          <li>Traditional Choy Lee Fut forms and techniques</li>
+          <li>Pad work for accuracy, timing, and conditioning</li>
+          <li>Self-defense applications and practical drills</li>
+          <li>Strength and flexibility training</li>
+          <li>Progressive skill development, no experience needed</li>
+        </ul>
+        <br>
+        <a href="#enroll-form" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">Book Your Free Trial</a>
+      </div>
     </div>
   </section>
 
@@ -98,71 +211,11 @@ meta:
     </div>
   </section>
 
-  <!-- Photos Section -->
-  <section id="photos" class="py-16 bg-gray-100">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-8">Hornsby Adult Class Photos</h2>
-      <div class="grid gap-4 sm:grid-cols-3">
-        <img src="/assets/images/hero-images/IMG_1033.webp"
-             alt="Adult students practicing partner drills outdoors at Hornsby Kung Fu class"
-             class="w-full h-64 object-cover rounded-lg shadow-md">
-        <img src="/assets/images/hero-images/IMG_2326.webp"
-             alt="Adult students doing pad work self-defense training at Hornsby Kung Fu class"
-             class="w-full h-64 object-cover rounded-lg shadow-md">
-        <img src="/assets/images/hero-images/adult-group-practice.webp"
-             alt="Group of adult Kung Fu students training together"
-             class="w-full h-64 object-cover rounded-lg shadow-md">
-      </div>
-    </div>
-  </section>
-
-  <!-- Class Details Section -->
-  <section id="class-details" class="py-16 bg-white">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-8">Hornsby Adult Class Details</h2>
-      <div class="grid gap-8 md:grid-cols-2 items-start max-w-4xl mx-auto">
-        <div class="bg-gray-50 shadow-md rounded-lg p-6">
-          <h3 class="text-xl font-bold mb-2">Tuesday Evening Class</h3>
-          <p class="text-gray-700"><strong>Time:</strong> 7:15pm &ndash; 8:15pm</p>
-          <p class="text-gray-700"><strong>Location:</strong> Outside PCYC Hornsby, NSW 2077</p>
-          <p class="text-gray-700"><strong>Price:</strong> $80/month or $25 per class</p>
-          <p class="text-gray-700"><strong>Ages:</strong> 14+</p>
-          <p class="text-gray-600 text-sm mt-2">Perfect for busy professionals winding down after work.</p>
-          <p class="text-gray-600 text-sm mt-2">💡 Also training Saturdays at Marsfield? Pay monthly for both classes and get 50% off your second class — just $120/month total. <a href="/kungfu-classes-adults-sydney.html" class="text-blue-600 hover:underline">See the Saturday class →</a></p>
-          <p class="mt-4">
-            <a href="https://www.google.com/maps?cid=323470375572608909" target="_blank" rel="noopener" class="text-blue-600 hover:underline text-sm">Get directions to PCYC Hornsby ↗</a>
-          </p>
-        </div>
-        <div class="rounded-lg overflow-hidden shadow-md">
-          <iframe
-            src="https://www.google.com/maps?cid=323470375572608909&output=embed"
-            width="100%"
-            height="280"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"></iframe>
-        </div>
-      </div>
-      <div class="text-center mt-10 max-w-2xl mx-auto">
-        <p class="mb-4"><strong>What to expect:</strong></p>
-        <ul class="list-disc list-inside mb-6 text-gray-700 text-left inline-block">
-          <li>Traditional Choy Lee Fut forms and techniques</li>
-          <li>Pad work for accuracy, timing, and conditioning</li>
-          <li>Self-defense applications and practical drills</li>
-          <li>Strength and flexibility training</li>
-          <li>Progressive skill development, no experience needed</li>
-        </ul>
-        <br>
-        <a href="#enroll-form" class="bg-red-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-700">Book Your Free Trial</a>
-      </div>
-    </div>
-  </section>
-
   <!-- Instructor Section -->
   <section id="instructor" class="py-16 bg-gray-100">
     <div class="container mx-auto px-6 text-center">
       <h2 class="text-3xl font-bold mb-6">Meet Your Instructor: Sifu Angus</h2>
-      <img src="/assets/images/sifu_angus.webp" alt="Sifu Angus - Adult Kung Fu Instructor Hornsby" class="w-full max-w-md mx-auto rounded-lg shadow-md mb-6">
+      <img src="/assets/images/sifu_angus.webp" loading="lazy" alt="Sifu Angus - Adult Kung Fu Instructor Hornsby" class="w-full max-w-md mx-auto rounded-lg shadow-md mb-6">
       <p class="text-lg max-w-3xl mx-auto mb-6">
         Sifu Angus brings over 20 years of authentic Choy Lee Fut experience to our adult classes.
         Trained in Hong Kong under <a href="/about-grandmaster-chushiuki.html" class="text-blue-600">Grand Master Chu Shiu Ki</a>,
@@ -349,14 +402,30 @@ meta:
   }
   </script>
 
-  <!-- Sticky CTA bar — mobile only -->
-  <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-3 flex items-center justify-between shadow-lg md:hidden" id="sticky-cta">
-    <p class="text-sm text-gray-600 leading-tight">First class is <strong>free</strong><br>No payment needed</p>
-    <a href="#enroll-form"
-       class="bg-red-600 text-white font-bold px-5 py-3 rounded hover:bg-red-700 whitespace-nowrap">
-      Book Free Trial &rarr;
-    </a>
+  <!-- Photo lightbox -->
+  <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Photo">
+    <button type="button" class="lightbox__close" aria-label="Close">&times;</button>
+    <img alt="">
   </div>
-  <style>
-    @media (max-width: 767px) { body { padding-bottom: 72px; } }
-  </style>
+  <script>
+    (function () {
+      var box = document.getElementById('lightbox');
+      var img = box.querySelector('img');
+      function close() { box.classList.add('hidden'); img.removeAttribute('src'); }
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[data-lightbox]');
+        if (link) {
+          e.preventDefault();
+          img.src = link.getAttribute('href');
+          img.alt = link.querySelector('img').alt;
+          box.classList.remove('hidden');
+        } else if (box.contains(e.target)) {
+          close();
+        }
+      });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    })();
+  </script>
+
+  <!-- Sticky CTA bar — mobile only -->
+  {% include sticky-cta.html primary="whatsapp" book_label="Book free class" wa_text="Hi Sifu Angus, I'm interested in the Tuesday adult class in Hornsby" %}
