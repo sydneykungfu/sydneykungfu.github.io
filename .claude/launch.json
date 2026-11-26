@@ -2,6 +2,12 @@
   "version": "0.0.1",
   "configurations": [
     {
+      "name": "jekyll-docker",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["-c", "docker run --rm -p 4000:4000 -v /Users/angustse/Documents/Projects/sydneykungfu.github.io:/srv/jekyll my-jekyll-site"],
+      "port": 4000
+    },
+    {
       "name": "jekyll-site-preview",
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "4001", "--directory", "_site"],
